@@ -1,0 +1,17 @@
+<td><%= link_to 'Archivos', archivos_url %></td>
+<table>
+  <tr>
+    <th>Nombre Archivo</th>
+    <th>Asignatura</th>
+    <th>Estado</th>
+  </tr>
+
+    <tr>
+      <td><%= @archivo.nombrearchivo %></td>
+      <td><%= @archivo.asignatura_id %></td>
+      <td><%= @archivo.estado %></td>
+      <td><%= link_to 'Ver', archivo_path(@archivo.id) %></td>
+      <td><%= link_to 'Editar', edit_archivo_path(@archivo.id) %></td>
+    </tr>
+    
+</table>

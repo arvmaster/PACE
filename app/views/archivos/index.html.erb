@@ -1,0 +1,27 @@
+<h1>Archivos Index</h1>
+
+<p>
+  <%= link_to 'Principal', controller: 'inicio' %> |
+  <%= link_to 'Crear', new_archivo_path %>  
+</p>
+
+<table>
+
+  <tr>
+    <th>Nombre Archivo</th>
+    <th>Asignatura</th>
+    <th>Estado</th>
+  </tr>
+
+  <% @archivos.each do |f| %>
+    <tr>
+      <td><%= f.nombrearchivo %></td>
+      <td><%= f.asignatura_id %></td>
+      <td><%= f.estado %></td>
+      <td><%= link_to 'Ver', archivo_path(f) %></td>
+      <td><%= link_to 'Editar', edit_archivo_path(f) %></td>
+    </tr>
+
+  <% end %>
+
+</table>

@@ -1,0 +1,11 @@
+<%= form_for @archivo do |f| %>
+    <div>
+        <%= f.label :nombrearchivo %>
+        <%= f.text_field :nombrearchivo %>
+        <%= f.label :asignatura_id %>
+        <%= f.text_field :asignatura_id %>
+        <%= f.label :estado %>
+        <%= f.check_box :estado %>
+    </div>    
+    <%= f.submit %>
+<% end %>
