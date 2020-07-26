@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
 
+  devise_for :users, controllers: { sessions: 'users/sessions'}
   root 'inicio#index'
 
   resources :archivos
-
+  resources :users
   get 'archivos', to: 'archivos#index'
 
 

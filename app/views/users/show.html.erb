@@ -1,0 +1,17 @@
+<td><%= link_to 'Usuarios', users_url %></td>
+<table>
+  <tr>
+    <th>Nombre Usuario</th>
+    <th>Apellido Paterno</th>
+    <th>Apellido Materno</th>
+  </tr>
+
+    <tr>
+      <td><%= @user.nombre_user %></td>
+      <td><%= @user.apellido_pa %></td>
+      <td><%= @user.apellido_ma %></td>
+      <td><%= link_to 'Ver', user_path(@user.id) %></td>
+      <td><%= link_to 'Editar', edit_user_path(@user.id) %></td>
+    </tr>
+    
+</table>

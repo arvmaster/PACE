@@ -20,37 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aac5b097-7438-4f2a-bd05-44f8ce57767f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/uploaders/documento_uploader.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/layouts/inicio.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/migrate/20200726011814_add_documento_to_archivos.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/archivo/documento/3/introduccion_al_algebra_1o.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.generators" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.generators" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/PACE.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PACE.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/devise/mailer/confirmation_instructions.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/users/_form.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/users/edit.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/users/index.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/users/new.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/users/show.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/asignaturas.coffee" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/asignaturas.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/inicio.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/archivos_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/archivos_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/asignaturas_controller.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/inicio_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/inicio_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/helpers/asignaturas_helper.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/archivo.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/archivo.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/asignatura.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/archivos/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/archivos/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/archivos/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/archivos/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/archivos/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/archivos/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/asignaturas/index.html.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/environments/development.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/development.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20200719205907_create_asignaturas.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20200719205930_create_archivos.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20200719205930_create_archivos.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/controllers/asignaturas_controller_test.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/fixtures/asignaturas.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/models/asignatura_test.rb" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +41,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1eq05GwCIz42hzAyczYAQWN4G9G" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -71,11 +54,13 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/views/archivos" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/views/devise" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\alexander\Desktop\Tesis\Plataforma Pace\PACE\app\views\devise" />
+      <recent name="C:\Users\alexander\Desktop\Tesis\Plataforma Pace\PACE\app\views\users" />
       <recent name="C:\Users\alexander\Desktop\Tesis\Plataforma Pace\PACE\app\views\archivos" />
     </key>
     <key name="MoveFile.RECENT_KEYS">

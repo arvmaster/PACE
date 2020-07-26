@@ -1,0 +1,25 @@
+<h1>Usuarios Index</h1>
+
+<p>
+  <%= link_to 'Principal', controller: 'inicio' %> |
+  <%= link_to 'Crear', new_user_path %>  
+</p>
+
+<table>
+
+  <tr>
+    <th>Nombre Usuario</th>
+    <th>Estado</th>
+  </tr>
+
+  <% @users.each do |f| %>
+    <tr>
+      <td><%= f.nombre_user %> <%= f.apellido_pa %> <%= f.apellido_ma %></td>
+      <td><%= f.estado %></td>
+      <td><%= link_to 'Ver', user_path(f) %></td>
+      <td><%= link_to 'Editar', edit_user_path(f) %></td>
+    </tr>
+
+  <% end %>
+
+</table>
