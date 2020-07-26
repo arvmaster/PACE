@@ -1,0 +1,2 @@
+class DatosCarrera < ApplicationRecord
+end

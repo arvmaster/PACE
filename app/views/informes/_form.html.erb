@@ -1,0 +1,8 @@
+<%= form_for @informe do |f| %>
+      <div class="form-group">
+        <%= f.label :Nombre_informe %>
+        <%= f.text_field :nombre_informe %>
+      </div>
+
+    <%= f.submit 'Enviar', :class => 'btn btn-primary' %>
+<% end %>

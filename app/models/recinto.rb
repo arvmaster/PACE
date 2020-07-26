@@ -1,0 +1,2 @@
+class Recinto < ApplicationRecord
+end

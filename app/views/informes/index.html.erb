@@ -1,0 +1,24 @@
+<h1>Informes Index</h1>
+
+<p>
+  <%= link_to 'Principal', controller: 'inicio' %> |
+  <%= link_to 'Crear', new_informe_path %>  
+</p>
+
+<table>
+
+  <tr>
+    <th>Nombre Informe</th>
+    <th>Topico</th>
+  </tr>
+
+  <% @informes.each do |f| %>
+    <tr>
+      <td><%= f.nombre_informe %></td>
+      <td><%= link_to 'Ver', informe_path(f) %></td>
+      <td><%= link_to 'Editar', edit_informe_path(f) %></td>
+    </tr>
+
+  <% end %>
+
+</table>

@@ -17,8 +17,13 @@
   <!-- Sidebar -->
   <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%">
     <h3 class="w3-bar-item">Menu</h3>
+    <%=link_to 'User',users_url, :class =>"w3-bar-item w3-button" %>
     <%=link_to 'Archivos',archivos_url, :class =>"w3-bar-item w3-button" %>
-
+    <%=link_to 'Asignatura',asignaturas_url, :class =>"w3-bar-item w3-button" %>
+    <%=link_to 'Cuestionario EdA', cuestionario_edas_url, :class =>"w3-bar-item w3-button" %>
+    <%=link_to 'Informe',informes_url, :class =>"w3-bar-item w3-button" %>
+    <%=link_to 'Datos Carrera',datos_carreras_url, :class =>"w3-bar-item w3-button" %>
+    <%=link_to 'Estudios',estudios_url, :class =>"w3-bar-item w3-button" %>
   </div>
 
   <!-- Page Content -->

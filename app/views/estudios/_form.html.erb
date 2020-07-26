@@ -1,0 +1,9 @@
+<%= form_for @estudio do |f| %>
+
+      <div class="form-group">
+        <%= f.label :Nombre_estudio %>
+        <%= f.text_field :nombre_estudio %>
+      </div>
+
+    <%= f.submit 'Enviar', :class => 'btn btn-primary' %>
+<% end %>

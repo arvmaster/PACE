@@ -1,0 +1,25 @@
+<h1>Pregunta_informes Index</h1>
+
+<p>
+  <%= link_to 'Principal', controller: 'inicio' %> |
+  <%= link_to 'Crear', new_pregunta_cuestionario_path %>  
+</p>
+
+<table>
+
+  <tr>
+    <th>Pregunta</th>
+    <th>Respuesta</th>
+  </tr>
+
+  <% @pregunta_cuestionarios.each do |f| %>
+    <tr>
+      <td><%= f.pregunta_cues %></td>
+      <td><%= f.respuesta %></td>
+      <td><%= link_to 'Ver', pregunta_cuestionario_path(f) %></td>
+      <td><%= link_to 'Editar', edit_pregunta_cuestionario_path(f) %></td>
+    </tr>
+
+  <% end %>
+
+</table>

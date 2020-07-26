@@ -1,0 +1,9 @@
+<%= form_for @recinto do |f| %>
+      <div class="form-group">
+        <%= f.label :Nombre_recinto %>
+        <%= f.text_field :nombre_recinto %>
+      </div>
+
+
+    <%= f.submit 'Enviar', :class => 'btn btn-primary' %>
+<% end %>

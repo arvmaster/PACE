@@ -1,0 +1,14 @@
+<td><%= link_to 'Recintos', recintos_url %></td>
+<table>
+  <tr>
+    <th>Nombre Recinto</th>
+    <th>Topico</th>
+  </tr>
+
+    <tr>
+      <td><%= @recinto.nombre_recinto %></td>
+      <td><%= link_to 'Ver', recinto_path(@recinto.id) %></td>
+      <td><%= link_to 'Editar', edit_recinto_path(@recinto.id) %></td>
+    </tr>
+    
+</table>

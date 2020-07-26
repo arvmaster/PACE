@@ -1,0 +1,2 @@
+class PreguntaInforme < ApplicationRecord
+end

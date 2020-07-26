@@ -1,0 +1,14 @@
+<%= form_for @pregunta_cuestionario do |f| %>
+      <div class="form-group">
+        <%= f.label :Pregunta_cuestionario %>
+        <%= f.text_field :pregunta_cues %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :Respuesta %>
+        <%= f.text_field :respuesta %>
+      </div>
+
+
+    <%= f.submit 'Enviar', :class => 'btn btn-primary' %>
+<% end %>

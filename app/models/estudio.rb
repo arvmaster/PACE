@@ -1,0 +1,2 @@
+class Estudio < ApplicationRecord
+end

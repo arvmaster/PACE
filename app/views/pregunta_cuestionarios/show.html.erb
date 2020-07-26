@@ -1,0 +1,15 @@
+<td><%= link_to 'Pregunta Cuestionarios', pregunta_cuestionarios_url %></td>
+<table>
+  <tr>
+    <th>Pregunta_Cuestionario</th>
+    <th>Respuesta</th>
+  </tr>
+
+    <tr>
+      <td><%= @pregunta_cuestionario.pregunta_inf %></td>
+      <td><%= @pregunta_cuestionario.respuesta %></td>
+      <td><%= link_to 'Ver', pregunta_cuestionario_path(@pregunta_cuestionario.id) %></td>
+      <td><%= link_to 'Editar', edit_pregunta_cuestionario_path(@pregunta_cuestionario.id) %></td>
+    </tr>
+    
+</table>

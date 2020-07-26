@@ -1,0 +1,24 @@
+<h1>Recintos Index</h1>
+
+<p>
+  <%= link_to 'Principal', controller: 'inicio' %> |
+  <%= link_to 'Crear', new_recinto_path %>  
+</p>
+
+<table>
+
+  <tr>
+    <th>Nombre Recinto</th>
+    <th>Topico</th>
+  </tr>
+
+  <% @recintos.each do |f| %>
+    <tr>
+      <td><%= f.nombre_recinto %></td>
+      <td><%= link_to 'Ver', recinto_path(f) %></td>
+      <td><%= link_to 'Editar', edit_recinto_path(f) %></td>
+    </tr>
+
+  <% end %>
+
+</table>

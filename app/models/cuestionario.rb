@@ -1,0 +1,2 @@
+class Cuestionario < ApplicationRecord
+end

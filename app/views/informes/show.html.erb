@@ -1,0 +1,14 @@
+<td><%= link_to 'Informes', informes_url %></td>
+<table>
+  <tr>
+    <th>Nombre Informe</th>
+    <th>Topico</th>
+  </tr>
+
+    <tr>
+      <td><%= @informe.nombre_informe %></td>
+      <td><%= link_to 'Ver', informe_path(@informe.id) %></td>
+      <td><%= link_to 'Editar', edit_informe_path(@informe.id) %></td>
+    </tr>
+    
+</table>

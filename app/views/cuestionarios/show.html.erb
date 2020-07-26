@@ -1,0 +1,15 @@
+<td><%= link_to 'Cuestionarios', cuestionario_edas_url %></td>
+<table>
+  <tr>
+    <th>Nombre Cuestionario</th>
+    <th>Topico</th>
+  </tr>
+
+    <tr>
+      <td><%= @cuestionario_eda.nombre_cuestionario %></td>
+      <td><%= @cuestionario_eda.topico %></td>
+      <td><%= link_to 'Ver', cuestionario_eda_path(@cuestionario_eda.id) %></td>
+      <td><%= link_to 'Editar', edit_cuestionario_eda_path(@cuestionario_eda.id) %></td>
+    </tr>
+    
+</table>
