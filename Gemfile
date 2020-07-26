@@ -6,8 +6,10 @@ ruby '2.3.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.2'
 #agregado por mi#
-gem 'devise', '~> 4.2'
+gem 'devise'
 gem 'pg'
+gem 'carrierwave'
+gem "mini_magick"
 #hasta aca
 # Use Puma as the app server
 gem 'puma', '~> 3.11'

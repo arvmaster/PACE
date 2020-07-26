@@ -2,14 +2,14 @@
 <table>
   <tr>
     <th>Nombre Archivo</th>
-    <th>Asignatura</th>
-    <th>Estado</th>
+    <th>Topico</th>
+    <th>Documento</th>
   </tr>
 
     <tr>
-      <td><%= @archivo.nombrearchivo %></td>
-      <td><%= @archivo.asignatura_id %></td>
-      <td><%= @archivo.estado %></td>
+      <td><%= @archivo.nombre_archivo %></td>
+      <td><%= @archivo.topico %></td>
+      <td><%= @archivo.documento %></td>
       <td><%= link_to 'Ver', archivo_path(@archivo.id) %></td>
       <td><%= link_to 'Editar', edit_archivo_path(@archivo.id) %></td>
     </tr>

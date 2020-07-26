@@ -9,15 +9,15 @@
 
   <tr>
     <th>Nombre Archivo</th>
-    <th>Asignatura</th>
-    <th>Estado</th>
+    <th>Topico</th>
+    <th>Documento</th>
   </tr>
 
   <% @archivos.each do |f| %>
     <tr>
-      <td><%= f.nombrearchivo %></td>
-      <td><%= f.asignatura_id %></td>
-      <td><%= f.estado %></td>
+      <td><%= f.nombre_archivo %></td>
+      <td><%= f.topico %></td>
+      <td><%= f.documento %></td>
       <td><%= link_to 'Ver', archivo_path(f) %></td>
       <td><%= link_to 'Editar', edit_archivo_path(f) %></td>
     </tr>

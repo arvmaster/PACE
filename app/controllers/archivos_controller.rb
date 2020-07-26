@@ -53,7 +53,7 @@ class ArchivosController < ApplicationController
     private
 
     def archivo_params
-      params.require(:archivo).permit(:nombrearchivo, :asignatura_id, :estado)
+      params.require(:archivo).permit(:nombre_archivo, :topico, :asignatura, :documento)
     end
 
 end

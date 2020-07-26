@@ -1,11 +1,10 @@
 Rails.application.routes.draw do
-  get 'asignaturas/index'
+
   root 'inicio#index'
 
   resources :archivos
 
   get 'archivos', to: 'archivos#index'
-  get 'archivos/new'
 
 
   #root 'welcome#index'

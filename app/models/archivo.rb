@@ -1,3 +1,4 @@
 class Archivo < ApplicationRecord
-    belongs_to :asignatura
+    mount_uploader :documento, DocumentoUploader
+    validates :documento, presence: true
 end

@@ -10,24 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_19_205930) do
+ActiveRecord::Schema.define(version: 2020_07_26_011814) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "archivos", force: :cascade do |t|
-    t.string "nombre"
+    t.string "nombre_archivo"
+    t.string "topico"
+    t.string "asignatura"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "asignaturas", force: :cascade do |t|
-    t.string "nombrearchivo"
-    t.boolean "estado"
-    t.bigint "asignatura_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["asignatura_id"], name: "index_asignaturas_on_asignatura_id"
+    t.string "documento"
   end
 
 end
