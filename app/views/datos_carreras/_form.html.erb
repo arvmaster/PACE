@@ -1,18 +1,13 @@
 <%= form_for @datos_carrera do |f| %>
 
       <div class="form-group">
-        <%= f.label :Matricula_Hombres %>
-        <%= f.text_field :matricula_hombre %>
+        <%= f.label :Nomre_Carrera %>
+        <%= f.text_field :nombre_carrera %>
       </div>
 
       <div class="form-group">
         <%= f.label :Matricula_Hombres %>
         <%= f.number_field :matricula_hombre %>
-      </div>
-
-      <div class="form-group">
-        <%= f.label :Matricula_Mujer %>
-        <%= f.number_field :matricula_mujer %>
       </div>
 
     <%= f.submit 'Enviar', :class => 'btn btn-primary' %>

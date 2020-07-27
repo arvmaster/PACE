@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_26_020051) do
+ActiveRecord::Schema.define(version: 2020_07_26_085205) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,54 @@ ActiveRecord::Schema.define(version: 2020_07_26_020051) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "documento"
+  end
+
+  create_table "cuestionarios", force: :cascade do |t|
+    t.string "nombre_cues"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "datos_carreras", force: :cascade do |t|
+    t.string "nombre_carrera"
+    t.integer "matricula_hombre"
+    t.integer "matricula_mujer"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "estudios", force: :cascade do |t|
+    t.string "nombre_estudio"
+    t.string "codigo"
+    t.boolean "estado"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "informes", force: :cascade do |t|
+    t.string "nombre_inf"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "pregunta_cuestionarios", force: :cascade do |t|
+    t.text "pregunta_cues"
+    t.text "respuesta"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "pregunta_informes", force: :cascade do |t|
+    t.text "pregunta_inf"
+    t.text "respuesta"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "recintos", force: :cascade do |t|
+    t.string "nombre_recinto"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

@@ -10,6 +10,7 @@ gem 'devise'
 gem 'pg'
 gem 'carrierwave'
 gem "mini_magick"
+gem "chartkick"
 #hasta aca
 # Use Puma as the app server
 gem 'puma', '~> 3.11'

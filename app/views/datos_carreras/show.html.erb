@@ -1,0 +1,23 @@
+<td><%= link_to 'Carreras', datos_carreras_url %></td>
+<table>
+  <tr>
+    <th>Nombre Carrera</th>
+    <th>Topico</th>
+  </tr>
+
+  <tr>
+    <td><%= @datos_carrera.nombre_carrera %></td>
+    <td><%= @datos_carrera.matricula_hombre %></td>
+    <td><%= link_to 'Ver', datos_carrera_path(@datos_carrera.id) %></td>
+    <td><%= link_to 'Editar', edit_datos_carrera_path(@datos_carrera.id) %></td>
+  </tr>
+
+
+</table>
+<div>
+  <%= column_chart(
+                  {"Hombres" => @datos_carrera.matricula_hombre,
+                   "Mujeres" => @datos_carrera.matricula_mujer}, width: "800px", height: "500px"
+                  )
+  %>
+</div>

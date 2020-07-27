@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
 
-  devise_for :users, controllers: { sessions: 'users/sessions'}
+  devise_for :users, controllers: {
+      sessions: 'users/sessions'
+  }
   root 'inicio#index'
 
   #users personalizados
   resources :users
 
+  resources :inicio
   resources :archivos
   resources :cuestionarios
   resources :pregunta_cuestionarios

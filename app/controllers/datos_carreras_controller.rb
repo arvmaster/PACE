@@ -53,7 +53,7 @@ class DatosCarrerasController < ApplicationController
   private
 
   def datos_carrera_params
-    params.require(:datos_carrera).permit( :nombre_carrera, :matricula_hombre, :matricula_mujer)
+    params.require(:datos_carrera).permit( :nombre_carrera, :matricula_hombre)
   end
 
 end

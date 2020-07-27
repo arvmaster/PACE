@@ -14,7 +14,7 @@
 
   <% @informes.each do |f| %>
     <tr>
-      <td><%= f.nombre_informe %></td>
+      <td><%= f.nombre_inf %></td>
       <td><%= link_to 'Ver', informe_path(f) %></td>
       <td><%= link_to 'Editar', edit_informe_path(f) %></td>
     </tr>
