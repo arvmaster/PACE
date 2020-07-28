@@ -1,19 +1,19 @@
 class ArchivosController < ApplicationController
+  #before_action :authenticate_user!,except: [:index]
 
     def index
       @archivos = Archivo.all
     end
-
     def show
       @archivo = Archivo.find(params[:id])
     end
-
+    #para agregar el user_id directo (Agregar en params la foreign key)
     def new
-      @archivo = Archivo.new
+      @archivo = current_user.archivos.build
     end
-
+    #para agregar sin tener que llamar el id se puede crear asi
     def create
-      @archivo = Archivo.create(archivo_params)
+      @archivo = current_user.archivos.build(archivo_params)
       if @archivo.save
         flash[:success] = "Archivo Creado"
         redirect_to @archivo
@@ -34,7 +34,7 @@ class ArchivosController < ApplicationController
         redirect_to archivos_url
       else
         flash[:error] = "No se modifico el archivo"
-        render :edit
+        render 'edit'
       end
     end
 
@@ -53,7 +53,7 @@ class ArchivosController < ApplicationController
     private
 
     def archivo_params
-      params.require(:archivo).permit(:nombre_archivo, :topico, :asignatura, :documento)
+      params.require(:archivo).permit(:nombre_archivo, :topico, :asignatura, :documento, :user_id)
     end
 
 end

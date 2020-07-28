@@ -1,4 +1,5 @@
 class EstudiosController < ApplicationController
+  before_action :authenticate_user!
   def index
     @estudios = Estudio.all
   end

@@ -45,12 +45,22 @@
   </div>
 
   <div class="field">
+    <%= f.label :Recinto %><br />
+    <%= f.collection_select :recinto_id, Recinto.all, :id, :nombre_recinto, {:include_blank => "Seleccionar Recinto"},{:class => "select"}  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Estudio %><br />
+    <%= f.collection_select :estudio_id, Estudio.all, :id, :nombre_estudio, {:include_blank => "Seleccionar Estudio"},{:class => "select"}  %>
+  </div>
+
+  <div class="field">
     <%= f.label :Dirección %>
     <%= f.text_field :direccion,class: "form-control" %>
   </div>
 
   <div class="field">
-    <%= f.label :Nivel_de_estudio %>
+    <%= f.label :Nivel_de_estudio %><br />
     <%= f.select(:nivel_estudio,["Superior","Media"], {}, { :class => 'select' }) %>
   </div>
 

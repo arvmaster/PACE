@@ -1,6 +1,11 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  has_many :archivos
+  has_many :datos_carreras
+  belongs_to :estudio
+  belongs_to :recinto
+  #
   validates :nombre_user, presence: true
   validates :nivel_estudio, presence: true
   validates :apellido_ma, presence: true

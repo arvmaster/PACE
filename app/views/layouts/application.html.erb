@@ -20,7 +20,13 @@
     <%=link_to 'User',users_url, :class =>"w3-bar-item w3-button" %>
     <%=link_to 'Archivos',archivos_url, :class =>"w3-bar-item w3-button" %>
     <%=link_to 'Cuestionarios EDA', cuestionarios_url, :class =>"w3-bar-item w3-button" %>
-    <%=link_to 'Informes',informes_url, :class =>"w3-bar-item w3-button" %>
+    <% if user_signed_in? %>
+    <% if current_user.nivel_estudio=="Media" %>
+        <%=link_to 'Preguntas Cuestionario',pregunta_cuestionarios_url, :class =>"w3-bar-item w3-button" %>
+        <%=link_to 'Informes',informes_url, :class =>"w3-bar-item w3-button" %>
+        <%=link_to 'Preguntas Informe',pregunta_informes_url, :class =>"w3-bar-item w3-button" %>
+    <%end%>
+    <%end %>
     <%=link_to 'Datos Carrera',datos_carreras_url, :class =>"w3-bar-item w3-button" %>
     <%=link_to 'Estudios',estudios_url, :class =>"w3-bar-item w3-button" %>
   </div>
@@ -30,6 +36,8 @@
 
     <div class="w3-container w3-teal">
       <h1>Comunidad Virtual PACE-UTEM</h1>
+      <li><%=link_to 'Info',users_url%></li>
+      <li><%=link_to 'Desconectarse',destroy_user_session_path,method: :delete %></li>
     </div>
     <div class="container">
       <p class="notice"><%= notice %></p>

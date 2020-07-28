@@ -1,4 +1,5 @@
 class InformesController < ApplicationController
+  before_action :authenticate_user!
   def index
     @informes = Informe.all
   end
@@ -13,6 +14,7 @@ class InformesController < ApplicationController
 
   def create
     @informe = Informe.create(informe_params)
+    @informe.user_id = current_user.id
     if @informe.save
       flash[:success] = "Informe Creado"
       redirect_to @informe

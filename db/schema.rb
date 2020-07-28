@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_26_085205) do
+ActiveRecord::Schema.define(version: 2020_07_27_221052) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,12 +22,15 @@ ActiveRecord::Schema.define(version: 2020_07_26_085205) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "documento"
+    t.integer "user_id"
   end
 
   create_table "cuestionarios", force: :cascade do |t|
     t.string "nombre_cues"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.integer "pregunta_cuestionario_id"
   end
 
   create_table "datos_carreras", force: :cascade do |t|
@@ -36,6 +39,7 @@ ActiveRecord::Schema.define(version: 2020_07_26_085205) do
     t.integer "matricula_mujer"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
   end
 
   create_table "estudios", force: :cascade do |t|
@@ -44,12 +48,15 @@ ActiveRecord::Schema.define(version: 2020_07_26_085205) do
     t.boolean "estado"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "recinto_id"
   end
 
   create_table "informes", force: :cascade do |t|
     t.string "nombre_inf"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.integer "pregunta_informe_id"
   end
 
   create_table "pregunta_cuestionarios", force: :cascade do |t|
@@ -92,8 +99,19 @@ ActiveRecord::Schema.define(version: 2020_07_26_085205) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "recinto_id"
+    t.integer "estudio_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "archivos", "users"
+  add_foreign_key "cuestionarios", "pregunta_cuestionarios"
+  add_foreign_key "cuestionarios", "users"
+  add_foreign_key "datos_carreras", "users"
+  add_foreign_key "estudios", "recintos"
+  add_foreign_key "informes", "pregunta_informes"
+  add_foreign_key "informes", "users"
+  add_foreign_key "users", "estudios"
+  add_foreign_key "users", "recintos"
 end

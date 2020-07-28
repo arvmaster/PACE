@@ -1,4 +1,5 @@
 class PreguntaCuestionariosController < ApplicationController
+  before_action :authenticate_user!
   def index
     @pregunta_cuestionarios = PreguntaCuestionario.all
   end

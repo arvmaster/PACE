@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-
+  before_action :authenticate_user!, except: [:new]
   def index
     @users = User.all
   end
@@ -53,7 +53,15 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:nombre_user, :apellido_pa, :apellido_ma, :rut, :fecha_nacimiento, :comuna,:direccion, :nivel_estudio, :fecha_ingreso, :especialidad, :telefono, :estado, :email, :password, :password_confirmation)
+    params.require(:user).permit(:nombre_user, :apellido_pa, :apellido_ma, :rut, :fecha_nacimiento, :comuna,:direccion, :nivel_estudio, :fecha_ingreso, :especialidad, :telefono, :estado, :email, :estudio_id,:recinto_id,:password, :password_confirmation)
   end
+
+  /def require_activated
+    if !current_user.estado?
+      flash[:error]="Usuario no existe [401]"
+      redirect_to root_path
+
+    end
+  end/
 
 end

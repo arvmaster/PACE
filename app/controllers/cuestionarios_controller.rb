@@ -1,4 +1,5 @@
 class CuestionariosController < ApplicationController
+  before_action :authenticate_user!
   def index
     @cuestionarios = Cuestionario.all
   end
@@ -13,6 +14,7 @@ class CuestionariosController < ApplicationController
 
   def create
     @cuestionario = Cuestionario.create(cuestionario_params)
+    @cuestionario.user_id = current_user.id
     if @cuestionario.save
       flash[:success] = "Cuestionario Creado"
       redirect_to @cuestionario
