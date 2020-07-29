@@ -13,6 +13,9 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
       t.string :nivel_estudio
       t.integer :fecha_ingreso
       t.string :especialidad
+      t.string :nacionalidad
+      t.string :rol,               null: false , default: "Estudiante"
+      t.integer :supervisar
       t.string :telefono
       t.boolean :estado
 

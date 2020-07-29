@@ -23,27 +23,23 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/archivos_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/archivos_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/cuestionarios_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/cuestionarios_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/datos_carreras_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/datos_carreras_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/estudios_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/estudios_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/informes_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/informes_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/pregunta_cuestionarios_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/pregunta_cuestionarios_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/pregunta_informes_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/pregunta_informes_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/recintos_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/recintos_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/archivo.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/archivo.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/datos_carrera.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/datos_carrera.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/estudio.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/estudio.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/recinto.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/recinto.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/archivos/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/archivos/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/datos_carreras/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/datos_carreras/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/archivos/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/archivos/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/archivos/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/archivos/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/cuestionarios/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/cuestionarios/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/informes/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/informes/show.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/inicio/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/inicio/index.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/inicio.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/inicio.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/users/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/users/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20200726020051_devise_create_users.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20200726020051_devise_create_users.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20200726084619_create_datos_carreras.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20200726084619_create_datos_carreras.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20200727180534_add_second_foreign_keys.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20200727180534_add_second_foreign_keys.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/archivo/documento/3/introduccion_al_algebra_1o.pdf" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,15 +67,15 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\alexander\Desktop\Tesis\Plataforma Pace\PACE\app\assets\stylesheets" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\alexander\Desktop\Tesis\Plataforma Pace\PACE\app\views\recintos" />
       <recent name="C:\Users\alexander\Desktop\Tesis\Plataforma Pace\PACE\app\views\pregunta_cuestionarios" />
       <recent name="C:\Users\alexander\Desktop\Tesis\Plataforma Pace\PACE\app\views\pregunta_informes" />
       <recent name="C:\Users\alexander\Desktop\Tesis\Plataforma Pace\PACE\app\views\informes" />
       <recent name="C:\Users\alexander\Desktop\Tesis\Plataforma Pace\PACE\app\views\estudios" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\alexander\Desktop\Tesis\Plataforma Pace\PACE\app\assets\stylesheets" />
     </key>
   </component>
   <component name="RubyModuleManagerSettings">
@@ -198,7 +194,10 @@
       <workItem from="1595191987153" duration="1124000" />
       <workItem from="1595793144822" duration="5595000" />
       <workItem from="1595802802635" duration="7580000" />
-      <workItem from="1595863684729" duration="35232000" />
+      <workItem from="1595863684729" duration="37527000" />
+      <workItem from="1595925827782" duration="4348000" />
+      <workItem from="1595945684969" duration="22613000" />
+      <workItem from="1596008238571" duration="5128000" />
     </task>
     <servers />
   </component>
@@ -222,6 +221,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="21" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1595033895860" />
+    <state x="393" y="164" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1595924617075">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="393" y="164" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1595924617075" />
     <state x="463" y="117" key="FileChooserDialogImpl" timestamp="1595886589143">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -242,5 +245,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1322" height="174" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1595035553499" />
+    <state x="339" y="157" key="run.anything.popup" timestamp="1596013237727">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="157" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1596013237727" />
   </component>
 </project>

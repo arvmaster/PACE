@@ -18,6 +18,14 @@
     <%= f.label :Rut %>
     <%= f.text_field :rut,class: "form-control" %>
   </div>
+  <% if user_signed_in? %>
+      <% if current_user.rol != "Estudiante" %>
+          <div class="field">
+            <%= f.label :Rol %><br />
+            <%= f.select(:rol,["PEM", "AES", "Tutor Disciplinar", "Tutor Par", "Coordinación", "Profesional Acompañamiento Psicoeducativo", "Estudiante"], {}, { :class => 'select' }) %>
+          </div>
+      <%end%>
+  <%end%>
 
   <div class="field">
     <%= f.label :Fecha_de_nacimiento %>
@@ -65,7 +73,7 @@
   </div>
 
   <div class="field">
-    <%= f.label :Fecha_de_ingreso %>
+    <%= f.label :Fecha_de_Egreso_Enseñanza_Media %>
     <%= f.text_field :fecha_ingreso,class: "form-control" %>
   </div>
 

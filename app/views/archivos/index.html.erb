@@ -10,14 +10,14 @@
   <tr>
     <th>Nombre Archivo</th>
     <th>Topico</th>
-    <th>Documento</th>
+    <th>Descargar</th>
   </tr>
 
   <% @archivos.each do |f| %>
     <tr>
       <td><%= f.nombre_archivo %></td>
       <td><%= f.topico %></td>
-      <td><%= f.documento %></td>
+      <td><%= link_to 'Download', f.file, download: '' %></td>
       <td><%= link_to 'Ver', archivo_path(f) %></td>
       <td><%= link_to 'Editar', edit_archivo_path(f) %></td>
     </tr>

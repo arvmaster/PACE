@@ -1,5 +1,6 @@
 class InformesController < ApplicationController
   before_action :authenticate_user!
+
   def index
     @informes = Informe.all
   end
@@ -60,3 +61,5 @@ class InformesController < ApplicationController
   end
 
 end
+
+

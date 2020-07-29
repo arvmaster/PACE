@@ -1,9 +1,10 @@
 class ArchivosController < ApplicationController
-  #before_action :authenticate_user!,except: [:index]
+    before_action :authenticate_user!,except: [:index]
 
     def index
       @archivos = Archivo.all
     end
+
     def show
       @archivo = Archivo.find(params[:id])
     end
@@ -19,7 +20,7 @@ class ArchivosController < ApplicationController
         redirect_to @archivo
       else
         flash[:error] = "No se ha creado el archivo"
-        render :new
+        render 'new'
       end
     end
 
@@ -53,7 +54,7 @@ class ArchivosController < ApplicationController
     private
 
     def archivo_params
-      params.require(:archivo).permit(:nombre_archivo, :topico, :asignatura, :documento, :user_id)
+      params.require(:archivo).permit(:nombre_archivo, :topico, :asignatura, :file, :user_id)
     end
 
 end

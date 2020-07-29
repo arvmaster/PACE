@@ -2,13 +2,19 @@
 <table>
   <tr>
     <th>Nombre Informe</th>
-    <th>Topico</th>
+    <th>Preguntas</th>
   </tr>
 
-    <tr>
-      <td><%= @informe.nombre_inf %></td>
-      <td><%= link_to 'Ver', informe_path(@informe.id) %></td>
-      <td><%= link_to 'Editar', edit_informe_path(@informe.id) %></td>
-    </tr>
-    
+  <tr>
+    <td><%= @informe.nombre_inf %></td>
+    <td><%= link_to 'Ver', informe_path(@informe.id) %></td>
+    <td><%= link_to 'Editar', edit_informe_path(@informe.id) %></td>
+  </tr>
+
 </table>
+<h1><%= @informe.nombre_informe %></h1>
+
+<p>
+  <%= link_to 'Principal', controller: 'inicio' %> |
+  <%= link_to 'Crear', new_informe_path %>
+</p>

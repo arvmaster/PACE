@@ -1,7 +1,7 @@
 class Archivo < ApplicationRecord
-    mount_uploader :documento, DocumentoUploader
-
+    #uploader de carrierwave, pero solo es sencillo subir elementos
+    #mount_uploader :documento, DocumentoUploader
+    has_one_attached :file
     belongs_to :user
 
-    validates :documento, presence: true
 end

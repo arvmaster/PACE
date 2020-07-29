@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :authenticate_user!, except: [:new]
+  before_action :authenticate_user!, except: [:new,:update]
   def index
     @users = User.all
   end
@@ -28,13 +28,18 @@ class UsersController < ApplicationController
   end
 
   def update
-    @user = User.find(params[:id])
-    if @user.update(user_params)
-      flash[:success] = "Se actualizo el user"
-      redirect_to users_url
+    if user_signed_in?
+        @user = User.find(params[:id])
+        if @user.update(user_params)
+          flash[:success] = "Se actualizo el user"
+          redirect_to users_url
+        else
+          flash[:error] = "No se modifico el user"
+          render :edit
+        end
     else
-      flash[:error] = "No se modifico el user"
-      render :edit
+      flash[:error] = "No puedes realizar esta accion"
+      redirect_to root_path
     end
   end
 
@@ -53,7 +58,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:nombre_user, :apellido_pa, :apellido_ma, :rut, :fecha_nacimiento, :comuna,:direccion, :nivel_estudio, :fecha_ingreso, :especialidad, :telefono, :estado, :email, :estudio_id,:recinto_id,:password, :password_confirmation)
+    params.require(:user).permit(:nombre_user, :rol, :supervisar, :apellido_pa, :apellido_ma, :rut, :fecha_nacimiento, :comuna, :direccion, :nivel_estudio, :fecha_ingreso, :especialidad, :telefono, :estado, :email, :estudio_id,:recinto_id,:password, :password_confirmation)
   end
 
   /def require_activated

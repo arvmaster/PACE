@@ -9,13 +9,13 @@
 
   <tr>
     <th>Nombre Cuestionario EdA</th>
-    <th>Topico</th>
+    <th>Preguntas</th>
   </tr>
 
   <% @cuestionarios.each do |f| %>
     <tr>
       <td><%= f.nombre_cues %></td>
-      <td><%= f.topico %></td>
+      <td><%= f.id %></td>
       <td><%= link_to 'Ver', cuestionario_path(f) %></td>
       <td><%= link_to 'Editar', edit_cuestionario_path(f) %></td>
     </tr>
