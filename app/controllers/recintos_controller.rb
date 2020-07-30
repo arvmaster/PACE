@@ -1,5 +1,5 @@
 class RecintosController < ApplicationController
-  before_action :authenticare_user!
+  #before_action :authenticate_user!
   def index
     @recintos = Recinto.all
   end

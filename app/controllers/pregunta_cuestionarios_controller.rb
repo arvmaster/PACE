@@ -1,5 +1,5 @@
 class PreguntaCuestionariosController < ApplicationController
-  before_action :authenticate_user!
+  #before_action :authenticate_user!
   def index
     @pregunta_cuestionarios = PreguntaCuestionario.all
   end
@@ -55,7 +55,7 @@ class PreguntaCuestionariosController < ApplicationController
   private
 
   def pregunta_cuestionario_params
-    params.require(:pregunta_cuestionario).permit(:pregunta_cues,:respuesta)
+    params.require(:pregunta_cuestionario).permit(:pregunta_cues,:respuesta, :cuestionario_id)
   end
 
 end

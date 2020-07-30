@@ -1,4 +1,4 @@
-<h2>Sign up</h2>
+<h2>Formulario Incripcion</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
@@ -70,6 +70,15 @@
     </div>
 
     <div class="field">
+      <%= f.label :Recinto %><br />
+      <%= f.collection_select :recinto_id, Recinto.all, :id, :nombre_recinto, {:include_blank => "Seleccionar Recinto"},{:class => "select"}  %>
+    </div>
+
+  <div class="field">
+    <%= f.label :Estudio %><br />
+    <%= f.collection_select :estudio_id, Estudio.all, :id, :nombre_estudio, {:include_blank => "Seleccionar Estudio"},{:class => "select"}  %>
+  </div>
+    <div class="field">
       <%= f.label :Fecha_de_Egreso_Enseñanza_Media %>
       <%= f.text_field :fecha_ingreso,class: "form-control" %>
     </div>
@@ -77,6 +86,11 @@
     <div class="field">
       <%= f.label :Especialidad %>
       <%= f.text_field :especialidad,class: "form-control" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :Nacionalidad %>
+      <%= f.text_field :nacionalidad,class: "form-control" %>
     </div>
 
     <div class="field">

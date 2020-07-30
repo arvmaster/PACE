@@ -1,8 +1,13 @@
 <%= form_for @estudio do |f| %>
 
-      <div class="form-group">
-        <%= f.label :Nombre_estudio %>
+      <div class="field">
+        <%= f.label :Nombre_estudio %><br />
         <%= f.text_field :nombre_estudio %>
+      </div>
+
+      <div class="field">
+        <%= f.label :Recinto %><br />
+        <%= f.collection_select :recinto_id, Recinto.all, :id, :nombre_recinto, {:include_blank => "Seleccionar Recinto"},{:class => "select"}  %>
       </div>
 
     <%= f.submit 'Enviar', :class => 'btn btn-primary' %>

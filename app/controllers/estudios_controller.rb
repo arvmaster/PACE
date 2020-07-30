@@ -1,5 +1,5 @@
 class EstudiosController < ApplicationController
-  before_action :authenticate_user!
+  #before_action :authenticate_user!
   def index
     @estudios = Estudio.all
   end
@@ -55,7 +55,7 @@ class EstudiosController < ApplicationController
   private
 
   def estudio_params
-    params.require(:estudio).permit(:nombre_estudio, :codigo, :estado)
+    params.require(:estudio).permit(:nombre_estudio, :codigo, :estado, :recinto_id)
   end
 
 end

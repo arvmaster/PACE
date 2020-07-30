@@ -5,6 +5,8 @@ class User < ApplicationRecord
   has_many :datos_carreras
   belongs_to :estudio
   belongs_to :recinto
+  has_many :informes
+  has_many :pregunta_informes
   #
   validates :nombre_user, presence: true
   validates :nivel_estudio, presence: true

@@ -1,8 +1,9 @@
 <%= form_for @informe do |f| %>
-      <div class="form-group">
-        <%= f.label :Nombre_informe %>
-        <%= f.text_field :nombre_inf %>
-      </div>
+
+        <div class="field">
+          <%= f.label :Nombre_informe %></br>
+          <%= f.select(:nombre_inf,["Informe Semanal","Informe Mensual"], {}, { :class => 'select' }) %>
+        </div>
 
     <%= f.submit 'Enviar', :class => 'btn btn-primary' %>
 <% end %>

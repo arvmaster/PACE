@@ -1,5 +1,5 @@
 class PreguntaInformesController < ApplicationController
-  before_action :authenticate_user!
+  #before_action :authenticate_user!
 
       def index
         @pregunta_informes = PreguntaInforme.all
@@ -56,7 +56,7 @@ class PreguntaInformesController < ApplicationController
       private
 
       def pregunta_informe_params
-        params.require(:pregunta_informe).permit(:pregunta_inf,:respuesta)
+        params.require(:pregunta_informe).permit(:pregunta_inf, :respuesta, :informe_id)
       end
 
 end
