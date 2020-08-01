@@ -1,15 +1,13 @@
-<td><%= link_to 'Cuestionarios', cuestionario_edas_url %></td>
+<h1><%= link_to 'Cuestionarios', cuestionarios_url %></h1>
 <table>
   <tr>
     <th>Nombre Cuestionario</th>
-    <th>Topico</th>
   </tr>
 
     <tr>
-      <td><%= @cuestionario_eda.nombre_cuestionario %></td>
-      <td><%= @cuestionario_eda.topico %></td>
-      <td><%= link_to 'Ver', cuestionario_eda_path(@cuestionario_eda.id) %></td>
-      <td><%= link_to 'Editar', edit_cuestionario_eda_path(@cuestionario_eda.id) %></td>
+      <td><%= @cuestionario.nombre_cues %></td>
+      <td><%= link_to 'Responder', edit_cuestionario_path(@cuestionario.id) %></td>
     </tr>
-
 </table>
+<%= pie_chart({"Activo"=>@cuestionario.eda_a,"Reflexivo"=>@cuestionario.eda_r,
+               "Teórico"=>@cuestionario.eda_t,"Pragmatico"=>@cuestionario.eda_p})%>

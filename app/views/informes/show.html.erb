@@ -2,14 +2,17 @@
 <h1><%= @informe.nombre_inf %></h1>
 <table>
   <tr>
+    <th>Checkbox</th>
     <th>Pregunta</th>
     <th>Respuesta</th>
   </tr>
 
   <tr>
     <% @preguntas.each do |f| %>
+    <td><%= check_box_tag "preguntas_cuestionario_ids[]",preguntas_cuestionario.casilla %></td>
     <td><%= f.pregunta_inf %></td>
     <td><%= f.respuesta%></td>
   </tr>
     <%end%>
 </table>
+

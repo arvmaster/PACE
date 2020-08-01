@@ -47,6 +47,10 @@ ActiveRecord::Schema.define(version: 2020_07_28_081758) do
 
   create_table "cuestionarios", force: :cascade do |t|
     t.string "nombre_cues"
+    t.integer "eda_a"
+    t.integer "eda_t"
+    t.integer "eda_r"
+    t.integer "eda_p"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
@@ -92,6 +96,7 @@ ActiveRecord::Schema.define(version: 2020_07_28_081758) do
 
   create_table "pregunta_cuestionarios", force: :cascade do |t|
     t.text "pregunta_cues"
+    t.boolean "casilla"
     t.text "respuesta"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

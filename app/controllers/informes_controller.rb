@@ -19,9 +19,8 @@ class InformesController < ApplicationController
     @informe = Informe.create(informe_params)
     @informe.user_id = current_user.id
     if @informe.save
-      preguntas = [{pregunta_inf: '¿quien soy?',respuesta: '' ,informe_id: @informe.id },
-                   {pregunta_inf: '¿Donde estoy?',respuesta: '' ,informe_id: @informe.id }]
-      @cpreguntas = PreguntaInforme.create(preguntas)
+      preguntas = [{pregunta_inf: '¿quien soy?',respuesta: '' ,informe_id: @informe.id }, {pregunta_inf: '¿Donde estoy?',respuesta: '' ,informe_id: @informe.id }]
+      @ipreguntas = PreguntaInforme.create(preguntas)
       flash[:success] = "Informe Creado"
       redirect_to @informe
     else
@@ -44,8 +43,6 @@ class InformesController < ApplicationController
       render :edit
     end
   end
-
-
   #def inactivo
   #informe.destroy
 
@@ -53,18 +50,14 @@ class InformesController < ApplicationController
   #  @informe.save
   #     redirect_to informes_path, success: "Se ha desvinculado el usuario"
   #end
-
-
   def destroy
     Informe.find(params[:id]).destroy
   end
-
   private
 
   def informe_params
     params.require(:informe).permit(:nombre_inf, :user_id)
   end
-
 end
 
 
