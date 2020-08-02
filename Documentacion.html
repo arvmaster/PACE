@@ -1,0 +1,55 @@
+Editar multiples elementos "through:"
+
+Paso 1:Elementos en la vista
+
+    <h1>Products</h1>
+    /Formulario que envia la información indicando un method (un metodo APARTE de los basicos)
+    el "Tipo" de metodo es "put" porque actualizaremos el valor los elementos(productos en este caso/
+    <%= form_tag discontinue_products_path, method: :put do%>
+        <table>
+            <tr>
+                <th></th>                                            /Casilla de las preguntas
+                <th>Nombre de los Elementos</th>                     /Nombre del producto
+                .       .       .       .       .       .       .    /  .       .       .
+            </tr>
+            <% @products.each do |product| %>
+                /Se almacena en un arreglo con los valores  que se enviara al controlador,pasamos el id del
+                elemento para saber cual modificar, en este caso del producto/
+              <tr>
+                <td><%= check_box_tag "products_ids[]", product.id %><td>
+                <td><%= product.name %></td>                         /Nombre del producto
+                .       .       .       .       .       .       .    /  .       .       .
+              </tr>
+            <% end %>
+        </table>
+        /Para enviar el arreglo con "ids" que se modificaran/
+        <%= submit_tag "Discontinue Checked"%>
+    <% end%>
+
+Paso 2: Definir la ruta "config/routes.rb"
+
+    /Se llama al "method" para que "LOS" elementos que cambiara se modifiquen
+    resources :products do
+                  collection do
+                      put :discontinue
+                  end
+               end
+
+Paso 3: Crear el Metodo en el controlador(Revisar completo para version actualizada)
+
+    -Se crea este metodo para llamar a todos los elementos que se marcaron desde el formulario
+    -"params[:product_ids]" Contiene la/s ".id" de los elementos que se actualizaran marcados en el formulario
+    -"Product.update_all" Actualizar "TODOS" los elementos en una sola Query (no entrega callbacks)
+     Objeto    Query       Atributo    Valor Nuevo    Elementos a actualizar(chek_box)
+        ↓        ↓             ↓            ↓                  ↓
+     Product.update_all( {discontinue:    true},     {id: params[:product_ids]})
+
+    def discontinue
+        Product.update_all({discontinue: true},{id: params[:product_ids]})
+    redirect_to products_url
+    end
+
+    #Version actualizada Query
+    Objeto    Cuales elemntos actualizar(chek_box)   Query    Atributo  Valor Nuevo
+      ↓                       ↓                        ↓           ↓        ↓
+    Product.where(id:  params[:products_ids])     .update_all(discontinue: true)

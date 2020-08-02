@@ -11,7 +11,12 @@ Rails.application.routes.draw do
   resources :inicio
   resources :archivos
   resources :cuestionarios
-  resources :pregunta_cuestionarios
+  resources :pregunta_cuestionarios do
+               collection do
+                 put :valor
+               end
+             end
+
   resources :datos_carreras
   resources :recintos
   resources :estudios

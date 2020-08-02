@@ -58,7 +58,7 @@ class CuestionariosController < ApplicationController
   private
 
   def cuestionario_params
-    params.require(:cuestionario).permit(:nombre_cues, :casilla, :respuesta, :user_id)
+    params.require(:cuestionario).permit( :nombre_cues,:eda_a,:eda_t,:eda_r,:eda_p,:user_id)
   end
 
 end
