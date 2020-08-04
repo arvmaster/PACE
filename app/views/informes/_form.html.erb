@@ -1,9 +1,21 @@
 <%= form_for @informe do |f| %>
-
-        <div class="field">
-          <%= f.label :Nombre_informe %></br>
-          <%= f.select(:nombre_inf,["Informe Semanal","Informe Mensual"], {}, { :class => 'select' }) %>
-        </div>
-
-    <%= f.submit 'Enviar', :class => 'btn btn-primary' %>
+    <div class="field">
+      <%= f.label :Nombre_informe %>
+      <%= f.select(:nombre_inf,["Informe Semanal","Informe Mensual"], {}, { :class => 'select' }) %>
+    </div>
+    <%= f.fields_for :pregunta_informes do |p|  %>
+       <div>
+          <% if current_user.nivel_estudio !="Educacion Superior" %>
+              <%= p.text_field :pregunta_inf, class: "form-control"%>
+              <%= p.hidden_field :respuesta, class: "form-control" %>
+          <%else%>
+              <%= p.label :Pregunta %>
+              <%= p.text_field :pregunta_inf, class: "form-control" %>
+              <%= p.label :Respuesta %>
+              <%= p.text_field :respuesta, class: "form-control"%>
+          <%end%>
+       </div>
+    <%end%>
+    <div><%= f.submit "Enviar", :class => 'btn btn-primary' %></div>
 <% end %>
+

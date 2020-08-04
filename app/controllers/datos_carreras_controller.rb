@@ -54,7 +54,7 @@ class DatosCarrerasController < ApplicationController
   private
 
   def datos_carrera_params
-    params.require(:datos_carrera).permit(:nombre_carrera, :area, :institucion,  :ret_1a, :pun_last_ma,  :duracion_for,  :duracion_real,  :emp_1a,  :emp_2a, :mat_h, :mat_m, :tit_h, :tit_m, :ing_1a, :ing_5a, :ing_10a, :user_id)
+    params.require(:datos_carrera).permit(:nombre_carrera, :area, :institucion, :ret_1a, :pun_last_ma, :duracion_for, :duracion_real, :emp_1a, :emp_2a, :mat_h, :mat_m, :tit_h, :tit_m, :ing_1a, :ing_5a, :ing_10a, :user_id)
   end
 
 end

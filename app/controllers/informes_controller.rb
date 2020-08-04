@@ -7,20 +7,19 @@ class InformesController < ApplicationController
 
   def show
     @informe = Informe.find(params[:id])
-    @preguntas = PreguntaInforme.where(informe_id: @informe.id)
   end
 
   def new
     @informe = Informe.new
-    @cpreguntas = PreguntaInforme.new
+    6.times { @informe.pregunta_informes.build }
   end
 
   def create
     @informe = Informe.create(informe_params)
     @informe.user_id = current_user.id
     if @informe.save
-      preguntas = [{pregunta_inf: '¿quien soy?',respuesta: '' ,informe_id: @informe.id }, {pregunta_inf: '¿Donde estoy?',respuesta: '' ,informe_id: @informe.id }]
-      @ipreguntas = PreguntaInforme.create(preguntas)
+      #preguntas = [{pregunta_inf: '¿quien soy?',respuesta: '' ,informe_id: @informe.id }, {pregunta_inf: '¿Donde estoy?',respuesta: '' ,informe_id: @informe.id }]
+      #@ipreguntas = PreguntaInforme.create(preguntas)
       flash[:success] = "Informe Creado"
       redirect_to @informe
     else
@@ -56,7 +55,7 @@ class InformesController < ApplicationController
   private
 
   def informe_params
-    params.require(:informe).permit(:nombre_inf, :user_id)
+    params.require(:informe).permit(:nombre_inf, :user_id, pregunta_informes_attributes: [:id, :pregunta_inf, :respuesta])
   end
 end
 

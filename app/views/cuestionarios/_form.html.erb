@@ -5,7 +5,7 @@
     <th>Respuesta</th>
   </tr>
 <%= form_for @cuestionario do |f| %>
-  <%= f.text_field :nombre_cues , class: "form-control"%>
+    <tr><%= f.text_field :nombre_cues , class: "form-control"%></tr>
       <%= f.fields_for :pregunta_cuestionarios do |p|  %>
         <tr>
               <td><%= p.check_box :casilla %></td>
@@ -20,7 +20,9 @@
             <%end%>
         </tr>
       <%end%>
+    <table>
   <%= f.submit 'Enviar', :class => 'btn btn-primary' %>
+    </table>
 <% end %>
 </table>
 

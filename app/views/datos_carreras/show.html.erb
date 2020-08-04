@@ -12,12 +12,11 @@
     <td><%= link_to 'Editar', edit_datos_carrera_path(@datos_carrera.id) %></td>
   </tr>
 
-
 </table>
 <div>
   <%= column_chart(
-                  {"Hombres" => @datos_carrera.matricula_hombre,
-                   "Mujeres" => @datos_carrera.matricula_mujer}, width: "800px", height: "500px"
+                  {"Hombres" => @datos_carrera.mat_h,
+                   "Mujeres" => @datos_carrera.mat_m}, width: "800px", height: "500px"
                   )
   %>
 </div>

@@ -22,13 +22,13 @@
     <list default="true" id="aac5b097-7438-4f2a-bd05-44f8ce57767f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Documentacion.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/cuestionarios_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/cuestionarios_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/pregunta_cuestionarios_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/pregunta_cuestionarios_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/cuestionario.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/cuestionario.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/informes_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/informes_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/informe.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/informe.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/cuestionarios/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/cuestionarios/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/cuestionarios/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/cuestionarios/edit.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/datos_carreras/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/datos_carreras/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/datos_carreras/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/datos_carreras/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/informes/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/informes/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/informes/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/informes/show.html.erb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,7 +193,8 @@
       <workItem from="1596311376264" duration="598000" />
       <workItem from="1596320801494" duration="8368000" />
       <workItem from="1596410513940" duration="5072000" />
-      <workItem from="1596485920529" duration="12730000" />
+      <workItem from="1596485920529" duration="13734000" />
+      <workItem from="1596564273369" duration="8458000" />
     </task>
     <servers />
   </component>
@@ -217,10 +218,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="21" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1595033895860" />
-    <state x="393" y="164" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1595924617075">
+    <state x="393" y="164" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1596578310845">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="393" y="164" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1595924617075" />
+    <state x="393" y="164" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1596578310845" />
     <state x="463" y="117" key="FileChooserDialogImpl" timestamp="1595886589143">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
