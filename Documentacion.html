@@ -1,4 +1,81 @@
-Editar multiples elementos "through:"
+Modelos "Nested" a otro modelo, modificar y crear en conjunto (ejem: "user" has_many "adresses")
+
+Paso 1:Definir los modelos
+
+Me basare en los usados en este proyecto,solo utlizando las partes necesarias para explicar sin tomar
+encuenta otros elementos como uniones a otros modelos.
+En este caso los modelos son "Cuestionario" y "PreguntaCuestionario".
+Su Relacion seria :  "1 Cuestionario tiene *N* PreguntasCuestionario "
+                     "1 PreguntaCuestionario tiene *1* Cuestionario "(cada cuestionario se responde distinto)
+ --------------------------------------------------------------------------------------------------
+|Atributos Cuestionario:  nombre_cues :string | Atributos PreguntaCuestionario: pregunta_cues :text |
+|                                             |                                 casilla :boolean    |
+|                                             |                                 respuesta :string   |
+|                                             |                                 cuestionario_id :int|
+ ---------------------------------------------------------------------------------------------------
+
+Por lo cual su relacion seria one-to-many y sus modelos serian ademas de solo estar relacionado posibles de modifica
+agregando "accepts_nested_attributes_for":
+
+class Cuestionario < ApplicationRecord
+    has_many :pregunta_cuestionarios
+    accepts_nested_attributes_for :pregunta_cuestionarios
+end
+
+class PreguntaCuestionario < ApplicationRecord
+    belongs_to :cuestionario
+end
+
+Explicado en "9 Building Complex Forms" menciona que este Helper genera un "Method" que en este caso se llamaria
+"pregunta_cuestionario_attributes=" que permite al Cuestionario: create,update(destroy opcional aparte)
+                                                                 PreguntasCuestionario asociadas a el.
+
+Paso 2: Formulario
+
+En este caso se utiliza form_for para el formulario del Modelo "Padre", y fields_for para el "Hijo"
+
+<%= form_with model: @cuestionario do |f| %>
+/Preguntas Cuestionario:
+<ul>
+    <%= f.fields_for :pregunta_cuestionarios do |p| %>
+    <li>
+        <%= p.check_box :casilla %>
+
+        <%= p.label :Pregunta_Cuestionario %>
+        <%= p.text_field :pregunta_cues %>
+
+        <%= p.label :Respuesta %>
+        <%= p.text_field :respuesta %>
+        ...
+    </li>
+    <% end %>
+</ul>
+<% end %>
+
+
+Paso 3: Parametos en el Controlador Padre (Necesario llave foranea entre modelos)
+
+Como en el ejemplo, dejaremos que se creen 2 Preguntas al llamarse el formulario
+(en caso de querer solo 1 se utiliza solo "@cuestionario.pregunta_cuestionarios.build"
+
+def create
+    @cuestionario = Cuestionario.new(cuestionario_params)
+    2.times { @cuestionario.pregunta_cuestionarios.build }
+end
+
+private
+def person_params
+    params.require(:cuestionario).permit(:nombre_cues, pregunta_cuestionarios_attributes: [:id, :pregunta_cues,
+                                                                                            :casilla, :respuesta])
+end
+
+NO ES NECESARIO agregar NADA MÁS en los demás "Methods" debido a que Rails es lo suficientemente inteligente
+y todos los elementos que esten asignados a es este "Cuestionario" los llamara y estaran a disposición de hacer
+un update a los atributos del "Cuestionario" o "PreguntasCuestionario" correspondientes
+
+
+
+Editar multiples elementos con check_box
 
 Paso 1:Elementos en la vista
 
@@ -16,7 +93,7 @@ Paso 1:Elementos en la vista
                 /Se almacena en un arreglo con los valores  que se enviara al controlador,pasamos el id del
                 elemento para saber cual modificar, en este caso del producto/
               <tr>
-                <td><%= check_box_tag "products_ids[]", product.id %><td>
+                <td><%= check_box_tag "product_ids[]", product.id %><td>
                 <td><%= product.name %></td>                         /Nombre del producto
                 .       .       .       .       .       .       .    /  .       .       .
               </tr>
@@ -52,4 +129,24 @@ Paso 3: Crear el Metodo en el controlador(Revisar completo para version actualiz
     #Version actualizada Query
     Objeto    Cuales elemntos actualizar(chek_box)   Query    Atributo  Valor Nuevo
       ↓                       ↓                        ↓           ↓        ↓
-    Product.where(id:  params[:products_ids])     .update_all(discontinue: true)
+    Product.where(id:  params[:product_ids])     .update_all(discontinue: true)
+
+
+Modelos "Nested" a otro modelo, modificar y crear en conjunto (ejem: "user" has_many "adresses")
+Links:
+https://guides.rubyonrails.org/form_helpers.html  "9 Building Complex Forms"
+https://api.rubyonrails.org/classes/ActiveRecord/NestedAttributes/ClassMethods.html
+
+                            Avanzado:Multiples Creaciones con Javascript
+(¿Porque con javascript? El final de "9 Building Complex Forms" se menciona, anteriormente adjuntado el link)
+                                                    ↓
+        → http://jyrkis-blogs.blogspot.com/2014/06/adding-fields-on-fly-with-ruby-on-rails.html ←
+                                                    ↑
+
+POR PROBAR → https://medium.com/@jhcheung/using-fields-for-to-edit-multiple-records-without-a-parent-record-818b8d0e98a3
+POR REVISAR →https://apidock.com/rails/ActionView/Helpers/FormHelper/fields_for
+
+
+Editar multiples elementos con check_box
+Links:
+http://railscasts.com/episodes/165-edit-multiple-revised?autoplay=true "Editar con checkbox o redirect a formularios"

@@ -1,7 +1,26 @@
+<table>
+  <tr>
+    <th></th>
+    <th>Pregunta</th>
+    <th>Respuesta</th>
+  </tr>
 <%= form_for @cuestionario do |f| %>
-      <div class="form-group">
-        <%= f.label :Nombre_cuestionario %>
-        <%= f.text_field :nombre_cues %>
-      </div>
-    <%= f.submit 'Enviar', :class => 'btn btn-primary' %>
+  <%= f.text_field :nombre_cues , class: "form-control"%>
+      <%= f.fields_for :pregunta_cuestionarios do |p|  %>
+        <tr>
+              <td><%= p.check_box :casilla %></td>
+            <% if current_user.rol =="Educacion Superior" %>
+              <td><%= p.text_field :pregunta_cues, class: "form-control"%></td>
+               <%= p.hidden_field :respuesta, class: "form-control" %>
+               <%= p.hidden_field :cuestionario_id, disabled: true %>
+            <%else%>
+              <td><%= p.text_field :pregunta_cues, class: "form-control" %></td>
+              <td><%= p.text_field :respuesta, class: "form-control"%></td>
+              <td><%= p.hidden_field :cuestionario_id, disabled: true %></td>
+            <%end%>
+        </tr>
+      <%end%>
+  <%= f.submit 'Enviar', :class => 'btn btn-primary' %>
 <% end %>
+</table>
+

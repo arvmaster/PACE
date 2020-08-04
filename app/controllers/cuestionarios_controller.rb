@@ -11,17 +11,17 @@ class CuestionariosController < ApplicationController
 
   def new
     @cuestionario = Cuestionario.new
+    2.times { @cuestionario.pregunta_cuestionarios.build }
   end
 
   def create
     @cuestionario = Cuestionario.create(cuestionario_params)
     @cuestionario.user_id = current_user.id
+    @cuestionario.eda_a = 0
+    @cuestionario.eda_r = 0
+    @cuestionario.eda_p = 0
+    @cuestionario.eda_t = 0
     if @cuestionario.save
-      preguntas = [{pregunta_cues: 'Muchas veces actúo sin mirar las consecuencias.',casilla: false ,respuesta: 'a' ,cuestionario_id: @cuestionario.id },
-                   {pregunta_cues: 'Disfruto cuando tengo tiempo para preparar mi trabajo y realizarlo a conciencia.',casilla: false ,respuesta: 'r' ,cuestionario_id: @cuestionario.id },
-                   {pregunta_cues: 'Estoy seguro/a de lo que es bueno y lo que es malo, lo que está bien y lo que está mal',casilla: false ,respuesta: 't' ,cuestionario_id: @cuestionario.id },
-                   {pregunta_cues: 'Tengo fama de decir lo que pienso claramente y sin rodeos.',casilla: false ,respuesta: 'p' ,cuestionario_id: @cuestionario.id },]
-      @cpreguntas = PreguntaCuestionario.create(preguntas)
       flash[:success] = "Cuestionario Creado"
       redirect_to @cuestionario
     else
@@ -58,7 +58,8 @@ class CuestionariosController < ApplicationController
   private
 
   def cuestionario_params
-    params.require(:cuestionario).permit( :nombre_cues,:eda_a,:eda_t,:eda_r,:eda_p,:user_id)
+    params.require(:cuestionario).permit( :nombre_cues,:eda_a,:eda_t,:eda_r,:eda_p,:user_id,
+                                          pregunta_cuestionarios_attributes: [:id, :pregunta_cues, :casilla, :respuesta])
   end
 
 end

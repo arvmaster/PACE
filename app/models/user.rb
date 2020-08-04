@@ -3,8 +3,8 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   has_many :archivos
   has_many :datos_carreras
-  belongs_to :estudio
-  belongs_to :recinto
+  belongs_to :estudio, optional: true
+  belongs_to :recinto, optional: true
   has_many :informes
   has_many :pregunta_informes, through: :informes
   has_many :cuestionarios

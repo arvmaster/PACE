@@ -21,10 +21,14 @@
   <component name="ChangeListManager">
     <list default="true" id="aac5b097-7438-4f2a-bd05-44f8ce57767f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentacion.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/cuestionarios_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/cuestionarios_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/pregunta_cuestionarios_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/pregunta_cuestionarios_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/pregunta_cuestionarios/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pregunta_cuestionarios/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/cuestionario.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/cuestionario.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/cuestionarios/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/cuestionarios/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/cuestionarios/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/cuestionarios/edit.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,7 +191,9 @@
       <workItem from="1596140153315" duration="20235000" />
       <workItem from="1596230287508" duration="6050000" />
       <workItem from="1596311376264" duration="598000" />
-      <workItem from="1596320801494" duration="8192000" />
+      <workItem from="1596320801494" duration="8368000" />
+      <workItem from="1596410513940" duration="5072000" />
+      <workItem from="1596485920529" duration="12730000" />
     </task>
     <servers />
   </component>
@@ -239,9 +245,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="157" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1596013237727" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1596184319167">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1596490895335">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1596184319167" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1596490895335" />
   </component>
 </project>
