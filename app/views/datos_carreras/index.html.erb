@@ -15,7 +15,7 @@
   <% @datos_carreras.each do |f| %>
     <tr>
       <td><%= f.nombre_carrera %></td>
-      <td><%= f.matricula_hombre %></td>
+      <td><%= f.mat_h %></td>
       <td><%= link_to 'Ver', datos_carrera_path(f) %></td>
       <td><%= link_to 'Editar', edit_datos_carrera_path(f) %></td>
     </tr>

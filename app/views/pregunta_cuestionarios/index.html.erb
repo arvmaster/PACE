@@ -3,16 +3,13 @@
   <%= link_to 'Principal', controller: 'inicio' %> |
   <%= link_to 'Crear', new_pregunta_cuestionario_path %>
 </p>
-<%= form_tag valor_pregunta_cuestionarios_path, method: :put do%>
   <table>
     <tr>
-      <th></th>
       <th>Valor</th>
       <th>Pregunta</th>
     </tr>
     <% @pregunta_cuestionarios.each do |f| %>
       <tr>
-        <td><%= check_box_tag "preguntas_ids[]", f.id %><td>
         <td><%= f.casilla ? "Si" : "No" %></td>
         <td><%= f.pregunta_cues %></td>
         <td><%= link_to 'Ver', pregunta_cuestionario_path(f) %></td>
@@ -20,6 +17,3 @@
       </tr>
     <% end %>
   </table>
-  /Para enviar el arreglo con "ids" que se modificaran/
-  <%= submit_tag "Valor"%>
-<% end%>

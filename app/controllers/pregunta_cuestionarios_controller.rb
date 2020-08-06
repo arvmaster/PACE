@@ -52,10 +52,10 @@ class PreguntaCuestionariosController < ApplicationController
     PreguntaCuestionario.find(params[:id]).destroy
   end
 
-  def valor
-    PreguntaCuestionario.where(id: params[:preguntas_ids]).update_all(casilla: true)
-    redirect_to pregunta_cuestionarios_url
-  end
+  #def valor
+  #  PreguntaCuestionario.where(id: params[:preguntas_ids]).update_all(casilla: true)
+  #  redirect_to pregunta_cuestionarios_url
+  #end
 
   private
 

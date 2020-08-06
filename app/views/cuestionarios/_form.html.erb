@@ -1,28 +1,24 @@
-<table>
-  <tr>
-    <th></th>
-    <th>Pregunta</th>
-    <th>Respuesta</th>
-  </tr>
+<form class="form-inline">
 <%= form_for @cuestionario do |f| %>
-    <tr><%= f.text_field :nombre_cues , class: "form-control"%></tr>
+
+    <%= f.text_field :nombre_cues , class: "form-control"%>
       <%= f.fields_for :pregunta_cuestionarios do |p|  %>
-        <tr>
-              <td><%= p.check_box :casilla %></td>
+      <div class="form-group">
+              <%= p.check_box :casilla %>
             <% if current_user.rol =="Educacion Superior" %>
-              <td><%= p.text_field :pregunta_cues, class: "form-control"%></td>
+              <%= p.text_field :pregunta_cues, class: "form-control"%>
                <%= p.hidden_field :respuesta, class: "form-control" %>
                <%= p.hidden_field :cuestionario_id, disabled: true %>
             <%else%>
-              <td><%= p.text_field :pregunta_cues, class: "form-control" %></td>
-              <td><%= p.text_field :respuesta, class: "form-control"%></td>
-              <td><%= p.hidden_field :cuestionario_id, disabled: true %></td>
+              <%= p.text_field :pregunta_cues, class: "form-control" %>
+              <%= p.text_field :respuesta, class: "form-control"%>
+              <%= p.hidden_field :cuestionario_id, disabled: true %>
             <%end%>
-        </tr>
+        </div>
       <%end%>
-    <table>
-  <%= f.submit 'Enviar', :class => 'btn btn-primary' %>
-    </table>
+
+  <%= f.submit 'Enviar', :class => 'btn btn-default' %>
+
 <% end %>
-</table>
+</form>
 

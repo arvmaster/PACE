@@ -11,6 +11,7 @@ gem 'pg'
 gem 'carrierwave'
 gem "mini_magick"
 gem "chartkick"
+gem 'run_cl'
 #hasta aca
 # Use Puma as the app server
 gem 'puma', '~> 3.11'

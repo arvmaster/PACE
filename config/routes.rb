@@ -11,11 +11,11 @@ Rails.application.routes.draw do
   resources :inicio
   resources :archivos
   resources :cuestionarios
-  resources :pregunta_cuestionarios do
-               collection do
-                 put :valor
-               end
-             end
+  resources :pregunta_cuestionarios #do  descomentar si se quieren cambiar valores de forma masiva checkbox
+  #collection do
+  #              put :valor
+  #            end
+  #           end
 
   resources :datos_carreras
   resources :recintos

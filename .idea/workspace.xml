@@ -20,15 +20,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aac5b097-7438-4f2a-bd05-44f8ce57767f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/PACE.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PACE.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/informes_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/informes_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/informe.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/informe.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/cuestionarios/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/cuestionarios/_form.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/datos_carreras/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/datos_carreras/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/datos_carreras/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/datos_carreras/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/datos_carreras/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/datos_carreras/new.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/datos_carreras/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/datos_carreras/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/informes/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/informes/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/informes/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/informes/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/users/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,19 +57,19 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Sistema-Alerta-Temprana-UTEM" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Datos por carrera/estudios.csv" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\alexander\Desktop\Tesis\Plataforma Pace\PACE\app\assets\stylesheets" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\alexander\Desktop\Tesis\Plataforma Pace\PACE\app\views\recintos" />
       <recent name="C:\Users\alexander\Desktop\Tesis\Plataforma Pace\PACE\app\views\pregunta_cuestionarios" />
       <recent name="C:\Users\alexander\Desktop\Tesis\Plataforma Pace\PACE\app\views\pregunta_informes" />
       <recent name="C:\Users\alexander\Desktop\Tesis\Plataforma Pace\PACE\app\views\informes" />
       <recent name="C:\Users\alexander\Desktop\Tesis\Plataforma Pace\PACE\app\views\estudios" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\alexander\Desktop\Tesis\Plataforma Pace\PACE\app\assets\stylesheets" />
     </key>
   </component>
   <component name="RubyModuleManagerSettings">
@@ -194,7 +199,10 @@
       <workItem from="1596320801494" duration="8368000" />
       <workItem from="1596410513940" duration="5072000" />
       <workItem from="1596485920529" duration="13734000" />
-      <workItem from="1596564273369" duration="8458000" />
+      <workItem from="1596564273369" duration="10474000" />
+      <workItem from="1596582584488" duration="676000" />
+      <workItem from="1596637839956" duration="20471000" />
+      <workItem from="1596742248092" duration="885000" />
     </task>
     <servers />
   </component>
@@ -222,10 +230,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="393" y="164" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1596578310845" />
-    <state x="463" y="117" key="FileChooserDialogImpl" timestamp="1595886589143">
+    <state x="463" y="117" key="FileChooserDialogImpl" timestamp="1596673554183">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1595886589143" />
+    <state x="463" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1596673554183" />
     <state width="1322" height="174" key="GridCell.Tab.0.bottom" timestamp="1595035553499">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -246,9 +254,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="157" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1596013237727" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1596490895335">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1596673951411">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1596490895335" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1596673951411" />
   </component>
 </project>

@@ -1,4 +1,16 @@
 <%= form_for @user do |f| %>
+
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2>No se pudo realizar la acción: <%= pluralize(@user.errors.count, "Error/es") %> </h2>
+      <ul>
+        <% @user.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+
+  <% end %>
   <div class="field">
     <%= f.label :Nombre %>
     <%= f.text_field :nombre_user,class: "form-control" %>
@@ -19,10 +31,10 @@
     <%= f.text_field :rut,class: "form-control" %>
   </div>
   <% if user_signed_in? %>
-      <% if current_user.rol != "Estudiante" %>
+      <% if current_user.rol != "Admin" %>
           <div class="field">
             <%= f.label :Rol %><br />
-            <%= f.select(:rol,["PEM", "AES", "Tutor Disciplinar", "Tutor Par", "Coordinación", "Profesional Acompañamiento Psicoeducativo", "Estudiante"], {}, { :class => 'select' }) %>
+            <%= f.select(:rol,["Admin"",PEM", "AES", "Tutor Disciplinar", "Tutor Par", "Coordinación", "Profesional Acompañamiento Psicoeducativo", "Estudiante"], {}, { :class => 'select' }) %>
           </div>
       <%end%>
   <%end%>
@@ -87,9 +99,9 @@
     <%= f.text_field :telefono,class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="checkbox">
     <%= f.label :estado %>
-    <%= f.check_box :estado,class: "form-control" %>
+    <%= f.check_box :estado %>
   </div>
   <%= f.submit 'Enviar', :class => 'btn btn-primary' %>
 <% end %>
