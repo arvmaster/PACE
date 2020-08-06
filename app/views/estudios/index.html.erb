@@ -23,3 +23,7 @@
   <% end %>
 
 </table>
+<%= form_tag import_estudios_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Import" %>
+<% end %>

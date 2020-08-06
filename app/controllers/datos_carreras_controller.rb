@@ -51,6 +51,11 @@ class DatosCarrerasController < ApplicationController
     DatosCarrera.find(params[:id]).destroy
   end
 
+  def import
+    DatosCarrera.import(params[:file])
+    redirect_to datos_carreras_path, notice: "Datos importados."
+  end
+
   private
 
   def datos_carrera_params

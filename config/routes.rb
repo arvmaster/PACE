@@ -17,9 +17,14 @@ Rails.application.routes.draw do
   #            end
   #           end
 
-  resources :datos_carreras
+  resources :datos_carreras do
+    collection {post :import}
+  end
+
   resources :recintos
-  resources :estudios
+  resources :estudios do
+    collection {post :import}
+  end
   resources :informes
   resources :pregunta_informes
 

@@ -131,6 +131,43 @@ Paso 3: Crear el Metodo en el controlador(Revisar completo para version actualiz
       ↓                       ↓                        ↓           ↓        ↓
     Product.where(id:  params[:product_ids])     .update_all(discontinue: true)
 
+Subir Masivamente un CSV con Records
+
+Paso 1: Agregar en la Vista donde subir el archivo de carga
+
+<%= form_tag import_estudios_path, multipart: true do %>
+    <%= file_field_tag :file %>
+    <%= submit_tag "Import" %>
+<% end %>
+
+Paso 2: Llamada del metodo en "Routes"
+
+resources :estudios do
+    collection {post :import}
+end
+
+Paso 3 Agregar Metodo en el Controlador:
+
+def import
+    Estudio.import(params[:file])
+    redirect_to estudios_path, notice: "Datos importados."
+end
+
+Paso 4 Creacion de los elementos SIN repetir :
+class Estudio < ApplicationRecord
+
+def self.import(file)
+        CSV.foreach(file.path, headers: true) do |row|
+            Estudio.create! row.to_hash
+        end
+    end
+end
+
+
+
+
+
+
 
 Modelos "Nested" a otro modelo, modificar y crear en conjunto (ejem: "user" has_many "adresses")
 Links:

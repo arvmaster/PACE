@@ -52,6 +52,11 @@ class EstudiosController < ApplicationController
     Estudio.find(params[:id]).destroy
   end
 
+  def import
+    Estudio.import(params[:file])
+    redirect_to estudios_path, notice: "Datos importados."
+  end
+
   private
 
   def estudio_params

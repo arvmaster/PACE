@@ -23,3 +23,8 @@
   <% end %>
 
 </table>
+
+<%= form_tag import_datos_carreras_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Import" %>
+<% end %>
