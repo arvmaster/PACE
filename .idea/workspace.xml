@@ -21,14 +21,12 @@
   <component name="ChangeListManager">
     <list default="true" id="aac5b097-7438-4f2a-bd05-44f8ce57767f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/datos_carreras_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/datos_carreras_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/estudios_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/estudios_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/datos_carrera.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/datos_carrera.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/estudio.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/estudio.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/estudios.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/estudios.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/datos_carreras/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/datos_carreras/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/estudios/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/estudios/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/application.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/application.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/datos_carreras/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/datos_carreras/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/users/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/index.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -198,7 +196,7 @@
       <workItem from="1596564273369" duration="10474000" />
       <workItem from="1596582584488" duration="676000" />
       <workItem from="1596637839956" duration="20471000" />
-      <workItem from="1596742248092" duration="2936000" />
+      <workItem from="1596742248092" duration="10516000" />
     </task>
     <servers />
   </component>

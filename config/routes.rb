@@ -6,7 +6,9 @@ Rails.application.routes.draw do
   root 'inicio#index'
 
   #users personalizados
-  resources :users
+  resources :users do
+    collection {post :import}
+  end
 
   resources :inicio
   resources :archivos

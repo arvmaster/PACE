@@ -1,22 +1,29 @@
 <td><%= link_to 'Carreras', datos_carreras_url %></td>
-<table>
+<table class="table table-condensed">
   <tr>
     <th>Nombre Carrera</th>
-    <th>Topico</th>
+    <th>Area</th>
+    <th>Institucion</th>
+    <th>Ultimo Matriculado</th>
+    <th>Retencion 1 Año</th>
+    <th>Duración</th>
   </tr>
-
-  <tr>
-    <td><%= @datos_carrera.nombre_carrera %></td>
-    <td><%= @datos_carrera.mat_h %></td>
-    <td><%= link_to 'Ver', datos_carrera_path(@datos_carrera.id) %></td>
-    <td><%= link_to 'Editar', edit_datos_carrera_path(@datos_carrera.id) %></td>
-  </tr>
-
+    <tr>
+      <td><%= @datos_carrera.nombre_carrera %></td>
+      <td><%= @datos_carrera.area %></td>
+      <td><%= @datos_carrera.institucion %></td>
+      <td><%= @datos_carrera.pun_last_ma %></td>
+      <td><%= @datos_carrera.ret_1a %></td>
+      <td><%= @datos_carrera.duracion_for %></td>
+      <%if current_user.rol == "Admin" %>
+        <td><%= link_to 'Editar', edit_datos_carrera_path(@datos_carrera) %></td>
+      <%end%> >
+    </tr>
 </table>
 <div>
   <%= column_chart(
                   {"Hombres" => @datos_carrera.mat_h,
-                   "Mujeres" => @datos_carrera.mat_m}, width: "800px", height: "500px"
+                   "Mujeres" => @datos_carrera.mat_m}, width: "500px", height: "300px"
                   )
   %>
 </div>

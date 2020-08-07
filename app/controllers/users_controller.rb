@@ -55,6 +55,11 @@ class UsersController < ApplicationController
     User.find(params[:id]).destroy
   end
 
+  def import
+    User.import(params[:file])
+    redirect_to users_path, notice: "Datos importados."
+  end
+
   private
 
   def user_params

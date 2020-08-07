@@ -1,30 +1,38 @@
 <h1>Datos Carrera</h1>
 
 <p>
-  <%= link_to 'Principal', controller: 'inicio' %> |
+  <%= link_to 'Principal', controller: 'inicio' %>
   <%= link_to 'Crear', new_datos_carrera_path %>
 </p>
 
-<table>
-
+<table class="table table-condensed">
   <tr>
     <th>Nombre Carrera</th>
-    <th>Topico</th>
+    <th>Area</th>
+    <th>Institucion</th>
+    <th>Ultimo Matriculado</th>
+    <th>Retencion 1 Año</th>
+    <th>Duración</th>
   </tr>
-
   <% @datos_carreras.each do |f| %>
-    <tr>
-      <td><%= f.nombre_carrera %></td>
-      <td><%= f.mat_h %></td>
-      <td><%= link_to 'Ver', datos_carrera_path(f) %></td>
-      <td><%= link_to 'Editar', edit_datos_carrera_path(f) %></td>
-    </tr>
-
-  <% end %>
-
+  <tr>
+    <td><%= f.nombre_carrera %></td>
+    <td><%= f.area %></td>
+    <td><%= f.institucion %></td>
+    <td><%= f.pun_last_ma %></td>
+    <td><%= f.ret_1a %></td>
+    <td><%= f.duracion_for %></td>
+    <td><%= link_to 'Ver', datos_carrera_path(f), class: "btn btn-info"  %></td>
+    <%if current_user.rol == "Admin" %>
+    <td><%= link_to 'Editar', edit_datos_carrera_path(f) %></td>
+     <%end%> >
+  </tr>
+  <%end%>
 </table>
 
+<div>
 <%= form_tag import_datos_carreras_path, multipart: true do %>
   <%= file_field_tag :file %>
   <%= submit_tag "Import" %>
 <% end %>
+</div>
