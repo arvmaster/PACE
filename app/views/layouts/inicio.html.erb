@@ -17,9 +17,9 @@
       <%= link_to 'COAP UTEM',root_path ,:class =>"navbar-brand"%>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><%=link_to 'Archivos',archivos_path %></li>
       <li><%= link_to 'Quienes Somos',root_path %></li>
-      <li><%= link_to 'Usuarios',users_path %></li>
+      <li><%= link_to 'Info Carreras',datos_carreras_path %></li>
+      <li><%=link_to 'Material Didactico',archivos_path %></li>
 
     </ul>
     <ul class="nav navbar-nav navbar-right">
@@ -33,12 +33,18 @@
     </ul>
   </div>
 </nav>
+<% if current_page?(root_path) %>
 <div class="container">
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
 </div>
-
 <%= yield %>
-
-</body>
+<%else %>
+  <div class="container">
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <%= yield %>
+  </div>
+<%end%>
+  </body>
 </html>

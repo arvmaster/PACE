@@ -6,7 +6,7 @@
   <%= link_to 'Crear', new_user_path %>  
 </p>
 
-<table>
+<table class="table table-of-contents">
 
   <tr>
     <th>Nombre Usuario</th>
@@ -24,9 +24,11 @@
   <% end %>
 
 </table>
+<% if current_user.rol == "Admin" %>
 <div>
   <%= form_tag import_users_path, multipart: true do %>
     <%= file_field_tag :file %>
     <%= submit_tag "Import" %>
   <% end %>
 </div>
+<%end%>
