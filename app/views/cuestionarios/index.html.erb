@@ -4,7 +4,7 @@
   <%= link_to 'Principal', controller: 'inicio' %> |
   <%= link_to 'Crear', new_cuestionario_path %>  
 </p>
-<table>
+<table class="table table-striped table-bordered">
 
   <tr>
     <th>Nombre Cuestionario</th>
@@ -13,7 +13,6 @@
 
   <% @cuestionarios.each do |f| %>
     <tr>
-      <td><%= check_box_tag "cuestionario_ids[]",f.id %></td>
       <td><%= f.nombre_cues %></td>
       <td><%= PreguntaCuestionario.where(cuestionario_id: f.id).count %></td>
       <td><%= link_to 'Ver', cuestionario_path(f) %></td>
@@ -21,5 +20,4 @@
     </tr>
 
   <% end %>
-<%=submit_tag "Editar Encuesta" %>
 </table>

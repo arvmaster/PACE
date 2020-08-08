@@ -1,5 +1,6 @@
 class CuestionariosController < ApplicationController
-  #before_action :authenticate_user!
+  before_action :authenticate_user!
+
   def index
     @cuestionarios = Cuestionario.all
   end
@@ -11,16 +12,12 @@ class CuestionariosController < ApplicationController
 
   def new
     @cuestionario = Cuestionario.new
-    2.times { @cuestionario.pregunta_cuestionarios.build }
+    3.times { @cuestionario.pregunta_cuestionarios.build }
   end
 
   def create
     @cuestionario = Cuestionario.create(cuestionario_params)
     @cuestionario.user_id = current_user.id
-    @cuestionario.eda_a = 0
-    @cuestionario.eda_r = 0
-    @cuestionario.eda_p = 0
-    @cuestionario.eda_t = 0
     if @cuestionario.save
       flash[:success] = "Cuestionario Creado"
       redirect_to @cuestionario
@@ -58,8 +55,7 @@ class CuestionariosController < ApplicationController
   private
 
   def cuestionario_params
-    params.require(:cuestionario).permit( :nombre_cues,:eda_a,:eda_t,:eda_r,:eda_p,:user_id,
-                                          pregunta_cuestionarios_attributes: [:id, :pregunta_cues, :casilla, :respuesta])
+    params.require(:cuestionario).permit( :nombre_cues, :eda_a, :eda_t, :eda_r, :eda_p, :user_id, pregunta_cuestionarios_attributes: [:id, :casilla, :pregunta_cues, :respuesta])
   end
 
 end

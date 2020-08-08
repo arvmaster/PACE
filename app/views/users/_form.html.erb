@@ -31,11 +31,16 @@
     <%= f.text_field :rut,class: "form-control" %>
   </div>
   <% if user_signed_in? %>
-      <% if current_user.rol != "Admin" %>
+      <% if current_user.rol == "Admin" %>
           <div class="field">
             <%= f.label :Rol %><br />
-            <%= f.select(:rol,["Admin"",PEM", "AES", "Tutor Disciplinar", "Tutor Par", "Coordinación", "Profesional Acompañamiento Psicoeducativo", "Estudiante"], {}, { :class => 'select' }) %>
+            <%= f.select(:rol,["Admin","PEM", "AES", "Tutor Disciplinar", "Tutor Par", "Coordinación", "Profesional Acompañamiento Psicoeducativo", "Estudiante"], {}, { :class => 'btn btn-default dropdown-toggle' }) %>
           </div>
+      <%else%>
+      <div class="field">
+        <%= f.label :Rol %><br />
+        <%= f.select(:rol,["Admin","PEM", "AES", "Tutor Disciplinar", "Tutor Par", "Coordinación", "Profesional Acompañamiento Psicoeducativo", "Estudiante"], {}, { :class => 'btn btn-default dropdown-toggle',disabled: true }) %>
+      </div>
       <%end%>
   <%end%>
 
@@ -61,17 +66,17 @@
 
   <div class="field">
     <%= f.label :Comuna %><br />
-    <%= f.select(:comuna,["Cerrillos", "Cerro Navia", "Conchalí", "El Bosque", "Estación Central", "Huechuraba", "Independencia", "La Cisterna", "La Florida", "La Granja", "La Pintana", "La Reina", "Las Condes", "Lo Barnechea", "Lo Espejo", "Lo Prado", "Macul", "Maipú", "Ñuñoa", "Pedro Aguirre Cerda", "Peñalolén", "Providencia", "Pudahuel","Santiago Centro", "Quilicura", "Quinta Normal", "Recoleta", "Renca", "San Joaquín", "San Miguel", "San Ramón", "Vitacura", "Puente Alto", "Pirque", "San José de Maipo", "Colina", "Lampa", "Tiltil", "San Bernardo", "Buin", "Calera de Tango", "Paine", "Melipilla", "Alhué", "Curacaví", "María Pinto", "San Pedro", "Talagante", "El Monte", "Isla de Maipo", "Padre Hurtado", "Peñaflor"], {}, { :class => 'select' }) %>
+    <%= f.select(:comuna,["Cerrillos", "Cerro Navia", "Conchalí", "El Bosque", "Estación Central", "Huechuraba", "Independencia", "La Cisterna", "La Florida", "La Granja", "La Pintana", "La Reina", "Las Condes", "Lo Barnechea", "Lo Espejo", "Lo Prado", "Macul", "Maipú", "Ñuñoa", "Pedro Aguirre Cerda", "Peñalolén", "Providencia", "Pudahuel","Santiago Centro", "Quilicura", "Quinta Normal", "Recoleta", "Renca", "San Joaquín", "San Miguel", "San Ramón", "Vitacura", "Puente Alto", "Pirque", "San José de Maipo", "Colina", "Lampa", "Tiltil", "San Bernardo", "Buin", "Calera de Tango", "Paine", "Melipilla", "Alhué", "Curacaví", "María Pinto", "San Pedro", "Talagante", "El Monte", "Isla de Maipo", "Padre Hurtado", "Peñaflor"], {}, { :class => 'btn btn-default dropdown-toggle' }) %>
   </div>
 
   <div class="field">
     <%= f.label :Recinto %><br />
-    <%= f.collection_select :recinto_id, Recinto.all, :id, :nombre_recinto, {:include_blank => "Seleccionar Recinto"},{:class => "select"}  %>
+    <%= f.collection_select :recinto_id, Recinto.all, :id, :nombre_recinto, {:include_blank => "Seleccionar Recinto"},{:class => "btn btn-default dropdown-toggle"}  %>
   </div>
 
   <div class="field">
     <%= f.label :Estudio %><br />
-    <%= f.collection_select :estudio_id, Estudio.all, :id, :nombre_estudio, {:include_blank => "Seleccionar Estudio"},{:class => "select"}  %>
+    <%= f.collection_select :estudio_id, Estudio.all, :id, :nombre_estudio, {:include_blank => "Seleccionar Estudio"},{:class => "btn btn-default dropdown-toggle"}  %>
   </div>
 
   <div class="field">
@@ -81,7 +86,7 @@
 
   <div class="field">
     <%= f.label :Nivel_de_estudio %><br />
-    <%= f.select(:nivel_estudio,["Superior","Media"], {}, { :class => 'select' }) %>
+    <%= f.select(:nivel_estudio,["Superior","Media"], {}, { :class => 'btn btn-default dropdown-toggle' }) %>
   </div>
 
   <div class="field">

@@ -5,30 +5,24 @@ Rails.application.routes.draw do
   }
   root 'inicio#index'
 
+  resources :inicio
+  resources :archivos
+  resources :cuestionarios
+  resources :pregunta_cuestionarios
+  resources :recintos
+  resources :informes
+  resources :pregunta_informes
   #users personalizados
   resources :users do
     collection {post :import}
   end
-
-  resources :inicio
-  resources :archivos
-  resources :cuestionarios
-  resources :pregunta_cuestionarios #do  descomentar si se quieren cambiar valores de forma masiva checkbox
-  #collection do
-  #              put :valor
-  #            end
-  #           end
-
   resources :datos_carreras do
     collection {post :import}
   end
-
-  resources :recintos
   resources :estudios do
     collection {post :import}
   end
-  resources :informes
-  resources :pregunta_informes
+
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

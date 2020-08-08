@@ -5,7 +5,7 @@
     </div>
     <%= f.fields_for :pregunta_informes do |p|  %>
        <div>
-          <% if current_user.nivel_estudio !="Educacion Superior" %>
+          <% if current_user.rol =="Admin" %>
               <%= p.text_field :pregunta_inf, class: "form-control"%>
               <%= p.hidden_field :respuesta, class: "form-control" %>
           <%else%>

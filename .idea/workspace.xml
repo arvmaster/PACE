@@ -21,12 +21,23 @@
   <component name="ChangeListManager">
     <list default="true" id="aac5b097-7438-4f2a-bd05-44f8ce57767f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/cuestionarios_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/cuestionarios_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/informes_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/informes_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/pregunta_cuestionarios_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/pregunta_cuestionarios_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/archivos/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/archivos/index.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/cuestionarios/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/cuestionarios/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/datos_carreras/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/datos_carreras/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/datos_carreras/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/datos_carreras/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/inicio.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/inicio.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/cuestionarios/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/cuestionarios/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/estudios/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/estudios/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/informes/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/informes/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/informes/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/informes/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/pregunta_cuestionarios/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pregunta_cuestionarios/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/pregunta_cuestionarios/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pregunta_cuestionarios/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/pregunta_informes/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pregunta_informes/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/recintos/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/recintos/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/users/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/_form.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/users/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,7 +207,9 @@
       <workItem from="1596582584488" duration="676000" />
       <workItem from="1596637839956" duration="20471000" />
       <workItem from="1596742248092" duration="12480000" />
-      <workItem from="1596825863021" duration="6980000" />
+      <workItem from="1596825863021" duration="9472000" />
+      <workItem from="1596871648417" duration="981000" />
+      <workItem from="1596921869216" duration="6526000" />
     </task>
     <servers />
   </component>

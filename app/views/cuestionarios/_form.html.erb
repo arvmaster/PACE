@@ -1,24 +1,25 @@
-<form class="form-inline">
 <%= form_for @cuestionario do |f| %>
-
-    <%= f.text_field :nombre_cues , class: "form-control"%>
+    <div class="field">
+      <%= f.label :Nombre_Cuestionario %>
+      <%= f.select(:nombre_cues,["EDA","Duda Existencial"], {}, { :class => 'select' }) %>
+    </div>
       <%= f.fields_for :pregunta_cuestionarios do |p|  %>
-      <div class="form-group">
+        <div>
               <%= p.check_box :casilla %>
-            <% if current_user.rol =="Admin" %>
-              <%= p.text_field :pregunta_cues, class: "form-control"%>
-               <%= p.hidden_field :respuesta, class: "form-control" %>
-               <%= p.hidden_field :cuestionario_id, disabled: true %>
+            <% if current_user.rol == 'Admin' %>
+                <%= p.label :Pregunta %>
+                <%= p.text_field :pregunta_cues, class: "form-control" %>
+                <%= p.label :Respuesta %>
+                <%= p.text_field :respuesta, class: "form-control"%>
             <%else%>
-              <%= p.text_field :pregunta_cues, class: "form-control" %>
-              <%= p.text_field :respuesta, class: "form-control"%>
-              <%= p.hidden_field :cuestionario_id, disabled: true %>
+                <%= p.label :Pregunta %>
+                <%= p.text_field :pregunta_cues, class: "form-control"%>
+                <%= p.hidden_field :respuesta, class: "form-control" %>
             <%end%>
         </div>
       <%end%>
 
-  <%= f.submit 'Enviar', :class => 'btn btn-default' %>
+  <div><%= f.submit 'Enviar', :class => 'btn btn-default' %></div>
 
 <% end %>
-</form>
 
