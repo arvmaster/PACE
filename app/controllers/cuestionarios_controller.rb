@@ -2,7 +2,7 @@ class CuestionariosController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @cuestionarios = Cuestionario.all
+    @cuestionarios = Cuestionario.where(user_id: 1)
   end
 
   def show
@@ -19,7 +19,12 @@ class CuestionariosController < ApplicationController
     @cuestionario = Cuestionario.create(cuestionario_params)
     @cuestionario.user_id = current_user.id
     if @cuestionario.save
-      flash[:success] = "Cuestionario Creado"
+       @cuestionario.eda_a = PreguntaCuestionario.where(cuestionario_id: @cuestionario.id , casilla: true ,respuesta: 'a').count
+       @cuestionario.eda_t = PreguntaCuestionario.where(cuestionario_id: @cuestionario.id , casilla: true ,respuesta: 't').count
+       @cuestionario.eda_r = PreguntaCuestionario.where(cuestionario_id: @cuestionario.id , casilla: true ,respuesta: 'r').count
+       @cuestionario.eda_p = PreguntaCuestionario.where(cuestionario_id: @cuestionario.id , casilla: true ,respuesta: 'p').count
+       @cuestionario.save
+       flash[:success] = "Cuestionario Creado"
       redirect_to @cuestionario
     else
       flash[:error] = "No se ha creado el cuestionario"
@@ -34,8 +39,13 @@ class CuestionariosController < ApplicationController
   def update
     @cuestionario = Cuestionario.find(params[:id])
     if @cuestionario.update(cuestionario_params)
+      @cuestionario.eda_a = PreguntaCuestionario.where(cuestionario_id: @cuestionario.id , casilla: true ,respuesta: 'a').count
+      @cuestionario.eda_t = PreguntaCuestionario.where(cuestionario_id: @cuestionario.id , casilla: true ,respuesta: 't').count
+      @cuestionario.eda_r = PreguntaCuestionario.where(cuestionario_id: @cuestionario.id , casilla: true ,respuesta: 'r').count
+      @cuestionario.eda_p = PreguntaCuestionario.where(cuestionario_id: @cuestionario.id , casilla: true ,respuesta: 'p').count
+      @cuestionario.save
       flash[:success] = "Se actualizo el cuestionario"
-      redirect_to cuestionarios_url
+      redirect_to @cuestionario
     else
       flash[:error] = "No se modifico el cuestionario"
       render :edit

@@ -11,7 +11,11 @@ class InformesController < ApplicationController
 
   def new
     @informe = Informe.new
-    6.times { @informe.pregunta_informes.build }
+    #6.times { @informe.pregunta_informes.build }
+    @informe.pregunta_informes.build(pregunta_inf: '¿Que acontecio en el evento/reunion?',respuesta: '' )
+    @informe.pregunta_informes.build(pregunta_inf: '¿Se logro realizar en el tiempo establecido?',respuesta: '' )
+    @informe.pregunta_informes.build(pregunta_inf: '¿Se logro el objetivo del evento/reunión?',respuesta: '' )
+    @informe.pregunta_informes.build(pregunta_inf: '¿Quedaron elemento a resolver?',respuesta: '' )
   end
 
   def create
