@@ -20,14 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aac5b097-7438-4f2a-bd05-44f8ce57767f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/PACE.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PACE.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/cuestionarios_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/cuestionarios_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/informes_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/informes_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/cuestionarios/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/cuestionarios/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/informes/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/informes/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/informes/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/informes/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/users/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/archivo.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/archivo.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/cuestionario.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/cuestionario.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/cuestionarios/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/cuestionarios/_form.html.erb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,9 +252,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="157" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1596013237727" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1596673951411">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1597173878239">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1596673951411" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1597173878239" />
   </component>
 </project>

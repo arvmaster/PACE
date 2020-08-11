@@ -1,7 +1,12 @@
 <%= form_for @cuestionario do |f| %>
     <div class="field">
       <%= f.label :Nombre_Cuestionario %>
-      <%= f.select(:nombre_cues,["EDA","Duda Existencial"], {}, { :class => 'select' }) %>
+      <% if current_user.rol == 'Admin' %>
+          <%= f.text_field :nombre_cues, :class => 'form-control' %>
+        <%else%>
+          <%= f.select(:nombre_cues,["EDA","Duda Existencial"], {}, { :class => 'btn btn-default dropdown-toggle' }) %>
+      <%end%>
+
     </div>
       <%= f.fields_for :pregunta_cuestionarios do |p|  %>
         <div>

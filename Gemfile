@@ -12,6 +12,8 @@ gem 'carrierwave'
 gem "mini_magick"
 gem "chartkick"
 gem 'run_cl'
+gem 'activestorage-validator'
+gem 'amoeba'
 #hasta aca
 # Use Puma as the app server
 gem 'puma', '~> 3.11'

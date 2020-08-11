@@ -3,5 +3,5 @@ class Archivo < ApplicationRecord
     #mount_uploader :documento, DocumentoUploader
     has_one_attached :file
     belongs_to :user
-
+    validates :file, presence: true, blob: { size_range: 1..2.megabytes }
 end
