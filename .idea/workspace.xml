@@ -21,10 +21,16 @@
   <component name="ChangeListManager">
     <list default="true" id="aac5b097-7438-4f2a-bd05-44f8ce57767f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/custom.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/inicio_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/inicio_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/application/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/application/index.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/inicio/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/inicio/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/_navbarinicio.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/_navbarinicio.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/_menuuser.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/_menuuser.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/_sidemenu.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/_sidemenu.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/inicio.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/inicio.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/inicio.html.erb" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +54,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Datos por carrera/estudios.csv" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/assets/javascripts" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
@@ -57,11 +63,11 @@
       <recent name="C:\Users\alexander\Desktop\Tesis\Plataforma Pace\PACE\app\assets\stylesheets" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\alexander\Desktop\Tesis\Plataforma Pace\PACE\app\assets\javascripts" />
+      <recent name="C:\Users\alexander\Desktop\Tesis\Plataforma Pace\PACE\app\assets\stylesheets" />
       <recent name="C:\Users\alexander\Desktop\Tesis\Plataforma Pace\PACE\app\views\recintos" />
       <recent name="C:\Users\alexander\Desktop\Tesis\Plataforma Pace\PACE\app\views\pregunta_cuestionarios" />
       <recent name="C:\Users\alexander\Desktop\Tesis\Plataforma Pace\PACE\app\views\pregunta_informes" />
-      <recent name="C:\Users\alexander\Desktop\Tesis\Plataforma Pace\PACE\app\views\informes" />
-      <recent name="C:\Users\alexander\Desktop\Tesis\Plataforma Pace\PACE\app\views\estudios" />
     </key>
   </component>
   <component name="RubyModuleManagerSettings">
@@ -199,6 +205,7 @@
       <workItem from="1596871648417" duration="981000" />
       <workItem from="1596921869216" duration="15613000" />
       <workItem from="1597093596140" duration="3965000" />
+      <workItem from="1597249620826" duration="6141000" />
     </task>
     <servers />
   </component>

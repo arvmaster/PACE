@@ -1,20 +1,37 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <title>PACE</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-    <meta charset="UTF-8">
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+      <head>
+        <title>PACE UTEM</title>
+          <%= csrf_meta_tags %>
+          <%= csp_meta_tag %>
+
+          <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+          <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
   <body>
-  <%= render "layouts/sidemenu" %>
-    <div class="container">
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-      <%= yield %>
-    </div>
-  </div>
+  <% if current_page?(root_path) %>
+
+    <%= render "layouts/navbarinicio" %>
+      <div class="container">
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+      </div>
+     <%= yield %>
+
+  <%else %>
+
+      <% if user_signed_in? %>
+        <%= render "layouts/sidemenu" %>
+      <%else %>
+        <%= render "layouts/navbarinicio" %>
+      <%end %>
+
+        <div class="container">
+          <p class="notice"><%= notice %></p>
+          <p class="alert"><%= alert %></p>
+          <%= yield %>
+        </div>
+  <%end%>
+
   </body>
 </html>

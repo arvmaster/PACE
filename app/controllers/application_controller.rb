@@ -1,5 +1,4 @@
 class ApplicationController < ActionController::Base
-  layout :probando_layout
   before_action :configure_devise_params, if: :devise_controller?
 
   def inicio
@@ -11,11 +10,4 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  def probando_layout
-    if user_signed_in?
-      "application"
-    else
-      "inicio"
-    end
-  end
 end

@@ -1,0 +1,54 @@
+<!-- Vertical navbar -->
+<div class="vertical-nav bg-white" id="sidebar">
+  <div class="py-4 px-3 mb-4 bg-light">
+    <div class="media d-flex align-items-center"><%=image_tag("customLogo.jpg" ,size: "65x65",class:"mr-3 rounded-circle img-thumbnail shadow-sm" ) %>
+      <div class="media-body">
+        <%= link_to current_user.nombre_user,edit_user_path(current_user.id) , class:"m-0 text-dark" %>
+        <p class="font-weight-light text-muted mb-0"><%= current_user.rol %></p>
+      </div>
+    </div>
+  </div>
+
+  <p class="text-gray font-weight-bold text-uppercase px-3 small pb-4 mb-0">COVI PACE-UTEM</p>
+
+  <ul class="nav flex-column bg-white mb-0">
+    <li class="nav-item">
+      <%=link_to 'User',users_url, :class =>"nav-link text-dark font-italic"%>
+    </li>
+    <li class="nav-item">
+      <%=link_to 'Archivos',archivos_url, :class =>"nav-link text-dark font-italic" %>
+    </li>
+    <li class="nav-item">
+      <%=link_to 'Cuestionarios EDA', cuestionarios_url, :class =>"nav-link text-dark font-italic" %>
+    </li>
+    <li class="nav-item">
+      <%=link_to 'Datos Carrera',datos_carreras_url, :class =>"nav-link text-dark font-italic" %>
+    </li>
+    <li class="nav-item">
+      <%=link_to 'Informes',informes_url, :class =>"nav-link text-dark font-italic" %>
+    </li>
+    <li class="nav-item">
+      <%=link_to 'Estudios',estudios_url, :class =>"nav-link text-dark font-italic" %>
+    </li>
+    <% if user_signed_in? %>
+      <li class="nav-item">
+        <%=link_to 'Preguntas Cuestionario',pregunta_cuestionarios_url, :class =>"nav-link text-dark font-italic" %>
+      </li>
+      <li class="nav-item">
+        <%=link_to 'Informes',informes_url, :class =>"nav-link text-dark font-italic" %>
+      </li>
+      <li class="nav-item">
+        <%=link_to 'Preguntas Informe',pregunta_informes_url, :class =>"nav-link text-dark font-italic" %>
+      </li>
+    <%end %>
+  </ul>
+    <ul class="nav flex-column bg-white mb-0">
+    </ul>
+</div>
+<!-- End vertical navbar -->
+
+
+<!-- Page content holder -->
+<div class="page-content p-5" id="content">
+  <!-- Toggle button -->
+  <button id="sidebarCollapse" type="button" class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4"><i class="fa fa-bars mr-2"></i><small class="text-uppercase font-weight-bold">Toggle</small></button>
