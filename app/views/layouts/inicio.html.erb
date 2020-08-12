@@ -7,32 +7,15 @@
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <meta charset="utf-8">
+  <title>Sidebar Dashboard Template</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+
 </head>
 
 <body>
-
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <%= link_to 'COAP UTEM',root_path ,:class =>"navbar-brand"%>
-    </div>
-    <ul class="nav navbar-nav">
-      <li><%= link_to 'Quienes Somos',root_path %></li>
-      <li><%= link_to 'Info Carreras',datos_carreras_path %></li>
-      <li><%=link_to 'Material Didactico',archivos_path %></li>
-
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <%- if user_signed_in? %>
-        <li><%=link_to 'Info',users_path%></li>
-        <li><%=link_to 'Desconectarse',destroy_user_session_path,method: :delete %></li>
-      <% else %>
-        <li><%=link_to 'Login',new_user_session_path%></li>
-        <li><%=link_to 'Inscribirse',new_user_registration_path%></li>
-      <%end %>
-    </ul>
-  </div>
-</nav>
+<%= render "layouts/navbarinicio" %>
 <% if current_page?(root_path) %>
 <div class="container">
   <p class="notice"><%= notice %></p>

@@ -1,42 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
   <head>
     <title>PACE</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <meta charset="UTF-8">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <body>
-
-  <!-- Sidebar -->
-  <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%">
-    <h3 class="w3-bar-item">UTEM</h3>
-    <%=link_to 'User',users_url, :class =>"w3-bar-item w3-button" %>
-    <%=link_to 'Archivos',archivos_url, :class =>"w3-bar-item w3-button" %>
-    <%=link_to 'Cuestionarios EDA', cuestionarios_url, :class =>"w3-bar-item w3-button" %>
-    <% if user_signed_in? %>
-        <%=link_to 'Preguntas Cuestionario',pregunta_cuestionarios_url, :class =>"w3-bar-item w3-button" %>
-        <%=link_to 'Informes',informes_url, :class =>"w3-bar-item w3-button" %>
-        <%=link_to 'Preguntas Informe',pregunta_informes_url, :class =>"w3-bar-item w3-button" %>
-    <%end %>
-    <%=link_to 'Datos Carrera',datos_carreras_url, :class =>"w3-bar-item w3-button" %>
-    <%=link_to 'Estudios',estudios_url, :class =>"w3-bar-item w3-button" %>
-  </div>
-
-  <!-- Page Content -->
-  <div style="margin-left:25%">
-
-    <div class="w3-container w3-teal">
-      <h1>Comunidad Virtual PACE-UTEM</h1>
-      <li><%=link_to 'Info',users_url%></li>
-      <li><%=link_to 'Desconectarse',destroy_user_session_path,method: :delete %></li>
-    </div>
+  <%= render "layouts/sidemenu" %>
     <div class="container">
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
