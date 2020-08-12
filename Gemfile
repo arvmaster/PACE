@@ -14,6 +14,7 @@ gem "chartkick"
 gem 'run_cl'
 gem 'activestorage-validator'
 gem 'amoeba'
+gem 'jquery-rails'
 #hasta aca
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
