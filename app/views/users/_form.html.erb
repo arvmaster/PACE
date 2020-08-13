@@ -103,10 +103,11 @@
     <%= f.label :Telefono %>
     <%= f.text_field :telefono,class: "form-control" %>
   </div>
-
+  <% if current_user.rol != "Estudiante" %>
   <div class="checkbox">
     <%= f.label :estado %>
     <%= f.check_box :estado %>
   </div>
+  <%end%>
   <%= f.submit 'Enviar', :class => 'btn btn-primary' %>
 <% end %>

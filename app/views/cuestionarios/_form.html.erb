@@ -9,22 +9,28 @@
 
     </div>
       <%= f.fields_for :pregunta_cuestionarios do |p|  %>
-        <div>
+    </br>
+          <div class="form-check-inline">
+          <% if current_page? new_cuestionario_path%>
+              <%= p.hidden_field :casilla, :value => false %>
+          <%else %>
               <%= p.check_box :casilla %>
-            <% if current_user.rol == 'Admin' %>
+          <%end %>
+          <% if current_user.rol == 'Admin' %>
                 <%= p.label :Pregunta %>
                 <%= p.text_field :pregunta_cues, class: "form-control" %>
                 <%= p.label :Respuesta %>
-                <%= p.text_field :respuesta, class: "form-control"%>
-            <%else%>
+                <%= p.select(:respuesta,["A","T","R","P"], {}, { :class => 'btn btn-default dropdown-toggle border' }) %>
+          <%else%>
                 <%= p.label :Pregunta %>
-                <%= p.text_field :pregunta_cues, class: "form-control"%>
+                <%= p.text_field :pregunta_cues, class: "form-control",disable: true%>
                 <%= p.hidden_field :respuesta, class: "form-control" %>
-            <%end%>
+          <%end%>
         </div>
+    </br>
       <%end%>
-
-  <div><%= f.submit 'Enviar', :class => 'btn btn-default' %></div>
+  </br>
+  <div><%= f.submit 'Enviar', :class => 'btn btn-info' %></div>
 
 <% end %>
 

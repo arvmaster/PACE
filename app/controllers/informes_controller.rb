@@ -10,23 +10,45 @@ class InformesController < ApplicationController
   end
 
   def new
-    @informe = Informe.new
-    #6.times { @informe.pregunta_informes.build }
-    @informe.pregunta_informes.build(pregunta_inf: '¿Que acontecio en el evento/reunion?',respuesta: '' )
-    @informe.pregunta_informes.build(pregunta_inf: '¿Se logro realizar en el tiempo establecido?',respuesta: '' )
-    @informe.pregunta_informes.build(pregunta_inf: '¿Se logro el objetivo del evento/reunión?',respuesta: '' )
-    @informe.pregunta_informes.build(pregunta_inf: '¿Quedaron elemento a resolver?',respuesta: '' )
+    if current_user.rol == "Admin"
+      @informe = Informe.new
+      4.times { @informe.pregunta_informes.build }
+    else
+      @informe = Informe.new
+    end
+    #@informe.pregunta_informes.build(pregunta_inf: '¿Que acontecio en el evento/reunion?',respuesta: '' )
+    #@informe.pregunta_informes.build(pregunta_inf: '¿Se logro realizar en el tiempo establecido?',respuesta: '' )
+    #@informe.pregunta_informes.build(pregunta_inf: '¿Se logro el objetivo del evento/reunión?',respuesta: '' )
+    #@informe.pregunta_informes.build(pregunta_inf: '¿Quedaron elemento a resolver?',respuesta: '' )
   end
 
   def create
     @informe = Informe.create(informe_params)
     @informe.user_id = current_user.id
-    if @informe.save
-      flash[:success] = "Informe Creado"
-      redirect_to @informe
+    if current_user.rol == "Admin"
+      @informe = Informe.create(informe_params)
+      @informe.user_id = current_user.id
+      if @informe.save
+        @informe.save
+        flash[:success] = "Informe Creado"
+        redirect_to @informe
+      else
+        flash[:error] = "No se ha creado el informe"
+        render :new
+      end
     else
-      flash[:error] = "No se ha creado el informe"
-      render :new
+      @user = User.find_by(rol: "Admin")
+      @informe = Informe.create(informe_params)
+      @informe.user_id = current_user.id
+      if @informe.save
+        @informe = Informe.find_by(nombre_cues: @informe.nombre_cues, user_id: @user.id )
+        @informe.save
+        flash[:success] = "Informe Creado"
+        redirect_to edit_informe_path(@informe.id)
+      else
+        flash[:error] = "No se ha creado el informe"
+        render :new
+      end
     end
   end
 

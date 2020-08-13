@@ -63,10 +63,10 @@ class CuestionariosController < ApplicationController
     @cuestionario = Cuestionario.find(params[:id])
     #if current_user.rol == "Admin" or ""
     if @cuestionario.update(cuestionario_params)
-       @cuestionario.eda_a = PreguntaCuestionario.where(cuestionario_id: @cuestionario.id , casilla: true ,respuesta: 'a').count
-       @cuestionario.eda_t = PreguntaCuestionario.where(cuestionario_id: @cuestionario.id , casilla: true ,respuesta: 't').count
-       @cuestionario.eda_r = PreguntaCuestionario.where(cuestionario_id: @cuestionario.id , casilla: true ,respuesta: 'r').count
-       @cuestionario.eda_p = PreguntaCuestionario.where(cuestionario_id: @cuestionario.id , casilla: true ,respuesta: 'p').count
+       @cuestionario.eda_a = PreguntaCuestionario.where(cuestionario_id: @cuestionario.id , casilla: true ,respuesta: 'A').count
+       @cuestionario.eda_t = PreguntaCuestionario.where(cuestionario_id: @cuestionario.id , casilla: true ,respuesta: 'T').count
+       @cuestionario.eda_r = PreguntaCuestionario.where(cuestionario_id: @cuestionario.id , casilla: true ,respuesta: 'R').count
+       @cuestionario.eda_p = PreguntaCuestionario.where(cuestionario_id: @cuestionario.id , casilla: true ,respuesta: 'P').count
        @cuestionario.save
       flash[:success] = "Se actualizo el cuestionario"
       redirect_to @cuestionario
