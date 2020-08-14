@@ -12,6 +12,9 @@ Rails.application.routes.draw do
   resources :recintos
   resources :informes
   resources :pregunta_informes
+  resources :eventos
+  #resources :user
+  #resources :user_eventos
   #users personalizados
   resources :users do
     collection {post :import}

@@ -1,0 +1,14 @@
+<td><%= link_to 'Eventos', eventos_url %></td>
+<table>
+  <tr>
+    <th>Nombre Evento</th>
+    <th>Topico</th>
+  </tr>
+
+    <tr>
+      <td><%= @evento.nombre_ev %></td>
+      <td><%= link_to 'Info', "http://#{@evento.url}" %></td>
+      <td><%= link_to 'Editar', edit_evento_path(@evento.id) %></td>
+    </tr>
+    
+</table>

@@ -17,9 +17,11 @@
     <tr>
       <td><%= f.nombre_archivo %></td>
       <td><%= f.topico %></td>
-      <td><%= link_to 'Download', f.file, download: '' %></td>
+      <td align="center"><%= link_to image_tag("document.jpg",size: "35x35"), f.file, download: '' %></td>
+      <% if current_user.rol != "Estudiante" %>
       <td><%= link_to 'Ver', archivo_path(f) %></td>
       <td><%= link_to 'Editar', edit_archivo_path(f) %></td>
+      <% end %>
     </tr>
 
   <% end %>

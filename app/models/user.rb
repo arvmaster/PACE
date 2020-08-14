@@ -9,6 +9,8 @@ class User < ApplicationRecord
   has_many :pregunta_informes, through: :informes
   has_many :cuestionarios
   has_many :pregunta_cuestionarios, through: :cuestionarios
+  has_many :user_eventos
+  has_many :eventos, through: :user_eventos
   #
   include RunCl::ActAsRun
   validates  :rut,presence: { message: 'Ingrese un rut'}, uniqueness: true
@@ -25,13 +27,13 @@ class User < ApplicationRecord
   validates :fecha_nacimiento, presence: true
   validates :comuna, presence: true
   validates :direccion, length: { in: 10..254 , :message => " La direccion debe estar los 10 a 254 caracteres"}, presence: { message: "no puede estar en blanco" }
-  #validates :fecha_ingreso, presence: true
-  #validates :especialidad, presence: true
-  #VALID_NUMBER_REGEX = /^(\+?56)?(\s?)(0?9)(\s?)[98765]\d{7}$/
-  #validates :telefono, presence: {message: 'Ingrese Telefono'}, length: {is: 9, message:'Largo debe ser 9'}
-  #validates :estado, presence: true
-  #validate :fecha_de_nacimiento_debe_ser_en_pasado
-  #validate :edadminima
+  validates :fecha_ingreso, presence: true
+  validates :especialidad, presence: true
+  VALID_NUMBER_REGEX = /^(\+?56)?(\s?)(0?9)(\s?)[98765]\d{7}$/
+  validates :telefono, presence: {message: 'Ingrese Telefono'}, length: {is: 9, message:'Largo debe ser 9'}
+  validates :estado, presence: true
+  validate :fecha_de_nacimiento_debe_ser_en_pasado
+  validate :edadminima
 
   def self.import(file)
     CSV.foreach(file.path, headers: true) do |row|

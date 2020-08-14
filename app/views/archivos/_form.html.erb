@@ -1,4 +1,15 @@
 <%= form_for @archivo do |f| %>
+  <% if @archivo.errors.any? %>
+    <div id="error_explanation">
+      <h2>No se pudo realizar la acción: <%= pluralize(@archivo.errors.count, "Error/es") %> </h2>
+      <ul>
+        <% @archivo.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+
+  <% end %>
       <div class="form-group">
         <%= f.label :Nombre_archivo %>
         <%= f.text_field :nombre_archivo %>

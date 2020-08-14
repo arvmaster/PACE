@@ -1,8 +1,14 @@
 <h1>Datos Carrera</h1>
 
 <p>
-  <%= link_to 'Principal', controller: 'inicio' %>
+  <% if current_user != "Estudiante" %>
+  <%= link_to 'Principal', controller: 'inicio' %> |
   <%= link_to 'Crear', new_datos_carrera_path %>
+      <% if user_signed_in? and current_user.rol == "Admin"%>
+        <%= link_to 'evento', "http://#{current_user.rol}", :class => "btn btn-default" %>
+      Ejemplo de como hacer un link a una url
+      <%end%>
+  <%end %>
 </p>
 
 <table class="table table-striped table-bordered">

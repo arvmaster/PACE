@@ -1,0 +1,8 @@
+<%= form_for @evento do |f| %>
+      <div class="form-group">
+        <%= f.label :Nombre_Evento %>
+        <%= f.text_field :nombre_ev %>
+      </div>
+
+    <%= f.submit 'Enviar', :class => 'btn btn-primary' %>
+<% end %>

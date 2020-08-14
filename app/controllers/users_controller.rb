@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
-  before_action :authenticate_user!
+  #before_action :authenticate_user!
+
   def index
-    @users = User.all.where("id != ?", current_user.id)
+    @users = User.all.where("id != ? and supervisar > ?", current_user.id, current_user.supervisar)
   end
 
   def show

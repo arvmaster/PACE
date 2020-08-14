@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_28_081758) do
+ActiveRecord::Schema.define(version: 2020_08_14_000537) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -87,6 +87,15 @@ ActiveRecord::Schema.define(version: 2020_07_28_081758) do
     t.integer "recinto_id"
   end
 
+  create_table "eventos", force: :cascade do |t|
+    t.string "nombre_ev"
+    t.date "fecha_ev"
+    t.string "link_ev"
+    t.string "descripcion"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "informes", force: :cascade do |t|
     t.string "nombre_inf"
     t.datetime "created_at", null: false
@@ -113,6 +122,14 @@ ActiveRecord::Schema.define(version: 2020_07_28_081758) do
 
   create_table "recintos", force: :cascade do |t|
     t.string "nombre_recinto"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "user_eventos", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "evento_id"
+    t.boolean "asiste"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -154,6 +171,8 @@ ActiveRecord::Schema.define(version: 2020_07_28_081758) do
   add_foreign_key "informes", "users"
   add_foreign_key "pregunta_cuestionarios", "cuestionarios"
   add_foreign_key "pregunta_informes", "informes"
+  add_foreign_key "user_eventos", "eventos"
+  add_foreign_key "user_eventos", "users"
   add_foreign_key "users", "estudios"
   add_foreign_key "users", "recintos"
 end
