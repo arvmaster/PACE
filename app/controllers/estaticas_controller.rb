@@ -1,0 +1,2 @@
+class EstaticasController < ApplicationController
+end

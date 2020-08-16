@@ -3,9 +3,9 @@ Rails.application.routes.draw do
   devise_for :users, controllers: {
       sessions: 'users/sessions'
   }
-  root 'inicio#index'
+  root 'estaticas#home'
 
-  resources :inicio
+  resources :estaticas
   resources :archivos
   resources :cuestionarios
   resources :pregunta_cuestionarios
@@ -13,8 +13,7 @@ Rails.application.routes.draw do
   resources :informes
   resources :pregunta_informes
   resources :eventos
-  #resources :user
-  #resources :user_eventos
+  resources :user_eventos
   #users personalizados
   resources :users do
     collection {post :import}

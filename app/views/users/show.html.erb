@@ -1,17 +1,67 @@
-<td><%= link_to 'Usuarios', users_url %></td>
-<table>
+<h2><%= link_to 'Usuarios', users_url %></h2></br>
+<h3 class="font-italic"> Usuario: <%= @user.nombre_user %> <%= @user.apellido_pa %> <%= @user.apellido_ma %></h3>
+</br>
+<h2>Datos Personales</h2>
+<table class="table-striped table-bordered table">
   <tr>
-    <th>Nombre Usuario</th>
-    <th>Apellido Paterno</th>
-    <th>Apellido Materno</th>
+    <th>RUT</th>
+    <th>Nacionalidad</th>
+    <th>Fecha de Nacimiento</th>
+    <th>Comuna</th>
+    <th>Dirección</th>
+    <th>Teléfono</th>
   </tr>
+  <tr>
+    <td><%= @user.rut %></td>
+    <td><%= @user.nacionalidad %></td>
+    <td><%= @user.fecha_nacimiento %></td>
+    <td><%= @user.comuna %></td>
+    <td><%= @user.direccion %></td>
+    <td><%= @user.telefono %></td>
+  </tr>
+</table>
 
+<h2>Datos Academicos</h2>
+<table class="table-striped table-bordered table">
+  <tr>
+    <th>Nivel de Estudio</th>
+    <th>Recinto</th>
+    <th>Estudio</th>
+    <th>Especialidad</th>
+  </tr>
+  <tr>
+    <td><%= @user.nivel_estudio %></td>
+    <td><%= @user.recinto.nombre_recinto %></td>
+    <td><%= @user.estudio.nombre_estudio %></td>
+    <td><%= @user.especialidad %></td>
+  </tr>
+</table>
+
+<table class="table-striped table-bordered table">
+  <tr>
+    <th>Informes</th>
+  </tr>
+  <% @user.informes.each do |f| %>
     <tr>
-      <td><%= @user.nombre_user %></td>
-      <td><%= @user.apellido_pa %></td>
-      <td><%= @user.apellido_ma %></td>
-      <td><%= link_to 'Ver', user_path(@user.id) %></td>
-      <td><%= link_to 'Editar', edit_user_path(@user.id) %></td>
+      <td><%= f.nombre_inf %></td>
+      <td><%= link_to 'Ver', informe_path(f) %></td>
+      <% if current_user.id == @user.id or current_user.rol == "Admin"%>
+        <td><%= link_to 'Editar', edit_informe_path(f) %></td>
+      <%end%>
     </tr>
-    
+  <% end %>
+</table>
+<table class="table-striped table-bordered table">
+  <tr>
+    <th>Cuestionarios</th>
+  </tr>
+  <% @user.cuestionarios.each do |f| %>
+    <tr>
+      <td><%= f.nombre_cues %></td>
+      <td><%= link_to 'Ver', cuestionario_path(f) %></td>
+      <% if current_user.id == @user.id or current_user.rol == "Admin"%>
+        <td><%= link_to 'Editar', edit_cuestionario_path(f) %></td>
+      <%end%>
+    </tr>
+  <% end %>
 </table>

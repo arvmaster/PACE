@@ -1,0 +1,12 @@
+<% if UserEvento.where(user_id: current_user.id) == nil %>
+  <%= form_for @user_evento do |f| %>
+    <%= f.hidden_field :user_id, value: current_user.id %>
+    <%= f.hidden_field :evento_id, value: @evento.id %>
+    <%= f.hidden_field :asiste, value: true %>
+    <%= f.submit 'Asistir',:class => "btn btn-info" %>
+  <% end %>
+<%else%>
+
+  <%= link_to 'No Asistir', post: "¿Estas seguro?",method => :delete ,:class => "btn btn-warning" %>
+<%end %>
+

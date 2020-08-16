@@ -1,17 +1,16 @@
 <h2>Formulario Incripcion</h2>
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
-
+<div class="row">
+  <div class="col">
     <div class="field">
       <%= f.label :Nombre %>
       <%= f.text_field :nombre_user,class: "form-control" %>
     </div>
-
     <div class="field">
       <%= f.label :Apellido_paterno %>
       <%= f.text_field :apellido_pa,class: "form-control" %>
     </div>
-
     <div class="field">
       <%= f.label :Apellido_materno %>
       <%= f.text_field :apellido_ma,class: "form-control" %>
@@ -25,14 +24,14 @@
         <% if current_user.rol != "Estudiante" %>
           <div class="field">
             <%= f.label :Rol %><br />
-            <%= f.select(:rol,["PEM", "AES", "Tutor Disciplinar", "Tutor Par", "Coordinación", "Profesional Acompañamiento Psicoeducativo", "Estudiante"], {}, { :class => 'btn btn-default dropdown-toggle' }) %>
+            <%= f.select(:rol,["PEM", "AES", "Tutor Disciplinar", "Tutor Par", "Coordinación", "Profesional Acompañamiento Psicoeducativo", "Estudiante"], {}, { :class => 'btn btn-default dropdown-toggle border' }) %>
           </div>
         <%end%>
       <%end%>
 
     <div class="field">
       <%= f.label :email %><br />
-      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email",class: "form-control" %>
     </div>
 
     <div class="field">
@@ -40,12 +39,12 @@
       <% if @minimum_password_length %>
         <em>(<%= @minimum_password_length %> characters minimum)</em>
       <% end %><br />
-      <%= f.password_field :password, autocomplete: "new-password" %>
+      <%= f.password_field :password, autocomplete: "new-password",class: "form-control" %>
     </div>
 
     <div class="field">
       <%= f.label :password_confirmation %><br />
-      <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+      <%= f.password_field :password_confirmation, autocomplete: "new-password",class: "form-control" %>
     </div>
 
     <div class="field">
@@ -55,9 +54,10 @@
 
     <div class="field">
       <%= f.label :Comuna %><br />
-      <%= f.select(:comuna,["Cerrillos", "Cerro Navia", "Conchalí", "El Bosque", "Estación Central", "Huechuraba", "Independencia", "La Cisterna", "La Florida", "La Granja", "La Pintana", "La Reina", "Las Condes", "Lo Barnechea", "Lo Espejo", "Lo Prado", "Macul", "Maipú", "Ñuñoa", "Pedro Aguirre Cerda", "Peñalolén", "Providencia", "Pudahuel","Santiago Centro", "Quilicura", "Quinta Normal", "Recoleta", "Renca", "San Joaquín", "San Miguel", "San Ramón", "Vitacura", "Puente Alto", "Pirque", "San José de Maipo", "Colina", "Lampa", "Tiltil", "San Bernardo", "Buin", "Calera de Tango", "Paine", "Melipilla", "Alhué", "Curacaví", "María Pinto", "San Pedro", "Talagante", "El Monte", "Isla de Maipo", "Padre Hurtado", "Peñaflor"], {}, { :class => 'btn btn-default dropdown-toggle' }) %>
+      <%= f.select(:comuna,["Cerrillos", "Cerro Navia", "Conchalí", "El Bosque", "Estación Central", "Huechuraba", "Independencia", "La Cisterna", "La Florida", "La Granja", "La Pintana", "La Reina", "Las Condes", "Lo Barnechea", "Lo Espejo", "Lo Prado", "Macul", "Maipú", "Ñuñoa", "Pedro Aguirre Cerda", "Peñalolén", "Providencia", "Pudahuel","Santiago Centro", "Quilicura", "Quinta Normal", "Recoleta", "Renca", "San Joaquín", "San Miguel", "San Ramón", "Vitacura", "Puente Alto", "Pirque", "San José de Maipo", "Colina", "Lampa", "Tiltil", "San Bernardo", "Buin", "Calera de Tango", "Paine", "Melipilla", "Alhué", "Curacaví", "María Pinto", "San Pedro", "Talagante", "El Monte", "Isla de Maipo", "Padre Hurtado", "Peñaflor"], {}, { :class => 'btn btn-default dropdown-toggle border' }) %>
     </div>
-
+  </div>
+  <div class="col">
     <div class="field">
       <%= f.label :Dirección %>
       <%= f.text_field :direccion,class: "form-control" %>
@@ -65,20 +65,20 @@
 
     <div class="field">
       <%= f.label :Nivel_de_Estudio %></br>
-      <%= f.select(:nivel_estudio,["Educacion Superior","Enseñanza Media"], {}, { :class => 'btn btn-default dropdown-toggle' }) %>
+      <%= f.select(:nivel_estudio,["Educacion Superior","Enseñanza Media"], {}, { :class => 'btn btn-default dropdown-toggle border' }) %>
     </div>
 
     <div class="field">
       <%= f.label :Recinto %><br />
-      <%= f.collection_select :recinto_id, Recinto.all, :id, :nombre_recinto, {:include_blank => "Seleccionar Recinto"},{:class => "btn btn-default dropdown-toggle"}  %>
+      <%= f.collection_select :recinto_id, Recinto.all, :id, :nombre_recinto, {:include_blank => "Seleccionar Recinto"},{:class => "btn btn-default dropdown-toggle border"}  %>
     </div>
 
   <div class="field">
     <%= f.label :Estudio %><br />
-    <%= f.collection_select :estudio_id, Estudio.all, :id, :nombre_estudio, {:include_blank => "Seleccionar Estudio"},{:class => "btn btn-default dropdown-toggle"}  %>
+    <%= f.collection_select :estudio_id, Estudio.all, :id, :nombre_estudio, {:include_blank => "Seleccionar Estudio"},{:class => "btn btn-default dropdown-toggle border"}  %>
   </div>
     <div class="field">
-      <%= f.label :Fecha_de_Egreso_Enseñanza_Media %>
+      <%= f.label :Fecha_de_Egreso_Enseñanza_Media %> (Real o esperada)
       <%= f.text_field :fecha_ingreso,class: "form-control" %>
     </div>
 
@@ -89,7 +89,7 @@
 
     <div class="field">
       <%= f.label :Nacionalidad %></br>
-      <%= f.select(:nacionalidad,["afgano/afgana","alemán/alemana","árabe/árabe","argentino/argentina","australiano/australiana","belga/belga","boliviano/boliviana","brasileño/brasileña","camboyano/camboyana","canadiense/canadiense","chileno/chilena","chino/china","colombiano/colombiana","coreano/coreana","costarricense/costarricense","cubano/cubana","danés/danesa","ecuatoriano/ecuatoriana","egipcio/egipcia","salvadoreño/salvadoreña","escocés/escocesa","español/española","estadounidense/estadounidense","estonio/estonia","etiope/etiope","filipino/filipina","finlandés/finlandesa","francés/francesa","galés/galesa","griego/griega","guatemalteco/guatemalteca","haitiano/haitiana","holandés/holandesa","hondureño/hondureña","indonés/indonesa","inglés/inglesa","iraquí/iraquí","iraní/iraní","irlandés/irlandesa","israelí/israelí","italiano/italiana","japonés/japonesa","jordano/jordana","laosiano/laosiana","letón/letona","letonés/letonesa","malayo/malaya","marroquí/marroquí","mexicano/mexicana","nicaragüense/nicaragüense","noruego/noruega","neozelandés/neozelandesa","panameño/panameña","paraguayo/paraguaya","peruano/peruana","polaco/polaca","portugués/portuguesa","puertorriqueño/puertorriqueño","dominicano/dominicana","rumano/rumana","ruso/rusa","sueco/sueca","suizo/suiza","tailandés/tailandesa","taiwanes/taiwanesa","turco/turca","ucraniano/ucraniana","uruguayo/uruguaya","venezolano/venezolana","vietnamita/vietnamita" ], {}, { :class => 'btn btn-default dropdown-toggle' }) %>
+      <%= f.select(:nacionalidad,["afgano/afgana","alemán/alemana","árabe/árabe","argentino/argentina","australiano/australiana","belga/belga","boliviano/boliviana","brasileño/brasileña","camboyano/camboyana","canadiense/canadiense","chileno/chilena","chino/china","colombiano/colombiana","coreano/coreana","costarricense/costarricense","cubano/cubana","danés/danesa","ecuatoriano/ecuatoriana","egipcio/egipcia","salvadoreño/salvadoreña","escocés/escocesa","español/española","estadounidense/estadounidense","estonio/estonia","etiope/etiope","filipino/filipina","finlandés/finlandesa","francés/francesa","galés/galesa","griego/griega","guatemalteco/guatemalteca","haitiano/haitiana","holandés/holandesa","hondureño/hondureña","indonés/indonesa","inglés/inglesa","iraquí/iraquí","iraní/iraní","irlandés/irlandesa","israelí/israelí","italiano/italiana","japonés/japonesa","jordano/jordana","laosiano/laosiana","letón/letona","letonés/letonesa","malayo/malaya","marroquí/marroquí","mexicano/mexicana","nicaragüense/nicaragüense","noruego/noruega","neozelandés/neozelandesa","panameño/panameña","paraguayo/paraguaya","peruano/peruana","polaco/polaca","portugués/portuguesa","puertorriqueño/puertorriqueño","dominicano/dominicana","rumano/rumana","ruso/rusa","sueco/sueca","suizo/suiza","tailandés/tailandesa","taiwanes/taiwanesa","turco/turca","ucraniano/ucraniana","uruguayo/uruguaya","venezolano/venezolana","vietnamita/vietnamita" ], {}, { :class => 'btn btn-default dropdown-toggle border' }) %>
     </div>
 
     <div class="field">
@@ -99,8 +99,10 @@
   <div class="field">
     <%= f.hidden_field :estado, :value => true %>
   </div>
-
+  </div>
+</div>
+</br>
   <div class="actions">
-    <%= f.submit "Inscribirse", class: "btn btn-default" %>
+    <%= f.submit "Inscribirse", class: "btn btn-info" %>
   </div>
 <% end %>

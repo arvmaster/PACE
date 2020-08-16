@@ -6,9 +6,8 @@
   </tr>
 
     <tr>
-      <td><%= @user_evento.nombre_ev %></td>
-      <td><%= link_to 'Info', "http://#{@user_evento.url}" %></td>
-      <td><%= link_to 'Editar', edit_user_evento_path(@user_evento.id) %></td>
+      <td><%= @user_evento.user.nombre_user %></td>
+      <td><%= @user_evento.evento.nombre_ev %></td>
     </tr>
     
 </table>

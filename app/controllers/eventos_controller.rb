@@ -7,6 +7,7 @@ class EventosController < ApplicationController
 
   def show
     @evento = Evento.find(params[:id])
+    # @user_evento = UserEvento.new
   end
 
   def new

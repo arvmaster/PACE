@@ -3,6 +3,18 @@
         <%= f.label :Nombre_Evento %>
         <%= f.text_field :nombre_ev %>
       </div>
+      <div class="form-group">
+        <%= f.label :Fecha_del_Evento %>
+        <%= f.date_field :fecha_ev,class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :Descripción %>
+        <%= f.text_field :descripcion %>
+      </div>
+      <div class="form-group">
+        <%= f.label :Link_de_Informacion %>
+        <%= f.text_field :link_ev %>
+      </div>
 
     <%= f.submit 'Enviar', :class => 'btn btn-primary' %>
 <% end %>
