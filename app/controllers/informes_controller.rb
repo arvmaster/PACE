@@ -40,8 +40,11 @@ class InformesController < ApplicationController
       @user = User.find_by(rol: "Admin")
       @informe = Informe.create(informe_params)
       @informe.user_id = current_user.id
+      @dup = @informe
       if @informe.save
-        @informe = Informe.find_by(nombre_cues: @informe.nombre_cues, user_id: @user.id )
+        @informe.destroy
+        @informe = Informe.find_by(nombre_inf: @dup.nombre_inf, user_id: @user.id ).amoeba_dup
+        @informe.user_id = current_user.id
         @informe.save
         flash[:success] = "Informe Creado"
         redirect_to edit_informe_path(@informe.id)

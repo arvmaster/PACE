@@ -39,12 +39,15 @@ class CuestionariosController < ApplicationController
       @user = User.find_by(rol: "Admin")
       @cuestionario = Cuestionario.create(cuestionario_params)
       @cuestionario.user_id = current_user.id
+      @dup = @cuestionario
       if @cuestionario.save
-         @cuestionario = Cuestionario.find_by(nombre_cues: @cuestionario.nombre_cues, user_id: @user.id )
+         @cuestionario.destroy
+         @cuestionario = Cuestionario.find_by(nombre_cues: @dup.nombre_cues, user_id: @user.id ).amoeba_dup
          @cuestionario.eda_a = 0
          @cuestionario.eda_t = 0
          @cuestionario.eda_r = 0
          @cuestionario.eda_p = 0
+         @cuestionario.user_id = current_user.id
          @cuestionario.save
          flash[:success] = "Cuestionario Creado"
          redirect_to edit_cuestionario_path(@cuestionario.id)

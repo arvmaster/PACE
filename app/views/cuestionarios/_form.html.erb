@@ -1,20 +1,33 @@
 <%= form_for @cuestionario do |f| %>
-    <div class="field">
-      <%= f.label :Nombre_Cuestionario %>
+
+  <% if @cuestionario.errors.any? %>
+    <div id="error_explanation">
+      <h2>No se pudo realizar la acción: <%= pluralize(@cuestionario.errors.count, "Error/es") %> </h2>
+      <ul>
+        <% @cuestionario.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+
+  <% end %>
+
+
+
+    <div class="form-group">
       <% if current_user.rol == 'Admin' %>
-          <%= f.text_field :nombre_cues, :class => 'form-control' %>
-        <%else%>
-          <%= f.select(:nombre_cues,["EDA","Duda Existencial"], {}, { :class => 'btn btn-default dropdown-toggle' }) %>
+        <%= f.label :Nombre_Cuestionario %>
+        <%= f.text_field :nombre_cues, :class => 'form-control' %>
       <%end%>
 
     </div>
       <%= f.fields_for :pregunta_cuestionarios do |p|  %>
     </br>
-          <div class="form-check-inline">
+          <div class="form-row">
           <% if current_page? new_cuestionario_path%>
               <%= p.hidden_field :casilla, :value => false %>
           <%else %>
-              <%= p.check_box :casilla %>
+              <%= p.check_box :casilla, class: "form-control col-1" %>
           <%end %>
           <% if current_user.rol == 'Admin' %>
                 <%= p.label :Pregunta %>
@@ -22,8 +35,7 @@
                 <%= p.label :Respuesta %>
                 <%= p.select(:respuesta,["A","T","R","P"], {}, { :class => 'btn btn-default dropdown-toggle border' }) %>
           <%else%>
-                <%= p.label :Pregunta %>
-                <%= p.text_field :pregunta_cues, class: "form-control",disable: true%>
+                <%= p.text_field :pregunta_cues, class: "form-control col-7",disable: true%>
                 <%= p.hidden_field :respuesta, class: "form-control" %>
           <%end%>
         </div>
