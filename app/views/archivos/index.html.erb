@@ -1,14 +1,14 @@
 <h1>Archivos Index</h1>
 
 <p>
-  <%= link_to 'Principal', controller: 'inicio' %> |
-  <%= link_to 'Crear', new_archivo_path %>  
+  <%= link_to 'Subir Material', new_archivo_path %>
 </p>
 
 <table class="table table-striped table-bordered">
 
   <tr>
     <th>Nombre Archivo</th>
+    <th>Asignatura</th>
     <th>Topico</th>
     <th>Descargar</th>
   </tr>
@@ -16,6 +16,7 @@
   <% @archivos.each do |f| %>
     <tr>
       <td><%= f.nombre_archivo %></td>
+      <td><%= f.asignatura %></td>
       <td><%= f.topico %></td>
       <td align="center"><%= link_to image_tag("document.jpg",size: "35x35"), f.file, download: '' %></td>
       <% if user_signed_in? and current_user.rol != "Estudiante" %>

@@ -1,5 +1,5 @@
 class UserEventosController < ApplicationController
-  before_action :authenticate_user!, except: [:index,:show]
+  before_action :authenticate_user!
 
   def index
     @user_eventos = UserEvento.all
@@ -35,7 +35,7 @@ class UserEventosController < ApplicationController
       redirect_to user_eventos_url
     else
       flash[:error] = "No se modifico el user_evento"
-        render :edit
+      render :edit
     end
   end
 
@@ -50,10 +50,7 @@ class UserEventosController < ApplicationController
 
 
   def destroy
-    @asistencia = UserEvento.find(params[:id])
-    @asistencia.asiste = false
-    @asistencia.save
-    redirect_to evento_path(@asistencia.evento_id)
+    UserEvento.find(params[:id]).destroy
   end
 
   private

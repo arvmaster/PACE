@@ -1,22 +1,9 @@
-<div id="product-modal" class="modal fade">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title"><%= title %></h4>
+<%= form_for @user_evento do |f| %>
+      <div class="form-group">
+          <%= f.label :Evento %><br />
+          <%= f.collection_select :evento_id, Evento.all, :id, :nombre_ev, {:include_blank => "Seleccionar Recinto"},{:class => "btn btn-default dropdown-toggle"}  %>
+          <%= f.hidden_field :user_id ,value: current_user.id%>
+          <%= f.check_box :asiste %>
       </div>
-      <%= form_for @user_evento, remote: true do |f| %>
-        <div class="modal-body">
-          <div class="form-group">
-            <%= f.hidden_field :user_id, value: current_user.id, class: "form-control input-lg" %>
-            <%= f.hidden_field :evento_id, value: @evento.id, class: "form-control input-lg" %>
-            <%= f.check_box :asiste, class: "form-control input-lg" %>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <%= f.submit 'Asistir' class: "btn btn-info btn-lg btn-block" %>
-        </div>
-      <% end %>
-    </div>
-  </div>
-</div>
+    <%= f.submit 'Enviar', :class => 'btn btn-primary' %>
+<% end %>

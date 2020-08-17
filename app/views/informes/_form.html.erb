@@ -1,7 +1,12 @@
 <%= form_for @informe do |f| %>
     <div class="field">
-      <%= f.label :Nombre_informe %>
-      <%= f.select(:nombre_inf,["Informe Semanal"], {}, { :class => 'select' }) %>
+      <% if current_user.rol == "Admin" %>
+        <%= f.label :Nombre_informe %><br />
+        <%= f.text_field :nombre_inf,  class: "form-control"%>
+      <%else%>
+        <%= f.label :Nombre_informe %><br />
+        <%= f.collection_select :nombre_inf, Informe.where(user_id: 1), :nombre_inf, :nombre_inf, {:include_blank => "Seleccionar Informe"},{:class => "btn btn-default dropdown-toggle"}  %>
+    <%end %>
     </div>
     <%= f.fields_for :pregunta_informes do |p|  %>
        <div>

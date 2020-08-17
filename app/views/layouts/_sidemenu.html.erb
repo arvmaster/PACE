@@ -4,7 +4,7 @@
   <div class="py-4 px-3 mb-4 bg-light">
     <div class="media d-flex align-items-center"><%=image_tag("customLogo.jpg" ,size: "65x65",class:"mr-3 rounded-circle img-thumbnail shadow-sm" ) %>
       <div class="media-body">
-        <%= link_to current_user.nombre_user + " "+ current_user.apellido_pa,edit_user_path(current_user.id) , class:"m-0 text-dark" %>
+        <%= link_to current_user.nombre_user + " "+ current_user.apellido_pa,user_path(current_user.id) , class:"m-0 text-dark" %>
         <p class="font-weight-light text-muted mb-0"><%= current_user.rol %></p>
         <%= link_to 'Desconectarse',destroy_user_session_path,method: :delete , class:"m-0 text-dark" %>
       </div>
@@ -38,19 +38,21 @@
     <li class="nav-item">
       <%=link_to 'Informes',informes_url, :class =>"nav-link text-dark font-italic" %>
     </li>
-    <li class="nav-item">
-      <%=link_to 'Estudios',estudios_url, :class =>"nav-link text-dark font-italic" %>
-    </li>
     <% if user_signed_in? and current_user.rol != "Estudiante" %>
       <li class="nav-item">
-        <%=link_to 'Preguntas Cuestionario',pregunta_cuestionarios_url, :class =>"nav-link text-dark font-italic" %>
+        <%=link_to 'Estudios',estudios_url, :class =>"nav-link text-dark font-italic" %>
       </li>
       <li class="nav-item">
         <%=link_to 'Informes',informes_url, :class =>"nav-link text-dark font-italic" %>
       </li>
-      <li class="nav-item">
-        <%=link_to 'Preguntas Informe',pregunta_informes_url, :class =>"nav-link text-dark font-italic" %>
-      </li>
+      <%if current_user.rol == "Admin" %>
+        <li class="nav-item">
+          <%=link_to 'Preguntas Informe',pregunta_informes_url, :class =>"nav-link text-dark font-italic" %>
+        </li>
+        <li class="nav-item">
+          <%=link_to 'Preguntas Cuestionario',pregunta_cuestionarios_url, :class =>"nav-link text-dark font-italic" %>
+        </li>
+      <%end%>
       <li class="nav-item">
         <%=link_to 'Recintos',recintos_url, :class =>"nav-link text-dark font-italic" %>
       </li>

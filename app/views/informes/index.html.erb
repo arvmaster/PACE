@@ -1,15 +1,17 @@
 <h1>Informes Index</h1>
 
 <p>
-  <%= link_to 'Principal', controller: 'inicio' %> |
-  <%= link_to 'Crear', new_informe_path %>  
+  <%if current_user.rol == "Admin" %>
+    <%= link_to 'Crear', new_informe_path %>
+  <%else%>
+    <%= link_to 'Generar', new_informe_path %>
+  <%end %>
 </p>
 
 <table class="table table-striped table-bordered">
 
   <tr>
     <th>Nombre Informe</th>
-    <th>Topico</th>
   </tr>
 
   <% @informes.each do |f| %>

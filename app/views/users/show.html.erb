@@ -1,4 +1,6 @@
-<h2><%= link_to 'Usuarios', users_url %></h2></br>
+<% if user_signed_in? and current_user.rol != "Estudiante"%>
+  <h2><%= link_to 'Usuarios', users_url %></h2></br>
+<%end %>
 <h3 class="font-italic"> Usuario: <%= @user.nombre_user %> <%= @user.apellido_pa %> <%= @user.apellido_ma %></h3>
 </br>
 <h2>Datos Personales</h2>
@@ -61,6 +63,21 @@
       <td><%= link_to 'Ver', cuestionario_path(f) %></td>
       <% if current_user.id == @user.id or current_user.rol == "Admin"%>
         <td><%= link_to 'Editar', edit_cuestionario_path(f) %></td>
+      <%end%>
+    </tr>
+  <% end %>
+</table>
+<table class="table-striped table-bordered table">
+  <tr>
+    <th>Eventos</th>
+  </tr>
+  <% @user.user_eventos.each do |f| %>
+    <tr>
+      <td><%= f.evento.nombre_ev %></td>
+      <td><%= f.evento.fecha_ev %></td>
+      <td><%= link_to 'Ver', user_evento_path(f) %></td>
+      <% if current_user.id == @user.id or current_user.rol == "Admin"%>
+        <td><%= link_to 'Editar', edit_user_evento_path(f) %></td>
       <%end%>
     </tr>
   <% end %>

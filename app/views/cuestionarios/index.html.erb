@@ -1,8 +1,12 @@
 <h1>Cuestionario Index</h1>
 
 <p>
-  <%= link_to 'Principal', controller: 'inicio' %> |
-  <%= link_to 'Crear', new_cuestionario_path %>  
+
+  <%if current_user.rol == "Admin" %>
+    <%= link_to 'Crear', new_cuestionario_path %>
+  <%else%>
+    <%= link_to 'Generar', new_cuestionario_path %>
+  <%end %>
 </p>
 <table class="table table-striped table-bordered">
 
