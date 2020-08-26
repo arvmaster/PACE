@@ -1,18 +1,21 @@
 <h2><%= link_to 'Eventos', eventos_url %></h2>
 <table class="table table-bordered table-striped">
   <tr>
-    <th>Nombre Evento</th>
+    <th>Fecha</th>
+    <th>Nombre del Evento</th>
     <th>Descripcion</th>
     <th>Link de Información</th>
   </tr>
 
     <tr>
+      <td><%= @evento.fecha_ev %></td>
       <td><%= @evento.nombre_ev %></td>
       <td><%= @evento.descripcion %></td>
       <td align="center"><%= link_to 'Info', "http://#{@evento.link_ev}" %></td>
       <% if current_user == "Admin" %>
         <td><%= link_to 'Editar', edit_evento_path(@evento.id) %></td>
       <%end %>
+      <td> <%= link_to 'NO FUNCIONA AUN', root_path ,:class=>"btn btn-warning"%></td>
     </tr>
 
 </table>

@@ -20,16 +20,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aac5b097-7438-4f2a-bd05-44f8ce57767f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/views/estaticas/index.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/cuestionarios_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/cuestionarios_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/estaticas_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/estaticas_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/informes_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/informes_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/informe.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/informe.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/cuestionarios/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/cuestionarios/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/cuestionarios/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/cuestionarios/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/cuestionarios/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/cuestionarios/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/informes/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/informes/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/informes/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/informes/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/_footer.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/_footer.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/user_evento.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user_evento.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/archivos/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/archivos/edit.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/archivos/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/archivos/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/archivos/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/archivos/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/cuestionarios/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/cuestionarios/edit.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/datos_carreras/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/datos_carreras/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/datos_carreras/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/datos_carreras/edit.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/datos_carreras/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/datos_carreras/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/datos_carreras/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/datos_carreras/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/estaticas/home.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/estaticas/home.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/estaticas/login.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/eventos/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/eventos/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/eventos/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/eventos/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/_navbarinicio.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/_navbarinicio.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/_sidemenu.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/_sidemenu.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/user_eventos/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/user_eventos/index.html.erb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,7 +220,10 @@
       <workItem from="1597249620826" duration="29834000" />
       <workItem from="1597345574170" duration="15388000" />
       <workItem from="1597365218813" duration="9032000" />
-      <workItem from="1597423106326" duration="49581000" />
+      <workItem from="1597423106326" duration="59653000" />
+      <workItem from="1597950846499" duration="614000" />
+      <workItem from="1597961511215" duration="9299000" />
+      <workItem from="1598393947402" duration="11706000" />
     </task>
     <servers />
   </component>
@@ -264,6 +279,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1597266834594" />
+    <state x="0" y="0" width="585" height="728" key="find.popup" timestamp="1598396741760">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="0" y="0" width="585" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1598396741760" />
     <state x="339" y="157" key="run.anything.popup" timestamp="1597611845638">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

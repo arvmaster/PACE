@@ -8,13 +8,18 @@
 <table class="table table-striped table-bordered">
 
   <tr>
-    <th>Nombre Evento</th>
-    <th>Topico</th>
+    <th>Fecha</th>
+    <th>Nombre del Evento</th>
+    <th>Descripcion</th>
+    <th>Link de Información</th>
   </tr>
 
   <% @eventos.each do |f| %>
     <tr>
+      <td><%= f.fecha_ev %></td>
       <td><%= f.nombre_ev %></td>
+      <td><%= f.descripcion %></td>
+      <td align="center"><%= link_to 'Info', "http://#{f.link_ev}" %></td>
       <td><%= link_to 'Ver', evento_path(f) %></td>
       <%if current_user.rol != "Estudiante" %>
       <td><%= link_to 'Editar', edit_evento_path(f) %></td>

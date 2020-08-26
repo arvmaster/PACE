@@ -1,4 +1,3 @@
-
 <!-- Vertical navbar -->
 <div class="vertical-nav bg-white" id="sidebar">
   <div class="py-4 px-3 mb-4 bg-light">
@@ -11,7 +10,7 @@
     </div>
   </div>
 
-  <%= link_to 'COVI PACE-UTEM',root_path, class:"text-gray font-weight-bold text-uppercase px-3 small pb-4 mb-0" %>
+  <%= link_to 'Comunidad PACE-UTEM',root_path, class:"text-gray font-weight-bold text-uppercase px-3 small pb-4 mb-0" %>
 
   <ul class="nav flex-column bg-white mb-0">
     <% if current_user.rol != "Estudiante"%>
@@ -33,12 +32,12 @@
       <%=link_to 'Datos ENS',datos_carreras_url, :class =>"nav-link text-dark font-italic" %>
     </li>
     <li class="nav-item">
-      <%=link_to 'Eventos',eventos_url, :class =>"nav-link text-dark font-italic" %>
-    </li>
-    <li class="nav-item">
-      <%=link_to 'Informes',informes_url, :class =>"nav-link text-dark font-italic" %>
+      <%=link_to 'Eventos',user_eventos_url, :class =>"nav-link text-dark font-italic" %>
     </li>
     <% if user_signed_in? and current_user.rol != "Estudiante" %>
+      <li class="nav-item">
+        <%=link_to 'Informes',informes_url, :class =>"nav-link text-dark font-italic" %>
+      </li>
       <li class="nav-item">
         <%=link_to 'Estudios',estudios_url, :class =>"nav-link text-dark font-italic" %>
       </li>

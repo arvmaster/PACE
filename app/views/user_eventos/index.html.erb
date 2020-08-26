@@ -16,7 +16,7 @@
     <tr>
       <td><%= f.user.nombre_user %></td>
       <td><%= f.evento.nombre_ev %></td>
-      <td><%= f.asistencia %></td>
+      <td><%= f.asiste %></td>
       <td><%= link_to 'Ver', user_evento_path(f) %></td>
       <%if current_user.rol != "Estudiante" %>
       <td><%= link_to 'Editar', edit_user_evento_path(f) %></td>

@@ -1,5 +1,5 @@
-<td><%= link_to 'Carreras', datos_carreras_url %></td>
-<table class="table table-condensed">
+<h2><%= link_to 'Datos ENS', datos_carreras_url %></h2>
+<table class="table table-striped table-bordered">
   <tr>
     <th>Nombre Carrera</th>
     <th>Area</th>
@@ -16,13 +16,15 @@
       <td><%= @datos_carrera.ret_1a %></td>
       <td><%= @datos_carrera.duracion_for %></td>
       <% if user_signed_in? %>
-          <%if current_user.rol == "Admin" %>
+          <%if current_user.rol != "Admin" %>
             <td><%= link_to 'Editar', edit_datos_carrera_path(@datos_carrera) %></td>
           <%end%>
       <%end%>
     </tr>
 </table>
+<br>
 <div>
+  <h2>Matriculas Año 2019</h2>
   <%= column_chart(
                   {"Hombres" => @datos_carrera.mat_h,
                    "Mujeres" => @datos_carrera.mat_m}, width: "500px", height: "300px"

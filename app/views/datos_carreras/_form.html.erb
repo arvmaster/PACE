@@ -1,69 +1,57 @@
 <%= form_for @datos_carrera do |f| %>
-      <div class="form-group">
+  <div class="row">
+    <div class="col">
         <%= f.label :Nombre_Carrera %></br>
         <%= f.text_field :nombre_carrera , class: "form-control"%>
-      </div>
-      <div class="form-group">
+
         <%= f.label :Matricula_Hombres_2019 %></br>
         <%= f.number_field :mat_h , class: "form-control"%>
-      </div>
-      <div class="form-group">
+
         <%= f.label :Matricula_Mujer_2019 %></br>
         <%= f.number_field :mat_m , class: "form-control"%>
-      </div>
-      <div class="form-group">
+
         <%= f.label :Area %>
         <%= f.text_field :area , class: "form-control"%>
-      </div>
-      <div class="form-group">
+
         <%= f.label :Nombre_Institución  %>
         <%= f.text_field :institucion  , class: "form-control"%>
-      </div>
-      <div class="form-group">
+
         <%= f.label :Retencion_1°Año %>
         <%= f.number_field :ret_1a  , class: "form-control"%>
-      </div>
-      <div class="form-group">
+
         <%= f.label :Puntaje_Ultimo_Matriculado %>
         <%= f.number_field :pun_last_ma  , class: "form-control"%>
-      </div>
-      <div class="form-group">
+
         <%= f.label :Duración_Real %>
         <%= f.number_field :duracion_for  , class: "form-control"%>
-      </div>
-      <div class="form-group">
+    </div>
+    <div class="col">
         <%= f.label :Duración_Promedio %>
         <%= f.number_field :duracion_real  , class: "form-control"%>
-      </div>
-      <div class="form-group">
+
         <%= f.label :Empleabilidad_1°Año %>
         <%= f.number_field :emp_1a  , class: "form-control"%>
-      </div>
-      <div class="form-group">
+
         <%= f.label :Empleabilidad_2°Año %>
         <%= f.number_field :emp_2a  , class: "form-control"%>
-      </div>
-      <div class="form-group">
+
         <%= f.label :Titulados_Hombres_2018 %>
         <%= f.number_field :tit_h  , class: "form-control"%>
-      </div>
-      <div class="form-group">
+
         <%= f.label :Titulados_Mujeres_2018 %>
         <%= f.number_field :tit_m  , class: "form-control"%>
-      </div>
-      <div class="form-group">
+
         <%= f.label :Ingreso_1°Año %>
         <%= f.number_field :ing_1a  , class: "form-control"%>
-      </div>
-      <div class="form-group">
+
         <%= f.label :Ingreso_5°Año %>
         <%= f.number_field :ing_5a  , class: "form-control"%>
-      </div>
-      <div class="form-group">
+
         <%= f.label :Ingreso_10°Año %>
         <%= f.number_field :ing_10a  , class: "form-control"%>
       </div>
-
+  </div>
+  </br>
     <%= f.submit 'Enviar', :class => 'btn btn-primary' %>
 
 <% end %>

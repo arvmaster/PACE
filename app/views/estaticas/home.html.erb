@@ -1,19 +1,90 @@
 <div>
-  <section>
-    <div class="container">
-      <h3>Comunidad de Aprendizaje Utem</h3>
-      <p>PACE es una entidad que acompaña el los labores de Orientación Vocacional.</p>
-  </section>
-  <aside>
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h2 class="panel-title">Probabando tablas</h2>
-      </div>
-      <table class="table-bordered table-striped">
+      <div class="row">
+            <div class="col-lg-3"><br>
+              <div class="container">
+                  <table class="table table-bordered table-striped table-info">
+                    <tr>
+                      <th>Eventos</th>
+                    </tr>
+                    <% @eventos.each do |f| %>
+                      <tr>
+                        <td><%= link_to f.fecha_ev , evento_path(f), class: "text-dark"%> / <%= link_to f.nombre_ev, evento_path(f), class: "text-dark" %></td>
+                      </tr>
+                    <% end %>
+                  </table>
+              </div>
+            </div>
+            <div class="col">
+                  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <%= image_tag("utem_pace.jpg",size: "100x400" , class: "d-block w-100") %>
+                      </div>
+                      <div class="carousel-item">
+                        <%= image_tag("UTEM.jpg",size: "100x400" , class: "d-block w-100") %>
+                      </div>
+                      <div class="carousel-item">
+                        <%= image_tag("covid_02_24_06.jpg",size: "100x400" , class: "d-block w-100") %>
+                      </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
+                <div class="container bg-white p-5 rounded my-5 shadow-sm">
+                  <div class="row">
+                    <div class="col-lg">
+                        <h3 class="text-center align-self-center">UTEM</h3> <br>
+                        <%=image_tag("Logo-UTEM.png",size: "300x200") %>
+                    </div>
+                    <div class="col-lg">
+                        <p>Orientación vocacional a todos los alumnos de colegios vulnerables en la Region Metropolitana perteneciente al programa PACE UTEM.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="container bg-white p-5 rounded my-5 shadow-sm">
+                  <div class="row">
+                    <div class="col-lg">
+                      <h3 class="text-center align-self-center">PACE UTEM</h3> <br>
+                      <%=image_tag("PACE-UTEM.jpg",size: "300x200") %>
+                    </div>
+                    <div class="col-lg">
+                      <p>Orientación vocacional a todos los alumnos de colegios vulnerables en la Region Metropolitana perteneciente al programa PACE UTEM.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="container bg-white p-5 rounded my-5 shadow-sm">
+                  <div class="row">
+                    <div class="col-lg">
+                      <div>
+                      <h3 class="text-center align-self-center">PAE UTEM</h3> <br>
+                      <%=image_tag("PAE-UTEM.jpg",size: "300x200",class:"d-inline" ) %>
+                      </div>
+                    </div>
+                    <div class="col-lg">
+                      <p>Orientación vocacional a todos los alumnos de colegios vulnerables en la Region Metropolitana perteneciente al programa PACE UTEM.</p>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="col-1">
 
-      </table>
-
-    </div>
-  </aside>
+            </div>
+          </div>
+            <div>
+              <div class="container">
+                <%= render "compartido/login" %>
+              </div>
+            </div>
+  <br>
 </div>
-
