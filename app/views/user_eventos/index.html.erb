@@ -1,4 +1,4 @@
-<h1>User Evento Index</h1>
+<h2>User Evento Index</h2>
 
 <p>
   <%= link_to 'Principal',root_path %> |
@@ -8,19 +8,20 @@
 <table class="table table-striped table-bordered">
 
   <tr>
-    <th>Nombre usuario</th>
+    <th>Nombre</th>
     <th>Evento</th>
   </tr>
 
   <% @user_eventos.each do |f| %>
     <tr>
-      <td><%= f.user.nombre_user %></td>
+      <td><%= f.user.nombre_user + " " + f.user.apellido_pa + " " + f.user.apellido_ma%></td>
       <td><%= f.evento.nombre_ev %></td>
       <td><%= f.asiste %></td>
       <td><%= link_to 'Ver', user_evento_path(f) %></td>
       <%if current_user.rol != "Estudiante" %>
       <td><%= link_to 'Editar', edit_user_evento_path(f) %></td>
       <%end%>
+      <td align="center"><%= link_to 'Desasistir', user_evento_path(f), :confirm => "¿Estas Seguro?", :method => :delete,class: "btn btn-danger"%></td>
     </tr>
 
   <% end %>

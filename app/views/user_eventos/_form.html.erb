@@ -1,9 +1,46 @@
 <%= form_for @user_evento do |f| %>
+  <% if @user_evento.errors.any? %>
+    <div id="error_explanation">
+      <h2>No se pudo realizar la acción: <%= pluralize(@user_evento.errors.count, "Error/es") %> </h2>
+      <ul>
+        <% @user_evento.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+
+  <% end %>
       <div class="form-group">
           <%= f.label :Evento %><br />
-          <%= f.collection_select :evento_id, Evento.all, :id, :nombre_ev, {:include_blank => "Seleccionar Recinto"},{:class => "btn btn-default dropdown-toggle"}  %>
+          <%= f.collection_select :evento_id, Evento.all, :id, :nombre_ev, {:include_blank => "Seleccionar Evento"},{:class => "btn btn-default dropdown-toggle"}  %>
           <%= f.hidden_field :user_id ,value: current_user.id%>
-          <%= f.check_box :asiste %>
+          <% if current_page?(new_user_evento_path) %>
+            <%= f.hidden_field :asiste ,value: true %>
+          <% else %>
+            <%= f.check_box :asiste %>
+          <% end %>
+
       </div>
     <%= f.submit 'Enviar', :class => 'btn btn-primary' %>
 <% end %>
+<br>
+<table class="table table-striped table-bordered">
+
+  <tr>
+    <th>Fecha</th>
+    <th>Nombre del Evento</th>
+    <th>Descripcion</th>
+    <th>Link de Información</th>
+  </tr>
+
+  <% @eventos.each do |f| %>
+    <tr>
+      <td><%= f.fecha_ev %></td>
+      <td><%= f.nombre_ev %></td>
+      <td><%= f.descripcion %></td>
+      <td align="center"><%= link_to 'Info', "http://#{f.link_ev}" %></td>
+      <td><%= link_to 'Ver', evento_path(f) %></td>
+    </tr>
+  <% end %>
+
+</table>

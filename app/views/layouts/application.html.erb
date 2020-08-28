@@ -28,11 +28,12 @@
         <%end %>
 
           <div class="container">
-            <p class="notice"><%= notice %></p>
-            <p class="alert"><%= alert %></p>
+
             <% if current_page?(estaticas_path) %>
               <%= yield %>
             <%else %>
+              <p class="notice"><%= notice %></p>
+              <p class="alert"><%= alert %></p>
               <%= render "layouts/fondo" %>
             <%end %>
           </div>

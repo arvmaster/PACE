@@ -14,7 +14,7 @@
                   </table>
               </div>
             </div>
-            <div class="col">
+            <div class="col-lg-6">
                   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
                       <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -45,7 +45,7 @@
                   <div class="row">
                     <div class="col-lg">
                         <h3 class="text-center align-self-center">UTEM</h3> <br>
-                        <%=image_tag("Logo-UTEM.png",size: "300x200") %>
+                        <%=image_tag("Logo-UTEM.png",size: "300x200", class: "mx-auto d-block") %>
                     </div>
                     <div class="col-lg">
                         <p>Orientación vocacional a todos los alumnos de colegios vulnerables en la Region Metropolitana perteneciente al programa PACE UTEM.</p>
@@ -56,7 +56,7 @@
                   <div class="row">
                     <div class="col-lg">
                       <h3 class="text-center align-self-center">PACE UTEM</h3> <br>
-                      <%=image_tag("PACE-UTEM.jpg",size: "300x200") %>
+                       <%=image_tag("PACE-UTEM.jpg",size: "300x200", class: "mx-auto d-block") %> >
                     </div>
                     <div class="col-lg">
                       <p>Orientación vocacional a todos los alumnos de colegios vulnerables en la Region Metropolitana perteneciente al programa PACE UTEM.</p>
@@ -68,7 +68,7 @@
                     <div class="col-lg">
                       <div>
                       <h3 class="text-center align-self-center">PAE UTEM</h3> <br>
-                      <%=image_tag("PAE-UTEM.jpg",size: "300x200",class:"d-inline" ) %>
+                      <%=image_tag("PAE-UTEM.jpg",size: "300x200", class: "mx-auto d-block" ) %>
                       </div>
                     </div>
                     <div class="col-lg">
@@ -77,14 +77,15 @@
                   </div>
                 </div>
             </div>
-            <div class="col-1">
-
-            </div>
-          </div>
-            <div>
-              <div class="container">
-                <%= render "compartido/login" %>
+            <div class="col-lg-3">
+              <div>
+                <div class="container">
+                <div class="container-fluid bg-white rounded">
+                  <%= render "compartido/login" %>
+                </div>
+                </div>
               </div>
             </div>
+          </div>
   <br>
 </div>

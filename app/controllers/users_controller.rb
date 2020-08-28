@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
-  #before_action :authenticate_user!
+  before_action :authenticate_user!
+  before_action :require_activated
 
   def index
     @users = User.all.where("id != ? and supervisar > ?", current_user.id, current_user.supervisar)
@@ -67,12 +68,12 @@ class UsersController < ApplicationController
     params.require(:user).permit(:nombre_user, :rol, :supervisar, :apellido_pa, :apellido_ma, :rut, :fecha_nacimiento, :comuna, :direccion, :nivel_estudio, :fecha_ingreso, :especialidad, :telefono, :estado, :email, :estudio_id,:recinto_id,:password, :password_confirmation)
   end
 
-  /def require_activated
+  def require_activated
     if !current_user.estado?
       flash[:error]="Usuario no existe [401]"
       redirect_to root_path
 
     end
-  end/
+  end
 
 end

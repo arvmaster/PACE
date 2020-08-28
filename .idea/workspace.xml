@@ -20,28 +20,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aac5b097-7438-4f2a-bd05-44f8ce57767f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/views/estaticas/index.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/estaticas_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/estaticas_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/informes_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/informes_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/eventos_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/eventos_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/user_eventos_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/user_eventos_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/user_evento.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user_evento.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/archivos/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/archivos/edit.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/archivos/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/archivos/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/archivos/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/archivos/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/cuestionarios/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/cuestionarios/edit.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/datos_carreras/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/datos_carreras/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/datos_carreras/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/datos_carreras/edit.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/datos_carreras/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/datos_carreras/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/datos_carreras/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/datos_carreras/show.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/estaticas/home.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/estaticas/home.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/estaticas/login.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/estaticas/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/estaticas/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/eventos/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/eventos/edit.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/eventos/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/eventos/index.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/eventos/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/eventos/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/_navbarinicio.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/_navbarinicio.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/layouts/_sidemenu.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/_sidemenu.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/user_eventos/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/user_eventos/_form.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/user_eventos/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/user_eventos/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/users/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/show.html.erb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,7 +217,9 @@
       <workItem from="1597423106326" duration="59653000" />
       <workItem from="1597950846499" duration="614000" />
       <workItem from="1597961511215" duration="9299000" />
-      <workItem from="1598393947402" duration="11706000" />
+      <workItem from="1598393947402" duration="12192000" />
+      <workItem from="1598473513077" duration="15221000" />
+      <workItem from="1598649857009" duration="2235000" />
     </task>
     <servers />
   </component>

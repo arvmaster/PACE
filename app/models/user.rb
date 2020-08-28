@@ -11,7 +11,7 @@ class User < ApplicationRecord
   has_many :pregunta_cuestionarios, through: :cuestionarios
   has_many :user_eventos
   has_many :eventos, through: :user_eventos
-  #
+
   include RunCl::ActAsRun
   validates  :rut,presence: { message: 'Ingrese un rut'}, uniqueness: true
   has_run_cl :rut
@@ -49,8 +49,8 @@ class User < ApplicationRecord
 
 
   def edadminima
-    if fecha_nacimiento.present? && fecha_nacimiento >= 18.year.ago
-      errors.add(:fecha_nacimiento, "debe ser mayor de 18 años")
+    if fecha_nacimiento.present? && fecha_nacimiento >= 15.year.ago
+      errors.add(:fecha_nacimiento, "debe ser mayor de 15 años")
     end
   end
 

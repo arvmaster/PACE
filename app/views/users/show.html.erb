@@ -77,7 +77,6 @@
       <td><%= f.evento.fecha_ev %></td>
       <td><%= link_to 'Ver', user_evento_path(f) %></td>
       <% if current_user.id == @user.id or current_user.rol == "Admin"%>
-        <td><%= link_to 'Editar', edit_user_evento_path(f) %></td>
       <%end%>
     </tr>
   <% end %>

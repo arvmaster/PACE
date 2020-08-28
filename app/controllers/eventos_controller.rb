@@ -7,6 +7,7 @@ class EventosController < ApplicationController
 
   def show
     @evento = Evento.find(params[:id])
+    @user_eventos = UserEvento.where(evento_id: @evento.id, asiste: true)
   end
 
   def new
@@ -19,7 +20,7 @@ class EventosController < ApplicationController
       flash[:success] = "Evento Creado"
       redirect_to @evento
     else
-      flash[:error] = "No se ha creado el evento"
+      flash[:error] = "No se ha creado el Evento"
       render :new
     end
   end
@@ -31,10 +32,10 @@ class EventosController < ApplicationController
   def update
     @evento = Evento.find(params[:id])
     if @evento.update(evento_params)
-      flash[:success] = "Se actualizo el evento"
+      flash[:success] = "Se actualizo el Evento"
       redirect_to eventos_url
     else
-      flash[:error] = "No se modifico el evento"
+      flash[:error] = "No se modifico el Evento"
       render :edit
     end
   end

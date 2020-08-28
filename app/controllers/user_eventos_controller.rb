@@ -11,16 +11,18 @@ class UserEventosController < ApplicationController
 
   def new
     @user_evento = UserEvento.new
+    @eventos = Evento.where('fecha_ev >= ?',  Time.current)
   end
 
   def create
+    @eventos = Evento.where('fecha_ev >= ?',  Time.current)
     @user_evento = UserEvento.create(user_evento_params)
     if @user_evento.save
-      flash[:success] = "UserEvento Creado"
-      redirect_to @user_evento
+      flash[:success] = "Te has inscrito al Evento"
+      redirect_to user_eventos_path
     else
-      flash[:error] = "No se ha creado el user_evento"
-      render :new
+      flash[:error] = "No puso realizarse la acción"
+      render new_user_evento_path
     end
   end
 
@@ -51,6 +53,8 @@ class UserEventosController < ApplicationController
 
   def destroy
     UserEvento.find(params[:id]).destroy
+    flash[:success] = "Desincripción realizada"
+    redirect_to user_eventos_path
   end
 
   private

@@ -32,7 +32,10 @@
       <%=link_to 'Datos ENS',datos_carreras_url, :class =>"nav-link text-dark font-italic" %>
     </li>
     <li class="nav-item">
-      <%=link_to 'Eventos',user_eventos_url, :class =>"nav-link text-dark font-italic" %>
+      <%=link_to 'User_Eventos',user_eventos_url, :class =>"nav-link text-dark font-italic" %>
+    </li>
+    <li class="nav-item">
+      <%=link_to 'Eventos',eventos_url, :class =>"nav-link text-dark font-italic" %>
     </li>
     <% if user_signed_in? and current_user.rol != "Estudiante" %>
       <li class="nav-item">

@@ -4,6 +4,7 @@
     <th>Fecha</th>
     <th>Nombre del Evento</th>
     <th>Descripcion</th>
+    <th>Asistencia</th>
     <th>Link de Información</th>
   </tr>
 
@@ -11,11 +12,23 @@
       <td><%= @evento.fecha_ev %></td>
       <td><%= @evento.nombre_ev %></td>
       <td><%= @evento.descripcion %></td>
+      <td align="center"><%= @user_eventos.count %></td>
       <td align="center"><%= link_to 'Info', "http://#{@evento.link_ev}" %></td>
       <% if current_user == "Admin" %>
         <td><%= link_to 'Editar', edit_evento_path(@evento.id) %></td>
       <%end %>
-      <td> <%= link_to 'NO FUNCIONA AUN', root_path ,:class=>"btn btn-warning"%></td>
     </tr>
 
+</table>
+<h2>Lista de Asistencia</h2><br>
+<table class="table-striped table-bordered table">
+  <tr>
+    <th>Usuario</th>
+  </tr>
+  <% @user_eventos.each do |f| %>
+    <tr>
+      <td><%= f.user.nombre_user + " " + f.user.apellido_pa + " " + f.user.apellido_ma %></td>
+      <td><%= link_to 'Ver', user_path(f) %></td>
+    </tr>
+  <% end %>
 </table>
