@@ -1,9 +1,11 @@
 class InformesController < ApplicationController
   before_action :authenticate_user!
-  #before_action :require_certain_role
+  before_action :require_activated
+  before_action :require_PACE
 
   def index
-    @informes = Informe.all
+    @admin = User.find_by(:rol => "Admin")
+    @informes = Informe.where(:user_id => @admin.id)
   end
 
   def show
@@ -81,10 +83,17 @@ class InformesController < ApplicationController
   def informe_params
     params.require(:informe).permit(:nombre_inf, :user_id, pregunta_informes_attributes: [:id, :pregunta_inf, :respuesta])
   end
-  def require_certain_role
+  def require_activated
+    if !current_user.estado?
+      flash[:error]="Usuario no existe [401]"
+      redirect_to root_path
+
+    end
+  end
+  def require_PACE
     if current_user.rol=='Estudiante'
       flash[:error]="No esta autorizado para acceder a esta pagina"
-      redirect_to root_path
+      redirect_to estaticas_path
     end
   end
 end

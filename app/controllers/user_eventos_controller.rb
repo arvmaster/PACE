@@ -1,5 +1,6 @@
 class UserEventosController < ApplicationController
   before_action :authenticate_user!
+  before_action :require_activated
 
   def index
     @user_eventos = UserEvento.all
@@ -61,6 +62,13 @@ class UserEventosController < ApplicationController
 
   def user_evento_params
     params.require(:user_evento).permit(:user_id, :evento_id, :asiste)
+  end
+  def require_activated
+    if !current_user.estado?
+      flash[:error]="Usuario no existe [401]"
+      redirect_to root_path
+
+    end
   end
 
 end

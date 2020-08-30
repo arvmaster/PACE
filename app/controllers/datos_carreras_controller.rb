@@ -1,7 +1,8 @@
 class DatosCarrerasController < ApplicationController
   before_action :authenticate_user!,except: [:index,:show]
+  helper_method :sort_column,:sort_direction
   def index
-    @datos_carreras = DatosCarrera.all
+    @datos_carreras = DatosCarrera.order(sort_column + " " + sort_direction)
   end
 
   def show
@@ -57,6 +58,14 @@ class DatosCarrerasController < ApplicationController
   end
 
   private
+
+  def sort_column
+    DatosCarrera.column_names.include?(params[:sort]) ? params[:sort] : "nombre_carrera"
+  end
+
+  def sort_direction
+    %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
+  end
 
   def datos_carrera_params
     params.require(:datos_carrera).permit(:nombre_carrera, :area, :institucion, :ret_1a, :pun_last_ma, :duracion_for, :duracion_real, :emp_1a, :emp_2a, :mat_h, :mat_m, :tit_h, :tit_m, :ing_1a, :ing_5a, :ing_10a, :user_id)

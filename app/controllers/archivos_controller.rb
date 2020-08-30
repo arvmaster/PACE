@@ -1,5 +1,7 @@
 class ArchivosController < ApplicationController
-    before_action :authenticate_user!,except: [:index]
+    before_action :authenticate_user!, except: [:index,:show]
+    before_action :require_activated, except: [:index,:show]
+    before_action :require_PACE, except: [:index,:show]
 
     def index
       @archivos = Archivo.all
@@ -55,6 +57,19 @@ class ArchivosController < ApplicationController
 
     def archivo_params
       params.require(:archivo).permit(:nombre_archivo, :topico, :asignatura, :file, :user_id)
+    end
+    def require_activated
+      if !current_user.estado?
+        flash[:error]="Usuario no existe [401]"
+        redirect_to root_path
+
+      end
+    end
+    def require_PACE
+      if current_user.rol=='Estudiante'
+        flash[:error]="No esta autorizado para acceder a esta pagina"
+        redirect_to estaticas_path
+      end
     end
 
 end

@@ -21,21 +21,23 @@
   <component name="ChangeListManager">
     <list default="true" id="aac5b097-7438-4f2a-bd05-44f8ce57767f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/archivos_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/archivos_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/cuestionarios_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/cuestionarios_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/datos_carreras_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/datos_carreras_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/estudios_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/estudios_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/eventos_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/eventos_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/informes_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/informes_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/pregunta_cuestionarios_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/pregunta_cuestionarios_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/pregunta_informes_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/pregunta_informes_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/recintos_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/recintos_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/user_eventos_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/user_eventos_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/user_evento.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user_evento.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/archivos/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/archivos/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/datos_carreras/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/datos_carreras/index.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/estaticas/home.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/estaticas/home.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/estaticas/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/estaticas/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/eventos/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/eventos/edit.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/eventos/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/eventos/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/eventos/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/eventos/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/_sidemenu.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/_sidemenu.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/user_eventos/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/user_eventos/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/user_eventos/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/user_eventos/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/users/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/users/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/edit.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/users/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/users/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/new.html.erb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,7 +221,11 @@
       <workItem from="1597961511215" duration="9299000" />
       <workItem from="1598393947402" duration="12192000" />
       <workItem from="1598473513077" duration="15221000" />
-      <workItem from="1598649857009" duration="2235000" />
+      <workItem from="1598649857009" duration="2783000" />
+      <workItem from="1598659049496" duration="632000" />
+      <workItem from="1598661953392" duration="2417000" />
+      <workItem from="1598677112656" duration="1253000" />
+      <workItem from="1598741539773" duration="9930000" />
     </task>
     <servers />
   </component>

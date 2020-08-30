@@ -1,8 +1,10 @@
 class CuestionariosController < ApplicationController
   before_action :authenticate_user!
+  before_action :require_activated
 
   def index
-    @cuestionarios = Cuestionario.all
+    @admin = User.find_by(:rol => "Admin")
+    @cuestionarios = Cuestionario.where(:user_id => @admin.id)
   end
 
   def show
@@ -103,6 +105,13 @@ class CuestionariosController < ApplicationController
 
   def cuestionario_params
     params.require(:cuestionario).permit( :nombre_cues, :eda_a, :eda_t, :eda_r, :eda_p, :user_id, pregunta_cuestionarios_attributes: [:id, :casilla, :pregunta_cues, :respuesta])
+  end
+  def require_activated
+    if !current_user.estado?
+      flash[:error]="Usuario no existe [401]"
+      redirect_to root_path
+
+    end
   end
 
 end

@@ -1,5 +1,7 @@
 class PreguntaInformesController < ApplicationController
-  #before_action :authenticate_user!
+  before_action :authenticate_user!
+  before_action :require_activated
+  before_action :require_PACE
 
       def index
         @pregunta_informes = PreguntaInforme.all
@@ -58,5 +60,18 @@ class PreguntaInformesController < ApplicationController
       def pregunta_informe_params
         params.require(:pregunta_informe).permit(:pregunta_inf, :respuesta, :informe_id)
       end
+  def require_activated
+    if !current_user.estado?
+      flash[:error]="Usuario no existe [401]"
+      redirect_to root_path
+
+    end
+  end
+  def require_PACE
+    if current_user.rol=='Estudiante'
+      flash[:error]="No esta autorizado para acceder a esta pagina"
+      redirect_to estaticas_path
+    end
+  end
 
 end

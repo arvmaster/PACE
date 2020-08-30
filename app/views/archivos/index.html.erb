@@ -1,6 +1,6 @@
 <h1>Archivos Index</h1>
 
-<% if current_user.rol != "Estudiante"%>
+<% if user_signed_in? and current_user.rol != "Estudiante"%>
   <p>
     <%= link_to 'Subir Material', new_archivo_path %>
   </p>

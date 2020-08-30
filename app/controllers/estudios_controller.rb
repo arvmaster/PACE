@@ -1,5 +1,8 @@
 class EstudiosController < ApplicationController
-  #before_action :authenticate_user!
+  before_action :authenticate_user!
+  before_action :require_activated
+  before_action :require_PACE
+
   def index
     @estudios = Estudio.all
   end
@@ -61,6 +64,19 @@ class EstudiosController < ApplicationController
 
   def estudio_params
     params.require(:estudio).permit(:nombre_estudio, :codigo, :estado, :recinto_id)
+  end
+  def require_activated
+    if !current_user.estado?
+      flash[:error]="Usuario no existe [401]"
+      redirect_to root_path
+
+    end
+  end
+  def require_PACE
+    if current_user.rol=='Estudiante'
+      flash[:error]="No esta autorizado para acceder a esta pagina"
+      redirect_to estaticas_path
+    end
   end
 
 end

@@ -1,5 +1,7 @@
 class RecintosController < ApplicationController
-  #before_action :authenticate_user!
+  before_action :authenticate_user!
+  before_action :require_activated
+  before_action :require_PACE
   def index
     @recintos = Recinto.all
   end
@@ -55,5 +57,17 @@ class RecintosController < ApplicationController
   def recinto_params
     params.require(:recinto).permit(:nombre_recinto)
   end
+  def require_activated
+    if !current_user.estado?
+      flash[:error]="Usuario no existe [401]"
+      redirect_to root_path
 
+    end
+  end
+  def require_PACE
+    if current_user.rol=='Estudiante'
+      flash[:error]="No esta autorizado para acceder a esta pagina"
+      redirect_to estaticas_path
+    end
+  end
 end
