@@ -14,51 +14,31 @@
 
   <ul class="nav flex-column bg-white mb-0">
     <% if current_user.rol != "Estudiante"%>
-    <li class="nav-item">
+    <li class="nav-item btn-outline-light">
       <%=link_to 'User',users_url, :class =>"nav-link text-dark font-italic"%>
     </li>
       <%else %>
-      <li class="nav-item">
+      <li class="nav-item btn-outline-light">
         <%= link_to "Mis Datos",edit_user_path(current_user.id) , :class =>"nav-link text-dark font-italic" %>
       </li>
   <%end %>
-    <li class="nav-item">
+    <li class="nav-item btn-outline-light">
       <%=link_to 'Archivos',archivos_url, :class =>"nav-link text-dark font-italic" %>
     </li>
-    <li class="nav-item">
-      <%=link_to 'Cuestionarios EDA', cuestionarios_url, :class =>"nav-link text-dark font-italic" %>
-    </li>
-    <li class="nav-item">
-      <%=link_to 'Datos ENS',datos_carreras_url, :class =>"nav-link text-dark font-italic" %>
-    </li>
-    <li class="nav-item">
-      <%=link_to 'User_Eventos',user_eventos_url, :class =>"nav-link text-dark font-italic" %>
-    </li>
-    <li class="nav-item">
-      <%=link_to 'Eventos',eventos_url, :class =>"nav-link text-dark font-italic" %>
+    <li class="nav-item btn-outline-light">
+      <%=link_to 'Cuestionarios', cuestionarios_url, :class =>"nav-link text-dark font-italic" %>
     </li>
     <% if user_signed_in? and current_user.rol != "Estudiante" %>
-      <li class="nav-item">
+      <li class="nav-item btn-outline-light">
         <%=link_to 'Informes',informes_url, :class =>"nav-link text-dark font-italic" %>
-      </li>
-      <li class="nav-item">
-        <%=link_to 'Estudios',estudios_url, :class =>"nav-link text-dark font-italic" %>
-      </li>
-      <li class="nav-item">
-        <%=link_to 'Informes',informes_url, :class =>"nav-link text-dark font-italic" %>
-      </li>
-      <%if current_user.rol == "Admin" %>
-        <li class="nav-item">
-          <%=link_to 'Preguntas Informe',pregunta_informes_url, :class =>"nav-link text-dark font-italic" %>
-        </li>
-        <li class="nav-item">
-          <%=link_to 'Preguntas Cuestionario',pregunta_cuestionarios_url, :class =>"nav-link text-dark font-italic" %>
-        </li>
-      <%end%>
-      <li class="nav-item">
-        <%=link_to 'Recintos',recintos_url, :class =>"nav-link text-dark font-italic" %>
       </li>
     <%end %>
+    <li class="nav-item btn-outline-light">
+      <%=link_to 'Eventos',eventos_url, :class =>"nav-link text-dark font-italic" %>
+    </li>
+    <li class="nav-item btn-outline-light">
+      <%=link_to 'Datos ENS',datos_carreras_url, :class =>"nav-link text-dark font-italic" %>
+    </li>
   </ul>
 </div>
 <!-- End vertical navbar -->

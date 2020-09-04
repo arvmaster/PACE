@@ -19,7 +19,7 @@ class ArchivosController < ApplicationController
       @archivo = current_user.archivos.build(archivo_params)
       if @archivo.save
         flash[:success] = "Archivo Creado"
-        redirect_to @archivo
+        redirect_to archivos_path
       else
         flash[:error] = "No se ha creado el archivo"
         render 'new'

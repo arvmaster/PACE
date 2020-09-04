@@ -12,12 +12,12 @@
   <% end %>
       <div class="form-group">
           <%= f.label :Evento %><br />
-          <%= f.collection_select :evento_id, Evento.all, :id, :nombre_ev, {:include_blank => "Seleccionar Evento"},{:class => "btn btn-default dropdown-toggle"}  %>
+          <%= f.collection_select :evento_id, Evento.all, :id, :nombre_ev, {:include_blank => "Seleccionar Evento"},{:class => "btn btn-default border dropdown-toggle"}  %>
           <%= f.hidden_field :user_id ,value: current_user.id%>
           <% if current_page?(new_user_evento_path) %>
             <%= f.hidden_field :asiste ,value: true %>
           <% else %>
-            <%= f.check_box :asiste %>
+            <%= f.hidden_field :asiste ,value: true %>
           <% end %>
 
       </div>

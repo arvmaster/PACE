@@ -12,11 +12,7 @@
   <body>
     <% if current_page?(root_path) %>
 
-      <%= render "layouts/navbarinicio" %>
-        <div class="container">
-          <p class="notice"><%= notice %></p>
-          <p class="alert"><%= alert %></p>
-        </div>
+      <%= render "layouts/navbarinicio" %><br>
        <%= yield %>
 
     <%else %>
@@ -32,9 +28,7 @@
             <% if current_page?(estaticas_path) %>
               <%= yield %>
             <%else %>
-              <p class="notice"><%= notice %></p>
-              <p class="alert"><%= alert %></p>
-              <%= render "layouts/fondo" %>
+              <%= render "layouts/fondo"%>
             <%end %>
           </div>
     <%end%>

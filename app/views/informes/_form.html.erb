@@ -4,9 +4,11 @@
         <%= f.label :Nombre_informe %><br />
         <%= f.text_field :nombre_inf,  class: "form-control"%>
       <%else%>
+        <% if current_page?(new_informe_path) %>
         <%= f.label :Nombre_informe %><br />
         <%= f.collection_select :nombre_inf, Informe.where(user_id: 1), :nombre_inf, :nombre_inf, {:include_blank => "Seleccionar Informe"},{:class => "btn btn-default dropdown-toggle border"}  %>
-    <%end %>
+        <%end %>
+      <%end %>
     </div>
     <%= f.fields_for :pregunta_informes do |p|  %>
        <div>

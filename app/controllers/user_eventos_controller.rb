@@ -3,7 +3,7 @@ class UserEventosController < ApplicationController
   before_action :require_activated
 
   def index
-    @user_eventos = UserEvento.all
+    @user_eventos = UserEvento.where(user_id: current_user.id)
   end
 
   def show

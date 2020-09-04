@@ -4,7 +4,9 @@ Rails.application.routes.draw do
       sessions: 'users/sessions'
   }
   root 'estaticas#home'
-
+  namespace :user do
+    root :to => "estaticas#index"
+  end
   resources :estaticas
   resources :archivos
   resources :cuestionarios

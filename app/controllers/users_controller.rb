@@ -1,8 +1,9 @@
 class UsersController < ApplicationController
-  before_action :authenticate_user!
-  before_action :require_activated
+  before_action :authenticate_user!, except: [:new,:create]
+  before_action :require_activated, except: [:new,:create]
 
   def index
+    @user = User.where(:rol => "Admin")
     @users = User.all.where("id != ? and supervisar > ?", current_user.id, current_user.supervisar)
   end
 
@@ -18,7 +19,7 @@ class UsersController < ApplicationController
     @user = User.create(user_params)
     if @user.save
       flash[:success] = "User Creado"
-      redirect_to users_path
+      redirect_to estaticas_path
     else
       flash[:error] = "No se ha creado el user"
       render 'new'

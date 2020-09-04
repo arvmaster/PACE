@@ -22,6 +22,8 @@ class CuestionariosController < ApplicationController
   end
 
   def create
+    @cuestionario = Cuestionario.create(cuestionario_params)
+    @cuestionario.user_id = current_user.id
     if current_user.rol == "Admin"
         @cuestionario = Cuestionario.create(cuestionario_params)
         @cuestionario.user_id = current_user.id
