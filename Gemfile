@@ -8,13 +8,14 @@ gem 'rails', '~> 5.2.2'
 #agregado por mi#
 gem 'devise'
 gem 'pg'
-gem 'carrierwave'
+gem 'awesome_print'
 gem "mini_magick"
 gem "chartkick"
 gem 'run_cl'
 gem 'activestorage-validator'
 gem 'amoeba'
 gem 'jquery-rails'
+gem "font-awesome-rails"
 #hasta aca
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
@@ -60,7 +61,7 @@ group :test do
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
 end
-gem 'tzinfo-data'
+
 gem 'tzinfo'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

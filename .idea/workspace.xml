@@ -20,37 +20,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aac5b097-7438-4f2a-bd05-44f8ce57767f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.generators" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.rakeTasks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/PACE.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PACE.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/archivos_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/archivos_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/cuestionarios_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/cuestionarios_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/estaticas_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/estaticas_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/user_eventos_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/user_eventos_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/archivo.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/archivo.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/evento.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/evento.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/archivos/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/archivos/edit.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cosas a tomar en cuenta" beforeDir="false" afterPath="$PROJECT_DIR$/Cosas a tomar en cuenta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/archivos/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/archivos/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/cuestionarios/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/cuestionarios/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/cuestionarios/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/cuestionarios/edit.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/cuestionarios/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/cuestionarios/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/datos_carreras/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/datos_carreras/edit.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/datos_carreras/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/datos_carreras/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/datos_carreras/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/datos_carreras/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/datos_carreras/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/datos_carreras/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/devise/confirmations/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/confirmations/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/estaticas/home.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/estaticas/home.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/estudios/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/estudios/index.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/eventos/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/eventos/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/eventos/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/eventos/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/eventos/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/eventos/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/informes/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/informes/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/informes/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/informes/edit.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/layouts/_footer.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/_footer.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/_navbarinicio.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/_navbarinicio.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/layouts/_sidemenu.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/_sidemenu.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/user_eventos/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/user_eventos/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/user_eventos/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/user_eventos/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/user_eventos/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/user_eventos/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/user_eventos/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/user_eventos/show.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/users/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/_form.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/users/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/index.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
@@ -62,6 +50,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
   </component>
   <component name="ProjectId" id="1eq05GwCIz42hzAyczYAQWN4G9G" />
   <component name="ProjectLevelVcsManager">
@@ -79,19 +70,19 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app/views/user_eventos" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="vcs.Subversion.SSH" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\alexander\Desktop\Tesis\Plataforma Pace\PACE\app\assets\images" />
-      <recent name="C:\Users\alexander\Desktop\Tesis\Plataforma Pace\PACE\app\assets\stylesheets" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\alexander\Desktop\Tesis\Plataforma Pace\PACE\app\views\user_eventos" />
       <recent name="C:\Users\alexander\Desktop\Tesis\Plataforma Pace\PACE\app\views\eventos" />
       <recent name="C:\Users\alexander\Desktop\Tesis\Plataforma Pace\PACE\app\assets\javascripts" />
       <recent name="C:\Users\alexander\Desktop\Tesis\Plataforma Pace\PACE\app\assets\stylesheets" />
       <recent name="C:\Users\alexander\Desktop\Tesis\Plataforma Pace\PACE\app\views\recintos" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\alexander\Desktop\Tesis\Plataforma Pace\PACE\app\assets\images" />
+      <recent name="C:\Users\alexander\Desktop\Tesis\Plataforma Pace\PACE\app\assets\stylesheets" />
     </key>
   </component>
   <component name="RubyModuleManagerSettings">
@@ -112,7 +103,8 @@
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
       <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
       <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" ENABLE_FORKED_COVERAGE="true" />
+      <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SCRIPT_ARGS" VALUE="" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="IP" VALUE="127.0.0.1" />
@@ -132,7 +124,8 @@
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
       <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
       <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" ENABLE_FORKED_COVERAGE="true" />
+      <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SCRIPT_ARGS" VALUE="" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="IP" VALUE="127.0.0.1" />
@@ -151,7 +144,8 @@
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
       <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
       <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" ENABLE_FORKED_COVERAGE="true" />
+      <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="spec" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE=":rspec " />
@@ -173,7 +167,8 @@
       </envs>
       <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
       <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" ENABLE_FORKED_COVERAGE="true" />
+      <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="test" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE=":test_unit " />
@@ -184,9 +179,10 @@
       <method v="2" />
     </configuration>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SpringUtil" SPRING_PRE_LOADER_OPTION="true" RAKE_SPRING_PRE_LOADER_OPTION="true" RAILS_SPRING_PRE_LOADER_OPTION="true" />
   <component name="SvnConfiguration">
-    <configuration>C:\Users\alexander\AppData\Roaming\Subversion</configuration>
+    <configuration>C:\Users\Alex\AppData\Roaming\Subversion</configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -247,11 +243,26 @@
       <workItem from="1599001741863" duration="1199000" />
       <workItem from="1599016087064" duration="1288000" />
       <workItem from="1599079850668" duration="21458000" />
+      <workItem from="1608127562003" duration="41000" />
+      <workItem from="1608142418080" duration="786000" />
+      <workItem from="1608144567701" duration="644000" />
+      <workItem from="1608149034347" duration="54000" />
+      <workItem from="1608263359744" duration="646000" />
+      <workItem from="1608333015650" duration="65000" />
+      <workItem from="1608333212646" duration="119000" />
+      <workItem from="1609768490572" duration="284000" />
+      <workItem from="1611206139401" duration="5000" />
+      <workItem from="1614644708764" duration="14000" />
+      <workItem from="1614647065967" duration="1222000" />
+      <workItem from="1614896355241" duration="5095000" />
+      <workItem from="1614924312231" duration="7585000" />
+      <workItem from="1615049060800" duration="12696000" />
+      <workItem from="1615145221869" duration="462000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -264,55 +275,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="275" y="21" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595033895860">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="275" y="21" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1595033895860" />
-    <state x="393" y="164" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1597424221988">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="393" y="164" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1597424221988" />
-    <state x="413" y="109" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1597613469116">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="413" y="109" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1597613469116" />
-    <state x="463" y="117" key="FileChooserDialogImpl" timestamp="1596673554183">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="463" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1596673554183" />
-    <state width="1322" height="174" key="GridCell.Tab.0.bottom" timestamp="1595035553499">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1322" height="174" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595035553499" />
-    <state width="1322" height="174" key="GridCell.Tab.0.center" timestamp="1595035553499">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1322" height="174" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1595035553499" />
-    <state width="1322" height="174" key="GridCell.Tab.0.left" timestamp="1595035553499">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1322" height="174" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1595035553499" />
-    <state width="1322" height="174" key="GridCell.Tab.0.right" timestamp="1595035553499">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1322" height="174" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1595035553499" />
-    <state x="184" y="0" key="SettingsEditor" timestamp="1597266834594">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1597266834594" />
-    <state x="0" y="0" width="585" height="728" key="find.popup" timestamp="1598396741760">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="0" y="0" width="585" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1598396741760" />
-    <state x="339" y="157" key="run.anything.popup" timestamp="1597611845638">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="339" y="157" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1597611845638" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1597266830222">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1597266830222" />
   </component>
 </project>

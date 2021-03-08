@@ -27,6 +27,7 @@ Rails.application.routes.draw do
     collection {post :import}
   end
 
+  get '/datos_ens' , to: 'datos_carreras#index'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

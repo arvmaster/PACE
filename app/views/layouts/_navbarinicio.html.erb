@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;"">
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
   <div class="container-fluid">
     <ul class="nav navbar-nav">
       <li><%= link_to 'COVI PACE UTEM',root_path ,:class =>"navbar-brand"%></li>
@@ -17,3 +17,12 @@
     </ul>
   </div>
 </nav>
+
+<% if current_page?(estaticas_path) || current_page?(root_path) %>
+  <br>
+    <%= yield %>
+  <%else%>
+   <div class="container">
+  <%= render 'layouts/fondo' %>
+   </div>
+<%end%>

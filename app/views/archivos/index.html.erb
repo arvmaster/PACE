@@ -20,7 +20,7 @@
       <td><%= f.nombre_archivo %></td>
       <td><%= f.asignatura %></td>
       <td><%= f.topico %></td>
-      <td align="center"><%= link_to image_tag("document.jpg",size: "35x35"), f.file, download: '' %></td>
+      <td align="center"><%= link_to image_tag("document.jpg",size: "35x35"), f.file, target: '_blank' %></td>
       <% if user_signed_in? and current_user.rol != "Estudiante" %>
       <td><%= link_to 'Ver', archivo_path(f) %></td>
       <td><%= link_to 'Editar', edit_archivo_path(f) %></td>

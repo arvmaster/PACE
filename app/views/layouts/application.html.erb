@@ -12,26 +12,24 @@
   <body>
     <% if current_page?(root_path) %>
 
-      <%= render "layouts/navbarinicio" %><br>
-       <%= yield %>
+
+       <%= render "layouts/navbarinicio" %><br>
+
 
     <%else %>
 
         <% if user_signed_in? %>
-          <%= render "layouts/sidemenu" %>
+
+              <%= render "layouts/sidemenu" %>
+
         <%else %>
-          <%= render "layouts/navbarinicio" %>
+
+              <%= render "layouts/navbarinicio" %>
+
         <%end %>
 
-          <div class="container">
-
-            <% if current_page?(estaticas_path) %>
-              <%= yield %>
-            <%else %>
-              <%= render "layouts/fondo"%>
-            <%end %>
-          </div>
     <%end%>
-  <%=render "layouts/footer" %>
+
   </body>
+      <%= render 'layouts/footer' %>
 </html>
