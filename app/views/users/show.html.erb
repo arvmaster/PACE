@@ -1,7 +1,9 @@
 <% if user_signed_in? and current_user.rol != "Estudiante"%>
   <h2><%= link_to 'Usuarios', users_url %></h2></br>
 <%end %>
-<h3 class="font-italic"> Usuario: <%= @user.nombre_user %> <%= @user.apellido_pa %> <%= @user.apellido_ma %></h3>
+<h3 class="font-italic"> Usuario:
+  <%= @user.nombre_user %> <%= @user.apellido_pa %> <%= @user.apellido_ma %>
+  <%= link_to "Editar", edit_user_path(current_user), class: 'btn btn-info'%></h3>
 </br>
 <h2>Datos Personales</h2>
 <table class="table-striped table-bordered table">
@@ -14,12 +16,12 @@
     <th>Teléfono</th>
   </tr>
   <tr>
-    <td><%= @user.rut %></td>
-    <td><%= @user.nacionalidad %></td>
-    <td><%= @user.fecha_nacimiento %></td>
-    <td><%= @user.comuna %></td>
-    <td><%= @user.direccion %></td>
-    <td><%= @user.telefono %></td>
+    <td><%= @user&.rut %></td>
+    <td><%= @user&.nacionalidad %></td>
+    <td><%= @user&.fecha_nacimiento %></td>
+    <td><%= @user&.comuna %></td>
+    <td><%= @user&.direccion %></td>
+    <td><%= @user&.telefono %></td>
   </tr>
 </table>
 
@@ -32,10 +34,10 @@
     <th>Especialidad</th>
   </tr>
   <tr>
-    <td><%= @user.nivel_estudio %></td>
-    <td><%= @user.recinto.nombre_recinto %></td>
-    <td><%= @user.estudio.nombre_estudio %></td>
-    <td><%= @user.especialidad %></td>
+    <td><%= @user&.nivel_estudio %></td>
+    <td><%= @user&.recinto&.nombre_recinto %></td>
+    <td><%= @user&.estudio&.nombre_estudio %></td>
+    <td><%= @user&.especialidad %></td>
   </tr>
 </table>
 
@@ -47,7 +49,7 @@
     <tr>
       <td><%= f.nombre_inf %></td>
       <td><%= link_to 'Ver', informe_path(f) %></td>
-      <% if current_user.id == @user.id or current_user.rol == "Admin"%>
+      <% if current_user.id == @user.id or current_user&.rol == "Admin"%>
         <td><%= link_to 'Editar', edit_informe_path(f) %></td>
       <%end%>
     </tr>

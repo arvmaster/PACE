@@ -7,8 +7,8 @@
       <% if current_page?(new_cuestionario_path) %>
         <%= f.label :Nombre_Cuestionario %>      </br>
         <%= f.collection_select :nombre_cues, Cuestionario.where(user_id: 1), :nombre_cues, :nombre_cues, {:include_blank => "Seleccionar Cuestionario"},{:class => "btn btn-default border dropdown-toggle"}  %>
-          <%end %>
-     <%end %>
+      <%end %>
+    <%end %>
 
     </div>
       <%= f.fields_for :pregunta_cuestionarios do |p|  %>
@@ -20,12 +20,12 @@
               <%= p.check_box :casilla, class: "form-control col-1" %>
           <%end %>
           <% if current_user.rol == 'Admin' %>
-                <%= p.label :Pregunta %>
+                <%= p.label :Pregunta ,style: 'margin-bottom: 0px' %>
                 <%= p.text_field :pregunta_cues, class: "form-control" %>
                 <%= p.label :Respuesta %>
                 <%= p.select(:respuesta,["A","T","R","P"], {}, { :class => 'btn btn-default dropdown-toggle border' }) %>
           <%else%>
-                <%= p.text_field :pregunta_cues, class: "form-control col-7", disabled: true%>
+                <%= p.text_field :pregunta_cues, class: "form-control col", disabled: true%>
                 <%= p.hidden_field :respuesta, class: "form-control" %>
           <%end%>
         </div>

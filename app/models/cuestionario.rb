@@ -3,6 +3,7 @@ class Cuestionario < ApplicationRecord
   has_many :pregunta_cuestionarios
   accepts_nested_attributes_for :pregunta_cuestionarios
 
+  validates :nombre_cues, presence: true
   #permite crear una copia 'EXCEPTO' del id y su tiempo de creacion, lo cual al hacer .save
   # lo cual es perfecto para clonar objetos
   amoeba do

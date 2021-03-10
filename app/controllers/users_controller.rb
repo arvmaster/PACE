@@ -33,6 +33,10 @@ class UsersController < ApplicationController
   def update
     if user_signed_in?
         @user = User.find(params[:id])
+        if params[:user][:password].blank? && params[:user][:password_confirmation].blank? && (current_user == @user || current_user.rol == "Admin")
+          params[:user].delete(:password)
+          params[:user].delete(:password_confirmation)
+        end
         if @user.update(user_params)
           flash[:success] = "Se actualizo el user"
           redirect_to users_url
