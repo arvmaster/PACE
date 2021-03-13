@@ -1,37 +1,57 @@
-<%= form_for @cuestionario do |f| %>
+<%= form_for @cuestionario do |form| %>
+  <% if @cuestionario.errors.any? %>
+    <div id="error_explanation">
+      <h2>No se pudo realizar la acción: <%= pluralize(@cuestionario.errors.count, "Error/es") %> </h2>
+      <ul>
+        <% @cuestionario.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+
+  <% end %>
+
+
   <div class="field">
     <% if current_user.rol == 'Admin' %>
-      <%= f.label :Nombre_Cuestionario %>
-      <%= f.text_field :nombre_cues, :class => 'form-control' %>
+      <%= form.label :Nombre_Cuestionario %>
+      <%= form.text_field :nombre_cues, :class => 'form-control' %>
     <%else %>
-      <% if current_page?(new_cuestionario_path) %>
-        <%= f.label :Nombre_Cuestionario %>      </br>
-        <%= f.collection_select :nombre_cues, Cuestionario.where(user_id: 1), :nombre_cues, :nombre_cues, {:include_blank => "Seleccionar Cuestionario"},{:class => "btn btn-default border dropdown-toggle"}  %>
-          <%end %>
-     <%end %>
+      <% if params[:action] == "new" || params[:action] == "create" %>
+        <%= form.label :Nombre_Cuestionario %>      </br>
+        <%= form.collection_select :nombre_cues, Cuestionario.where(user_id: 1), :nombre_cues, :nombre_cues, {:include_blank => "Seleccionar Cuestionario"},{:class => "btn btn-default border dropdown-toggle"}  %>
+      <% else %>
+        <h2><% @cuestionario.nombre_cues%></h2>
+      <%end %>
+    <%end %>
 
     </div>
-      <%= f.fields_for :pregunta_cuestionarios do |p|  %>
-    </br>
-          <div class="form-row">
-          <% if current_page? new_cuestionario_path%>
-              <%= p.hidden_field :casilla, :value => false %>
-          <%else %>
-              <%= p.check_box :casilla, class: "form-control col-1" %>
-          <%end %>
-          <% if current_user.rol == 'Admin' %>
-                <%= p.label :Pregunta %>
-                <%= p.text_field :pregunta_cues, class: "form-control" %>
-                <%= p.label :Respuesta %>
-                <%= p.select(:respuesta,["A","T","R","P"], {}, { :class => 'btn btn-default dropdown-toggle border' }) %>
-          <%else%>
-                <%= p.text_field :pregunta_cues, class: "form-control col-7", disabled: true%>
-                <%= p.hidden_field :respuesta, class: "form-control" %>
-          <%end%>
-        </div>
-    </br>
+
+
+      <%= form.fields_for :pregunta_cuestionarios do |f|  %>
+          <%= render 'pregunta_cuestionario_fields', f: f %>
       <%end%>
+   <%= link_to_add_fields "Nueva Pregunta", form, :pregunta_cuestionarios %>
+
   </br>
-  <div><%= f.submit 'Enviar', :class => 'btn btn-info' %></div>
+  <div><%= form.submit 'Enviar', :class => 'btn btn-info' %></div>
 
 <% end %>
+<script>
+    $('form').on('click', '.remove', function(event) {
+        console.log('clicked')
+          $(this).prev('input[type=hidden]').val('1');
+          $(this).closest('fieldset').hide();
+          return event.preventDefault();
+    });
+
+    $('form').on('click', '.add_fields', function(event) {
+        console.log('clicked!')
+        var regexp, time;
+        time = new Date().getTime();
+        regexp = new RegExp($(this).data('id'), 'g');
+        $(this).before($(this).data('fields').replace(regexp, time));
+        return event.preventDefault();
+    });
+
+</script>

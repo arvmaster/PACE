@@ -10,18 +10,18 @@
 
 <table class ="table table-striped table-bordered table-info">
           <tr>
-              <th></th>
+              <th>Check</th>
               <th>Pregunta</th>
               <% if current_user.rol == "Admin" %>
-              <th>Respuesta</th>
-          <%end%>
+                <th>Respuesta</th>
+              <%end%>
           </tr>
       <% @cuestionario.pregunta_cuestionarios.each do |f| %>
           <tr>
               <td><%= f.casilla ? "☑" : "☐"%></td>
               <td><%= f.pregunta_cues%></td>
               <% if current_user.rol == "Admin" %>
-              <td><%= f.respuesta%></td>
+                <td><%= f.respuesta%></td>
               <%end%>>
           </tr>
       <%end%>
