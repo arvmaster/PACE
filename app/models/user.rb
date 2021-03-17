@@ -22,18 +22,15 @@ class User < ApplicationRecord
   validates :nombre_user, presence: { message: 'Ingrese el primer nombre '}, length: {in: 2..40, message:'El nombre debe ser de mínimo largo 3'}, format: {with: VALID_NAME_REGEX, message: "Se permiten solo letras en los nombres"}
   validates :apellido_pa, presence: { message: 'Ingrese el primer apellido'}, length: {in: 2..20, message:'El apellido debe ser de mínimo largo 3'}, format: {with: VALID_NAME_REGEX,message: "Se permiten solo letras en los apellidos"}
   validates :apellido_ma, presence: { message: 'Ingrese el segundo apellido'}, length: {in: 2..20, message:'El apellido debe ser de mínimo largo 3'}, format: {with: VALID_NAME_REGEX, message: "Se permiten solo letras en los apellidos"}
-  validates :nivel_estudio, presence: true
-  validates :estado, :inclusion => {:in=> [true,false]}
-  validates :fecha_nacimiento, presence: true
-  validates :comuna, presence: true
-  validates :direccion, length: { in: 10..254 , :message => " La direccion debe estar los 10 a 254 caracteres"}, presence: { message: "no puede estar en blanco" }
-  validates :fecha_ingreso, presence: true
-  validates :especialidad, presence: true
-  VALID_NUMBER_REGEX = /^(\+?56)?(\s?)(0?9)(\s?)[98765]\d{7}$/
-  validates :telefono, presence: {message: 'Ingrese Telefono'}, length: {is: 9, message:'Largo debe ser 9'}
-  validates :estado, presence: true
-  validate :fecha_de_nacimiento_debe_ser_en_pasado
-  validate :edadminima
+  #validates :nivel_estudio, presence: true
+  #validates :estado, :inclusion => {:in=> [true,false]}
+  #validates :fecha_nacimiento, presence: true
+  #validates :direccion, length: { in: 10..254 , :message => " La direccion debe estar los 10 a 254 caracteres"}, presence: { message: "no puede estar en blanco" }
+  #validates :fecha_ingreso, presence: true
+  #validates :especialidad, presence: true
+  #VALID_NUMBER_REGEX = /^(\+?56)?(\s?)(0?9)(\s?)[98765]\d{7}$/
+  #validate :fecha_de_nacimiento_debe_ser_en_pasado
+  #validate :edadminima
 
   def self.import(file)
     CSV.foreach(file.path, headers: true) do |row|
