@@ -23,15 +23,7 @@
           <%= render "layouts/navbarinicio" %>
         <%end %>
 
-          <div class="container">
-
-            <% if current_page?(estaticas_path) %>
-              <%= yield %>
-            <%else %>
-              <%= render "layouts/fondo"%>
-            <%end %>
-          </div>
     <%end%>
-  <%=render "layouts/footer" %>
+
   </body>
 </html>
