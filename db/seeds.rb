@@ -25,3 +25,24 @@ User.create(
     {nombre_user: "Javier Eduardo",apellido_pa: "Rogers",apellido_ma: "Valdes", rut: "196450319", password: "123456", rol:"Tutor Disciplinar"},
   ]
 )
+
+Recinto.create(
+  [
+    {nombre_recinto: "UTEM Campus Macul"},
+    {nombre_recinto: "UTEM Campus Casa Central"},
+    {nombre_recinto: "UTEM Campus Providencia"}
+  ]
+)
+Estudio.create(
+  [
+    {nombre_estudio: "Ingeniería en Informática", codigo: "21030", recinto_id: 1},
+    {nombre_estudio: "Ingeniería Civil en Computación", codigo: "21040", recinto_id: 1},
+    {nombre_estudio: "Ingeniería en Geomensura", codigo: "21031", recinto_id: 1}
+  ]
+)
+User.create(
+  [
+    {nombre_user: "Alexander",apellido_pa: "Rogers",apellido_ma: "Valdes", rut: "196450319", password: "123456", rol:"Admin"},
+    {nombre_user: "Javier Eduardo",apellido_pa: "Rogers",apellido_ma: "Valdes", rut: "196450319", password: "123456", rol:"Tutor Disciplinar"},
+  ]
+)

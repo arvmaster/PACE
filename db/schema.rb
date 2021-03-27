@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_14_000537) do
+ActiveRecord::Schema.define(version: 2021_03_27_224001) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,10 +47,10 @@ ActiveRecord::Schema.define(version: 2020_08_14_000537) do
 
   create_table "cuestionarios", force: :cascade do |t|
     t.string "nombre_cues"
-    t.integer "eda_a"
-    t.integer "eda_t"
-    t.integer "eda_r"
-    t.integer "eda_p"
+    t.integer "eda_a", default: 0
+    t.integer "eda_t", default: 0
+    t.integer "eda_r", default: 0
+    t.integer "eda_p", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
@@ -76,6 +76,10 @@ ActiveRecord::Schema.define(version: 2020_08_14_000537) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
+    t.integer "cod_institucion"
+    t.string "cod_uniq_carrera"
+    t.string "titulo"
+    t.string "tipo_institucion"
   end
 
   create_table "estudios", force: :cascade do |t|
