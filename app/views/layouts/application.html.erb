@@ -21,6 +21,15 @@
           <%= render "layouts/sidemenu" %>
         <%else %>
           <%= render "layouts/navbarinicio" %>
+          <% if params[:action] == "new"%>
+            <div class="offset-4 col-sm-4 container-fluid" align="center">
+              <%= render 'layouts/fondo' %>
+            </div>
+          <% else %>
+            <div class="container">
+              <%= render 'layouts/fondo' %>
+            </div>
+          <% end %>
         <%end %>
 
     <%end%>

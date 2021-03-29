@@ -22,13 +22,12 @@ class InformesController < ApplicationController
   end
 
   def create
-    @informe = Informe.create(informe_params)
-    @informe.user_id = current_user.id
-    if current_user.rol == "Admin"
+    user = current_user
+    render :new if params[:informe][:nombre_inf].blank?
+    if user.rol == "Admin"
       @informe = Informe.create(informe_params)
-      @informe.user_id = current_user.id
+      @informe.user_id = user.id
       if @informe.save
-        @informe.save
         flash[:success] = "Informe Creado"
         redirect_to @informe
       else
@@ -37,14 +36,9 @@ class InformesController < ApplicationController
       end
     else
       @user = User.find_by(rol: "Admin")
-      @informe = Informe.create(informe_params)
-      @informe.user_id = current_user.id
-      @dup = @informe
+      @informe = Informe.find_by(nombre_inf: params[:informe][:nombre_inf], user_id: @user.id ).amoeba_dup
+      @informe.user_id = user.id
       if @informe.save
-        @informe.destroy
-        @informe = Informe.find_by(nombre_inf: @dup.nombre_inf, user_id: @user.id ).amoeba_dup
-        @informe.user_id = current_user.id
-        @informe.save
         flash[:success] = "Informe Creado"
         redirect_to edit_informe_path(@informe.id)
       else
