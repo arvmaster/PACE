@@ -1,8 +1,8 @@
 <h2>Datos ENS</h2>
 
 <p>
-  <% if current_user.rol == "Admin"%>
-  <%= link_to 'Crear', new_datos_carrera_path %>
+  <% if current_user && current_user&.rol == "Admin"%>
+    <%= link_to 'Crear', new_datos_carrera_path %>
   <%end %>
 </p>
 
@@ -38,7 +38,7 @@
   </tbody>
 </table>
 
-<% if current_user.rol == "Admin" %>
+<% if current_user&.rol == "Admin" %>
   <div>
     </br>
   <%= form_tag import_datos_carreras_path, multipart: true do %>

@@ -16,7 +16,8 @@ Estudio.create(
   [
     {nombre_estudio: "Ingeniería en Informática", codigo: "21030", recinto_id: 1},
     {nombre_estudio: "Ingeniería Civil en Computación", codigo: "21040", recinto_id: 1},
-    {nombre_estudio: "Ingeniería en Geomensura", codigo: "21031", recinto_id: 1}
+    {nombre_estudio: "Ingeniería en Geomensura", codigo: "21031", recinto_id: 1},
+    {nomnre_estudio: "3°Medio", codigo: "3", recinto_id: nil }
   ]
 )
 User.create(
