@@ -17,12 +17,24 @@ Estudio.create(
     {nombre_estudio: "Ingeniería en Informática", codigo: "21030", recinto_id: 1},
     {nombre_estudio: "Ingeniería Civil en Computación", codigo: "21040", recinto_id: 1},
     {nombre_estudio: "Ingeniería en Geomensura", codigo: "21031", recinto_id: 1},
-    {nomnre_estudio: "3°Medio", codigo: "3", recinto_id: nil }
+    {nombre_estudio: "3°Medio", codigo: "3", recinto_id: nil }
   ]
 )
-User.create(
+User.create!(
   [
-    {nombre_user: "Alexander",apellido_pa: "Rogers",apellido_ma: "Valdes", rut: "196450319", password: "123456", rol:"Admin"},
-    {nombre_user: "Javier Eduardo",apellido_pa: "Rogers",apellido_ma: "Valdes", rut: "196450319", password: "123456", rol:"Tutor Disciplinar"},
+    {nombre_user: "Alexander",
+     apellido_pa: "Rogers",
+     apellido_ma: "Valdes",
+     rut: "196450319",
+     password: "123456",
+     rol:"Admin",
+     email: 'alexander.rogersv@utem.cl'},
+    {nombre_user: "Javier Eduardo",
+     apellido_pa: "Rogers",
+     apellido_ma: "Valdes",
+     rut: "196450319",
+     password: "123456",
+     rol:"Tutor Disciplinar",
+     email: 'jrogersp2000@gmail.com'},
   ]
 )
