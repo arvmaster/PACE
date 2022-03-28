@@ -5,14 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Recinto.create(
+Recinto.create!(
   [
     {nombre_recinto: "UTEM Campus Macul"},
     {nombre_recinto: "UTEM Campus Casa Central"},
     {nombre_recinto: "UTEM Campus Providencia"}
   ]
 )
-Estudio.create(
+Estudio.create!(
   [
     {nombre_estudio: "Ingeniería en Informática", codigo: "21030", recinto_id: 1},
     {nombre_estudio: "Ingeniería Civil en Computación", codigo: "21040", recinto_id: 1},

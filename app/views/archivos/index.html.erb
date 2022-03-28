@@ -17,7 +17,7 @@
 
   <% @archivos.each do |f| %>
     <tr>
-      <td><%= f.nombre_archivo %></td>
+      <td><%= f.name %></td>
       <td><%= f.asignatura %></td>
       <td><%= f.topico %></td>
       <td align="center"><%= link_to image_tag("document.jpg",size: "35x35"), f.file, target: '_blank' %></td>

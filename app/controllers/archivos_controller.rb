@@ -56,7 +56,7 @@ class ArchivosController < ApplicationController
     private
 
     def archivo_params
-      params.require(:archivo).permit(:nombre_archivo, :topico, :asignatura, :file, :user_id)
+      params.require(:archivo).permit(:name, :topico, :asignatura, :file, :user_id)
     end
     def require_activated
       if !current_user.estado?

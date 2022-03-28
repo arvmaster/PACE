@@ -7,7 +7,7 @@
   </tr>
 
     <tr>
-      <td><%= @archivo.nombre_archivo %></td>
+      <td><%= @archivo.name %></td>
       <td><%= @archivo.topico %></td>
       <td align="center"><%= link_to image_tag("document.jpg",size: "35x35"),@archivo.file,download: ''%></td>
       <td><%= link_to 'Editar', edit_archivo_path(@archivo.id) %></td>

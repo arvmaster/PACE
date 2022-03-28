@@ -5,6 +5,6 @@ class Archivo < ApplicationRecord
     belongs_to :user
     validates :asignatura, presence: true
     validates :topico, presence: true
-    validates :nombre_archivo, presence: true
+    validates :name, presence: true
     validates :file, presence: true, blob: { size_range: 1..4.megabytes }
 end
