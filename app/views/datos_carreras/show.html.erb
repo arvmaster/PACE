@@ -16,7 +16,7 @@
       <td><%= @datos_carrera.ret_1a %></td>
       <td><%= @datos_carrera.duracion_for %></td>
       <% if user_signed_in? %>
-          <%if current_user.rol != "Admin" %>
+          <%if current_user.role != "Admin" %>
             <td><%= link_to 'Editar', edit_datos_carrera_path(@datos_carrera) %></td>
           <%end%>
       <%end%>

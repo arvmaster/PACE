@@ -1,7 +1,8 @@
-<% if user_signed_in? and current_user.rol != "Estudiante"%>
+<% if user_signed_in? &&
+      current_user.role != "Estudiante"%>
   <h2><%= link_to 'Usuarios', users_url %></h2></br>
 <%end %>
-<h3 class="font-italic"> Usuario: <%= @user.nombre_user %> <%= @user.apellido_pa %> <%= @user.apellido_ma %></h3>
+<h3 class="font-italic"> Usuario: <%= @user.name %> <%= @user.first_last_name %> <%= @user.second_last_name %></h3>
 </br>
 <h2>Datos Personales</h2>
 <table class="table-striped table-bordered table">
@@ -14,12 +15,12 @@
     <th>Teléfono</th>
   </tr>
   <tr>
-    <td><%= @user.rut %></td>
-    <td><%= @user.nacionalidad %></td>
-    <td><%= @user.fecha_nacimiento %></td>
-    <td><%= @user.comuna %></td>
-    <td><%= @user.direccion %></td>
-    <td><%= @user.telefono %></td>
+    <td><%= @user.dni %></td>
+    <td><%= @user.nationality %></td>
+    <td><%= @user.born_date %></td>
+    <td><%= @user.commune %></td>
+    <td><%= @user.address %></td>
+    <td><%= @user.phone %></td>
   </tr>
 </table>
 
@@ -32,10 +33,10 @@
     <th>Especialidad</th>
   </tr>
   <tr>
-    <td><%= @user.nivel_estudio %></td>
+    <td><%= @user.academic_level %></td>
     <td><%= @user.recinto.nombre_recinto %></td>
     <td><%= @user.estudio.nombre_estudio %></td>
-    <td><%= @user.especialidad %></td>
+    <td><%= @user.specialization_branch %></td>
   </tr>
 </table>
 
@@ -47,7 +48,7 @@
     <tr>
       <td><%= f.nombre_inf %></td>
       <td><%= link_to 'Ver', informe_path(f) %></td>
-      <% if current_user.id == @user.id or current_user.rol == "Admin"%>
+      <% if current_user.id == @user.id or current_user.role == "Admin"%>
         <td><%= link_to 'Editar', edit_informe_path(f) %></td>
       <%end%>
     </tr>
@@ -61,7 +62,7 @@
     <tr>
       <td><%= f.nombre_cues %></td>
       <td><%= link_to 'Ver', cuestionario_path(f) %></td>
-      <% if current_user.id == @user.id or current_user.rol == "Admin"%>
+      <% if current_user.id == @user.id or current_user.role == "Admin"%>
         <td><%= link_to 'Editar', edit_cuestionario_path(f) %></td>
       <%end%>
     </tr>
@@ -76,7 +77,7 @@
       <td><%= f.evento.nombre_ev %></td>
       <td><%= f.evento.fecha_ev %></td>
       <td><%= link_to 'Ver', user_evento_path(f) %></td>
-      <% if current_user.id == @user.id or current_user.rol == "Admin"%>
+      <% if current_user.id == @user.id or current_user.role == "Admin"%>
       <%end%>
     </tr>
   <% end %>

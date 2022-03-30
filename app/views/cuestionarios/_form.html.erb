@@ -13,7 +13,7 @@
 
 
   <div class="field">
-    <% if current_user.rol == 'Admin' %>
+    <% if current_user.role == 'Admin' %>
       <%= form.label :Nombre_Cuestionario %>
       <%= form.text_field :nombre_cues, :class => 'form-control' %>
     <%else %>

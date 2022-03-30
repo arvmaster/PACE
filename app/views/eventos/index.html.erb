@@ -22,7 +22,7 @@
       <td><%= f.descripcion %></td>
       <td align="center"><%= link_to 'Info', "http://#{f.link_ev}" %></td>
       <td><%= link_to 'Ver', evento_path(f) %></td>
-      <%if current_user.rol != "Estudiante" %>
+      <%if current_user.role != "Estudiante" %>
       <td><%= link_to 'Editar', edit_evento_path(f) %></td>
       <%end%>
     </tr>

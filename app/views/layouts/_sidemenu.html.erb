@@ -3,8 +3,8 @@
   <div class="py-4 px-3 mb-4 bg-light">
     <div class="media d-flex align-items-center"><%=image_tag("customLogo.jpg" ,size: "65x65",class:"mr-3 rounded-circle img-thumbnail shadow-sm" ) %>
       <div class="media-body">
-        <%= link_to current_user.nombre_user + " "+ current_user.apellido_pa,user_path(current_user.id) , class:"m-0 text-dark" %>
-        <p class="font-weight-light text-muted mb-0"><%= current_user.rol %></p>
+        <%= link_to current_user.name + " "+ current_user.first_last_name, user_path(current_user.id) , class:"m-0 text-dark" %>
+        <p class="font-weight-light text-muted mb-0"><%= current_user.role %></p>
         <%= link_to 'Desconectarse',destroy_user_session_path,method: :delete , class:"m-0 text-dark" %>
       </div>
     </div>
@@ -13,7 +13,7 @@
   <%= link_to 'Comunidad PACE-UTEM',root_path, class:"text-gray font-weight-bold text-uppercase px-3 small pb-4 mb-0" %>
 
   <ul class="nav flex-column bg-white mb-0">
-    <% if current_user.rol != "Estudiante"%>
+    <% if current_user.role != "Estudiante"%>
     <li class="nav-item btn-outline-light">
       <%=link_to 'User',users_url, :class =>"nav-link text-dark font-italic"%>
     </li>
@@ -28,7 +28,7 @@
     <li class="nav-item btn-outline-light">
       <%=link_to 'Cuestionarios', cuestionarios_url, :class =>"nav-link text-dark font-italic" %>
     </li>
-    <% if user_signed_in? and current_user.rol != "Estudiante" %>
+    <% if user_signed_in? and current_user.role != "Estudiante" %>
       <li class="nav-item btn-outline-light">
         <%=link_to 'Informes',informes_url, :class =>"nav-link text-dark font-italic" %>
       </li>

@@ -4,7 +4,7 @@ class InformesController < ApplicationController
   before_action :require_PACE
 
   def index
-    @admin = User.find_by(:rol => "Admin")
+    @admin = User.find_by(:role => "Admin")
     @informes = Informe.where(:user_id => @admin.id)
   end
 
@@ -13,7 +13,7 @@ class InformesController < ApplicationController
   end
 
   def new
-    if current_user.rol == "Admin"
+    if current_user.role == "Admin"
       @informe = Informe.new
       4.times { @informe.pregunta_informes.build }
     else
@@ -24,7 +24,7 @@ class InformesController < ApplicationController
   def create
     user = current_user
     render :new if params[:informe][:nombre_inf].blank?
-    if user.rol == "Admin"
+    if user.role == "Admin"
       @informe = Informe.create(informe_params)
       @informe.user_id = user.id
       if @informe.save
@@ -35,7 +35,7 @@ class InformesController < ApplicationController
         render :new
       end
     else
-      @user = User.find_by(rol: "Admin")
+      @user = User.find_by(role: "Admin")
       @informe = Informe.find_by(nombre_inf: params[:informe][:nombre_inf], user_id: @user.id ).amoeba_dup
       @informe.user_id = user.id
       if @informe.save
@@ -78,14 +78,14 @@ class InformesController < ApplicationController
     params.require(:informe).permit(:nombre_inf, :user_id, pregunta_informes_attributes: [:id, :pregunta_inf, :respuesta])
   end
   def require_activated
-    if !current_user.estado?
+    if !current_user.active?
       flash[:error]="Usuario no existe [401]"
       redirect_to root_path
 
     end
   end
   def require_PACE
-    if current_user.rol=='Estudiante'
+    if current_user.role=='Estudiante'
       flash[:error]="No esta autorizado para acceder a esta pagina"
       redirect_to estaticas_path
     end

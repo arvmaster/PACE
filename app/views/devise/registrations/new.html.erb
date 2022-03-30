@@ -5,26 +5,27 @@
   <div class="col">
     <div class="field">
       <%= f.label :Nombre %>
-      <%= f.text_field :nombre_user,class: "form-control" %>
+      <%= f.text_field :name,class: "form-control" %>
     </div>
     <div class="field">
       <%= f.label :Apellido_paterno %>
-      <%= f.text_field :apellido_pa,class: "form-control" %>
+      <%= f.text_field :first_last_name, class: "form-control" %>
     </div>
     <div class="field">
       <%= f.label :Apellido_materno %>
-      <%= f.text_field :apellido_ma,class: "form-control" %>
+      <%= f.text_field :second_last_name, class: "form-control" %>
     </div>
 
     <div class="field">
       <%= f.label :Rut %>
-      <%= f.text_field :rut,class: "form-control" %>
+      <%= f.text_field :dni, class: "form-control" %>
     </div>
       <% if user_signed_in? %>
-        <% if current_user.rol != "Estudiante" %>
+        <% if current_user.role != "Estudiante" %>
           <div class="field">
             <%= f.label :Rol %><br />
-            <%= f.select(:rol,["PEM", "AES", "Tutor Disciplinar", "Tutor Par", "Coordinación", "Profesional Acompañamiento Psicoeducativo", "Estudiante"], {}, { :class => 'btn btn-default dropdown-toggle border' }) %>
+            <%= f.select(:role, ["PEM", "AES", "Tutor Disciplinar", "Tutor Par", "Coordinación", "Profesional Acompañamiento Psicoeducativo", "Estudiante"],
+                         {}, { :class => 'btn btn-default dropdown-toggle border' }) %>
           </div>
         <%end%>
       <%end%>
@@ -49,7 +50,7 @@
 
     <div class="field">
       <%= f.label :Fecha_de_nacimiento %>
-      <%= f.date_field :fecha_nacimiento,class: "form-control" %>
+      <%= f.date_field :born_date,class: "form-control" %>
     </div>
 
   </div>
@@ -57,7 +58,7 @@
 
     <div class="field">
       <%= f.label :Nivel_de_Estudio %></br>
-      <%= f.select(:nivel_estudio,["Educacion Superior","Enseñanza Media"], {}, { :class => 'btn btn-default dropdown-toggle border' }) %>
+      <%= f.select(:academic_level,["Educacion Superior","Enseñanza Media"], {}, { :class => 'btn btn-default dropdown-toggle border' }) %>
     </div>
 
 
@@ -68,16 +69,18 @@
 
     <div class="field">
       <%= f.label :Especialidad %>
-      <%= f.text_field :especialidad,class: "form-control" %>
+      <%= f.text_field :specialization_branch, class: "form-control" %>
     </div>
 
     <div class="field">
       <%= f.label :Nacionalidad %></br>
-      <%= f.select(:nacionalidad,["afgano/afgana","alemán/alemana","árabe/árabe","argentino/argentina","australiano/australiana","belga/belga","boliviano/boliviana","brasileño/brasileña","camboyano/camboyana","canadiense/canadiense","chileno/chilena","chino/china","colombiano/colombiana","coreano/coreana","costarricense/costarricense","cubano/cubana","danés/danesa","ecuatoriano/ecuatoriana","egipcio/egipcia","salvadoreño/salvadoreña","escocés/escocesa","español/española","estadounidense/estadounidense","estonio/estonia","etiope/etiope","filipino/filipina","finlandés/finlandesa","francés/francesa","galés/galesa","griego/griega","guatemalteco/guatemalteca","haitiano/haitiana","holandés/holandesa","hondureño/hondureña","indonés/indonesa","inglés/inglesa","iraquí/iraquí","iraní/iraní","irlandés/irlandesa","israelí/israelí","italiano/italiana","japonés/japonesa","jordano/jordana","laosiano/laosiana","letón/letona","letonés/letonesa","malayo/malaya","marroquí/marroquí","mexicano/mexicana","nicaragüense/nicaragüense","noruego/noruega","neozelandés/neozelandesa","panameño/panameña","paraguayo/paraguaya","peruano/peruana","polaco/polaca","portugués/portuguesa","puertorriqueño/puertorriqueño","dominicano/dominicana","rumano/rumana","ruso/rusa","sueco/sueca","suizo/suiza","tailandés/tailandesa","taiwanes/taiwanesa","turco/turca","ucraniano/ucraniana","uruguayo/uruguaya","venezolano/venezolana","vietnamita/vietnamita" ], {}, { :class => 'btn btn-default dropdown-toggle border' }) %>
+      <%= f.select(:nationality,
+                   ["afgano/afgana","alemán/alemana","árabe/árabe","argentino/argentina","australiano/australiana","belga/belga","boliviano/boliviana","brasileño/brasileña","camboyano/camboyana","canadiense/canadiense","chileno/chilena","chino/china","colombiano/colombiana","coreano/coreana","costarricense/costarricense","cubano/cubana","danés/danesa","ecuatoriano/ecuatoriana","egipcio/egipcia","salvadoreño/salvadoreña","escocés/escocesa","español/española","estadounidense/estadounidense","estonio/estonia","etiope/etiope","filipino/filipina","finlandés/finlandesa","francés/francesa","galés/galesa","griego/griega","guatemalteco/guatemalteca","haitiano/haitiana","holandés/holandesa","hondureño/hondureña","indonés/indonesa","inglés/inglesa","iraquí/iraquí","iraní/iraní","irlandés/irlandesa","israelí/israelí","italiano/italiana","japonés/japonesa","jordano/jordana","laosiano/laosiana","letón/letona","letonés/letonesa","malayo/malaya","marroquí/marroquí","mexicano/mexicana","nicaragüense/nicaragüense","noruego/noruega","neozelandés/neozelandesa","panameño/panameña","paraguayo/paraguaya","peruano/peruana","polaco/polaca","portugués/portuguesa","puertorriqueño/puertorriqueño","dominicano/dominicana","rumano/rumana","ruso/rusa","sueco/sueca","suizo/suiza","tailandés/tailandesa","taiwanes/taiwanesa","turco/turca","ucraniano/ucraniana","uruguayo/uruguaya","venezolano/venezolana","vietnamita/vietnamita" ],
+                   {}, { :class => 'btn btn-default dropdown-toggle border' }) %>
     </div>
 
   <div class="field">
-    <%= f.hidden_field :estado, :value => true %>
+    <%= f.hidden_field :active, :value => true %>
   </div>
   </div>
 </div>

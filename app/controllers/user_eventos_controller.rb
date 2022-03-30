@@ -64,7 +64,7 @@ class UserEventosController < ApplicationController
     params.require(:user_evento).permit(:user_id, :evento_id, :asiste)
   end
   def require_activated
-    if !current_user.estado?
+    if !current_user.active?
       flash[:error]="Usuario no existe [401]"
       redirect_to root_path
 

@@ -1,7 +1,7 @@
 <h1>Informes</h1>
 
 <p>
-  <%if current_user.rol == "Admin" %>
+  <%if current_user.role == "Admin" %>
     <%= link_to 'Crear', new_informe_path %>
   <%else%>
     <%= link_to 'Generar', new_informe_path %>
@@ -18,7 +18,7 @@
     <tr>
       <td><%= f.nombre_inf %></td>
       <td><%= link_to 'Ver', informe_path(f) %></td>
-      <% if current_user.rol == "Admin" %>
+      <% if current_user.role == "Admin" %>
       <td><%= link_to 'Editar', edit_informe_path(f) %></td>
         <%end %>
     </tr>

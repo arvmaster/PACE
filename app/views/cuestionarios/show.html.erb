@@ -1,7 +1,7 @@
 <h3><%= link_to 'Cuestionarios', cuestionarios_url %></h3>
 
 <h1><%= @cuestionario.nombre_cues %>
-  <%if current_user.rol == "Admin" %>
+  <%if current_user.role == "Admin" %>
     <%= link_to 'Editar Cuestionario', edit_cuestionario_path(@cuestionario.id) ,class: "btn btn-default" %>
   <%else %>
     <%= link_to 'Editar Respuestas', edit_cuestionario_path(@cuestionario.id) ,class: "btn btn-default" %>
@@ -12,7 +12,7 @@
           <tr>
               <th></th>
               <th>Pregunta</th>
-              <% if current_user.rol == "Admin" %>
+              <% if current_user.role == "Admin" %>
               <th>Respuesta</th>
           <%end%>
           </tr>
@@ -20,7 +20,7 @@
           <tr>
               <td><%= f.casilla ? "☑" : "☐"%></td>
               <td><%= f.pregunta_cues%></td>
-              <% if current_user.rol == "Admin" %>
+              <% if current_user.role == "Admin" %>
               <td><%= f.respuesta%></td>
               <%end%>>
           </tr>

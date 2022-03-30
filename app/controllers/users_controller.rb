@@ -3,8 +3,8 @@ class UsersController < ApplicationController
   before_action :require_activated, except: [:new,:create]
 
   def index
-    @user = User.where(:rol => "Admin")
-    @users = User.all.where("id != ? and supervisar > ?", current_user.id, current_user.supervisar)
+    @user = User.where(:role => "Admin")
+    @users = User.all.where("id != ? and superviser > ?", current_user.id, current_user.superviser)
   end
 
   def show
@@ -66,14 +66,24 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:nombre_user, :rol, :supervisar, :apellido_pa, :apellido_ma, :rut, :fecha_nacimiento, :comuna, :direccion, :nivel_estudio, :fecha_ingreso, :especialidad, :telefono, :estado, :email, :estudio_id,:recinto_id,:password, :password_confirmation)
+    params.require(:user).permit(:name, :phone,
+                                 :role, :superviser,
+                                 :first_last_name,
+                                 :second_last_name,
+                                 :dni, :born_date,
+                                 :commune, :address,
+                                 :academic_level,
+                                 :registration_date,
+                                 :specialization_branch,
+                                 :active, :email,
+                                 :estudio_id, :recinto_id,
+                                 :password, :password_confirmation)
   end
 
   def require_activated
-    if !current_user.estado?
-      flash[:error]="Usuario no existe [401]"
+    unless current_user.active?
+      flash[:error] = "Usuario no existe [401]"
       redirect_to root_path
-
     end
   end
 

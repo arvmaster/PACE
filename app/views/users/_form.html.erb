@@ -13,40 +13,40 @@
   <% end %>
   <div class="field">
     <%= f.label :Nombre %>
-    <%= f.text_field :nombre_user,class: "form-control" %>
+    <%= f.text_field :name,class: "form-control" %>
   </div>
 
   <div class="field">
     <%= f.label :Apellido_paterno %>
-    <%= f.text_field :apellido_pa,class: "form-control" %>
+    <%= f.text_field :first_last_name,class: "form-control" %>
   </div>
 
   <div class="field">
     <%= f.label :Apellido_materno %>
-    <%= f.text_field :apellido_ma,class: "form-control" %>
+    <%= f.text_field :second_last_name, class: "form-control" %>
   </div>
 
   <div class="field">
     <%= f.label :Rut %>
-    <%= f.text_field :rut,class: "form-control" %>
+    <%= f.text_field :dni, class: "form-control" %>
   </div>
   <% if user_signed_in? %>
-      <% if current_user.rol == "Admin" %>
+      <% if current_user.role == "Admin" %>
           <div class="field">
             <%= f.label :Rol %><br />
-            <%= f.select(:rol,["Admin","PEM", "AES", "Tutor Disciplinar", "Tutor Par", "Coordinación", "Profesional Acompañamiento Psicoeducativo", "Estudiante"], {}, { :class => 'btn btn-default dropdown-toggle border' }) %>
+            <%= f.select(:role,@roles, {}, { :class => 'btn btn-default dropdown-toggle border' }) %>
           </div>
       <%else%>
       <div class="field">
         <%= f.label :Rol %><br />
-        <%= f.select(:rol,["Admin","PEM", "AES", "Tutor Disciplinar", "Tutor Par", "Coordinación", "Profesional Acompañamiento Psicoeducativo", "Estudiante"], {}, { :class => 'btn btn-default dropdown-toggle border',disabled: true }) %>
+        <%= f.select(:role,@roles, {}, { :class => 'btn btn-default dropdown-toggle border',disabled: true }) %>
       </div>
       <%end%>
   <%end%>
 
   <div class="field">
     <%= f.label :Fecha_de_nacimiento %>
-    <%= f.date_field :fecha_nacimiento,class: "form-control" %>
+    <%= f.date_field :born_date,class: "form-control" %>
   </div>
 
   <div class="field">
@@ -66,7 +66,7 @@
 
   <div class="field">
     <%= f.label :Comuna %><br />
-    <%= f.select(:comuna,["Cerrillos", "Cerro Navia", "Conchalí", "El Bosque", "Estación Central", "Huechuraba", "Independencia", "La Cisterna", "La Florida", "La Granja", "La Pintana", "La Reina", "Las Condes", "Lo Barnechea", "Lo Espejo", "Lo Prado", "Macul", "Maipú", "Ñuñoa", "Pedro Aguirre Cerda", "Peñalolén", "Providencia", "Pudahuel","Santiago Centro", "Quilicura", "Quinta Normal", "Recoleta", "Renca", "San Joaquín", "San Miguel", "San Ramón", "Vitacura", "Puente Alto", "Pirque", "San José de Maipo", "Colina", "Lampa", "Tiltil", "San Bernardo", "Buin", "Calera de Tango", "Paine", "Melipilla", "Alhué", "Curacaví", "María Pinto", "San Pedro", "Talagante", "El Monte", "Isla de Maipo", "Padre Hurtado", "Peñaflor"], {}, { :class => 'btn btn-default dropdown-toggle border' }) %>
+    <%= f.select(:commune, ["Cerrillos", "Cerro Navia", "Conchalí", "El Bosque", "Estación Central", "Huechuraba", "Independencia", "La Cisterna", "La Florida", "La Granja", "La Pintana", "La Reina", "Las Condes", "Lo Barnechea", "Lo Espejo", "Lo Prado", "Macul", "Maipú", "Ñuñoa", "Pedro Aguirre Cerda", "Peñalolén", "Providencia", "Pudahuel","Santiago Centro", "Quilicura", "Quinta Normal", "Recoleta", "Renca", "San Joaquín", "San Miguel", "San Ramón", "Vitacura", "Puente Alto", "Pirque", "San José de Maipo", "Colina", "Lampa", "Tiltil", "San Bernardo", "Buin", "Calera de Tango", "Paine", "Melipilla", "Alhué", "Curacaví", "María Pinto", "San Pedro", "Talagante", "El Monte", "Isla de Maipo", "Padre Hurtado", "Peñaflor"], {}, { :class => 'btn btn-default dropdown-toggle border' }) %>
   </div>
 
   <div class="field">
@@ -81,35 +81,35 @@
 
   <div class="field">
     <%= f.label :Dirección %>
-    <%= f.text_field :direccion,class: "form-control" %>
+    <%= f.text_field :address,class: "form-control" %>
   </div>
 
   <div class="field">
     <%= f.label :Nivel_de_estudio %><br />
-    <%= f.select(:nivel_estudio,["Superior","Media"], {}, { :class => 'btn btn-default dropdown-toggle border' }) %>
+    <%= f.select(:academic_level, ["Superior","Media"], {}, { :class => 'btn btn-default dropdown-toggle border' }) %>
   </div>
 
   <div class="field">
     <%= f.label :Fecha_de_Egreso_Enseñanza_Media %>
-    <%= f.text_field :fecha_ingreso,class: "form-control" %>
+    <%= f.text_field :registration_date, class: "form-control" %>
   </div>
 
   <div class="field">
     <%= f.label :Especialidad %>
-    <%= f.text_field :especialidad,class: "form-control" %>
+    <%= f.text_field :specialization_branch,class: "form-control" %>
   </div>
 
   <div class="field">
     <%= f.label :Telefono %>
-    <%= f.text_field :telefono,class: "form-control" %>
+    <%= f.text_field :phone,class: "form-control" %>
   </div>
-  <% if user_signed_in? and current_user.rol != "Estudiante" %>
+  <% if user_signed_in? and current_user.role != "Estudiante" %>
   <div class="checkbox">
     <%= f.label :estado %>
-    <%= f.check_box :estado %>
+    <%= f.check_box :active %>
   </div>
     <%else %>
-    <% hidden_field :estado,value: true %>
+    <% hidden_field :active,value: true %>
   <%end%>
   <%= f.submit 'Enviar', :class => 'btn btn-primary' %>
 <% end %>

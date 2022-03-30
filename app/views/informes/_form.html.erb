@@ -1,6 +1,6 @@
 <%= form_for @informe do |f| %>
     <div class="field">
-      <% if current_user.rol == "Admin" %>
+      <% if current_user.role == "Admin" %>
         <%= f.label :Nombre_informe %><br />
         <%= f.text_field :nombre_inf,  class: "form-control"%>
       <%else%>
@@ -12,7 +12,7 @@
     </div>
     <%= f.fields_for :pregunta_informes do |p|  %>
        <div>
-          <% if current_user.rol =="Admin" %>
+          <% if current_user.role =="Admin" %>
               <%= p.label :Pregunta %>
               <%= p.text_field :pregunta_inf, class: "form-control"%></br>
               <%= p.text_field :respuesta, class: "form-control" %>

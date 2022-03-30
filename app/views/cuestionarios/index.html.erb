@@ -1,6 +1,6 @@
 <h1>Cuestionarios</h1>
 <p>
-  <%if current_user.rol == "Admin" %>
+  <%if current_user.role == "Admin" %>
     <%= link_to 'Crear', new_cuestionario_path %>
   <%else%>
     <%= link_to 'Generar', new_cuestionario_path %>
@@ -18,7 +18,7 @@
       <td><%= f.nombre_cues %></td>
       <td><%= PreguntaCuestionario.where(cuestionario_id: f.id).count %></td>
       <td><%= link_to 'Ver', cuestionario_path(f) %></td>
-      <%if current_user.rol == "Admin"%>
+      <%if current_user.role == "Admin"%>
       <td><%= link_to 'Editar', edit_cuestionario_path(f) %></td>
         <%end %>
     </tr>

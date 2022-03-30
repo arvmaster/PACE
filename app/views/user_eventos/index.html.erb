@@ -14,7 +14,7 @@
 
   <% @user_eventos.each do |f| %>
     <tr>
-      <td><%= f.user.nombre_user + " " + f.user.apellido_pa + " " + f.user.apellido_ma%></td>
+      <td><%= f.user.name + " " + f.user.first_last_name + " " + f.user.second_last_name %></td>
       <td><%= f.evento.nombre_ev %></td>
       <td><%= link_to 'Ver', evento_path(3) %></td>
       <td align="center"><%= link_to 'Desasistir', user_evento_path(f), :confirm => "¿Estas Seguro?", :method => :delete,class: "btn btn-danger"%></td>

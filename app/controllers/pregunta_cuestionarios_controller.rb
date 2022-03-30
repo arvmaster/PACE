@@ -66,14 +66,14 @@ class PreguntaCuestionariosController < ApplicationController
         params.require(:pregunta_cuestionario).permit(:pregunta_cues, :casilla, :respuesta, :cuestionario_id)
       end
   def require_activated
-    if !current_user.estado?
+    if !current_user.active?
       flash[:error]="Usuario no existe [401]"
       redirect_to root_path
 
     end
   end
   def require_PACE
-    if current_user.rol=='Estudiante'
+    if current_user.role=='Estudiante'
       flash[:error]="No esta autorizado para acceder a esta pagina"
       redirect_to estaticas_path
     end

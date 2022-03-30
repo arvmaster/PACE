@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2021_03_28_233801) do
+ActiveRecord::Schema[7.0].define(version: 2022_03_28_222600) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -36,9 +36,9 @@ ActiveRecord::Schema[7.0].define(version: 2021_03_28_233801) do
   end
 
   create_table "archivos", force: :cascade do |t|
-    t.string "nombre_archivo"
-    t.string "topico"
-    t.string "asignatura"
+    t.string "name"
+    t.string "topic"
+    t.string "subject"
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
     t.integer "user_id"
@@ -138,21 +138,21 @@ ActiveRecord::Schema[7.0].define(version: 2021_03_28_233801) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "nombre_user"
-    t.string "apellido_pa"
-    t.string "apellido_ma"
-    t.string "rut"
-    t.date "fecha_nacimiento"
-    t.string "comuna"
-    t.string "direccion"
-    t.string "nivel_estudio"
-    t.integer "fecha_ingreso"
-    t.string "especialidad"
-    t.string "nacionalidad"
-    t.string "rol", default: "Estudiante", null: false
-    t.integer "supervisar"
-    t.string "telefono"
-    t.boolean "estado"
+    t.string "name"
+    t.string "first_last_name"
+    t.string "second_last_name"
+    t.string "dni"
+    t.date "born_date"
+    t.string "commune"
+    t.string "address"
+    t.string "academic_level"
+    t.integer "registration_date"
+    t.string "specialization_branch"
+    t.string "nationality"
+    t.string "role", default: "Estudiante", null: false
+    t.integer "superviser"
+    t.string "phone"
+    t.boolean "activo"
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"

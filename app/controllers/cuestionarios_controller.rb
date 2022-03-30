@@ -3,7 +3,7 @@ class CuestionariosController < ApplicationController
   before_action :require_activated
 
   def index
-    @admin = User.find_by(:rol => "Admin")
+    @admin = User.find_by(:role => "Admin")
     @cuestionarios = Cuestionario.where(:user_id => @admin.id)
   end
 
@@ -13,7 +13,7 @@ class CuestionariosController < ApplicationController
   end
 
   def new
-    if current_user.rol == "Admin"
+    if current_user.role == "Admin"
       @cuestionario = Cuestionario.new
       6.times {@cuestionario.pregunta_cuestionarios.build}
     else
@@ -23,7 +23,7 @@ class CuestionariosController < ApplicationController
 
   def create
     usuario = current_user
-    if usuario.rol == "Admin"
+    if usuario.role == "Admin"
       @cuestionario = Cuestionario.create(cuestionario_params)
       @cuestionario.user_id = usuario.id
       if @cuestionario.save
@@ -34,7 +34,7 @@ class CuestionariosController < ApplicationController
         render :new
       end
     else
-      @user = User.find_by(rol: "Admin")
+      @user = User.find_by(role: "Admin")
       if params[:cuestionario][:nombre_cues].blank?
         @cuestionario = Cuestionario.create(cuestionario_params)
         @cuestionario.user_id = current_user.id
@@ -60,7 +60,7 @@ class CuestionariosController < ApplicationController
 
   def update
     @cuestionario = Cuestionario.find(params[:id])
-    #if current_user.rol == "Admin" or ""
+    #if current_user.role == "Admin" or ""
     if @cuestionario.update(cuestionario_params)
        @cuestionario.eda_a = PreguntaCuestionario.where(cuestionario_id: @cuestionario.id , casilla: true ,respuesta: 'A').count
        @cuestionario.eda_t = PreguntaCuestionario.where(cuestionario_id: @cuestionario.id , casilla: true ,respuesta: 'T').count
@@ -88,7 +88,7 @@ class CuestionariosController < ApplicationController
   private
 
   #def cuestionario_eda
-  #  @user = User.where(rol: "Admin")
+  #  @user = User.where(role: "Admin")
   #  @gotcues = Cuestionario.where("nombre_cues LIKE ?",@cuestionario.nombre_cues + "%").limit(1)
     #if @gotcues.user_id == @user.id
          #redirect_to edit_cuestionario_path(@gotcues.id)
@@ -101,7 +101,7 @@ class CuestionariosController < ApplicationController
     params.require(:cuestionario).permit( :nombre_cues, :eda_a, :eda_t, :eda_r, :eda_p, :user_id, pregunta_cuestionarios_attributes: [:id, :casilla, :pregunta_cues, :respuesta])
   end
   def require_activated
-    if !current_user.estado?
+    if !current_user.active?
       flash[:error]="Usuario no existe [401]"
       redirect_to root_path
 

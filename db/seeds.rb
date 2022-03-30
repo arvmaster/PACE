@@ -22,19 +22,19 @@ Estudio.create!(
 )
 User.create!(
   [
-    {nombre_user: "Alexander",
-     apellido_pa: "Rogers",
-     apellido_ma: "Valdes",
-     rut: "196450319",
+    {name: "Alexander",
+     first_last_name: "Rogers",
+     second_last_name: "Valdes",
+     dni: "196450319",
      password: "123456",
-     rol:"Admin",
+     role:"Admin",
      email: 'alexander.rogersv@utem.cl'},
-    {nombre_user: "Javier Eduardo",
-     apellido_pa: "Rogers",
-     apellido_ma: "Valdes",
-     rut: "196450319",
+    {name: "Javier Eduardo",
+     first_last_name: "Rogers",
+     second_last_name: "Valdes",
+     dni: "196450319",
      password: "123456",
-     rol:"Tutor Disciplinar",
+     role:"Tutor Disciplinar",
      email: 'jrogersp2000@gmail.com'},
   ]
 )

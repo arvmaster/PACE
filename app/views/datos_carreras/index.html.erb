@@ -1,7 +1,7 @@
 <h2>Datos ENS</h2>
 
 <p>
-  <% if current_user && current_user&.rol == "Admin"%>
+  <% if current_user && current_user&.role == "Admin"%>
     <%= link_to 'Crear', new_datos_carrera_path %>
   <%end %>
 </p>
@@ -29,7 +29,7 @@
       <td><%= f.duracion_for %></td>
       <td><%= link_to 'Ver', datos_carrera_path(f), class: "btn btn-info"  %></td>
       <% if user_signed_in? %>
-        <%if current_user.rol == "Admin" %>
+        <%if current_user.role == "Admin" %>
         <td><%= link_to 'Editar', edit_datos_carrera_path(f) %></td>
          <%end%>
       <%end%>
@@ -38,7 +38,7 @@
   </tbody>
 </table>
 
-<% if current_user&.rol == "Admin" %>
+<% if current_user&.role == "Admin" %>
   <div>
     </br>
   <%= form_tag import_datos_carreras_path, multipart: true do %>
