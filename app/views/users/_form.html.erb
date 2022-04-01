@@ -71,12 +71,12 @@
 
   <div class="field">
     <%= f.label :Recinto %><br />
-    <%= f.collection_select :recinto_id, Recinto.all, :id, :nombre_recinto, {:include_blank => "Seleccionar Recinto"},{:class => "btn btn-default dropdown-toggle border"}  %>
+    <%= f.collection_select :recinto_id, Recinto.all, :id, :name, {:include_blank => "Seleccionar Recinto"},{:class => "btn btn-default dropdown-toggle border"}  %>
   </div>
 
   <div class="field">
     <%= f.label :Estudio %><br />
-    <%= f.collection_select :estudio_id, Estudio.all, :id, :nombre_estudio, {:include_blank => "Seleccionar Estudio"},{:class => "btn btn-default dropdown-toggle border"}  %>
+    <%= f.collection_select :estudio_id, Estudio.all, :id, :name, {:include_blank => "Seleccionar Estudio"},{:class => "btn btn-default dropdown-toggle border"}  %>
   </div>
 
   <div class="field">

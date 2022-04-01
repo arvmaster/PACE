@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_03_28_222600) do
+ActiveRecord::Schema[7.0].define(version: 2022_04_01_024737) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -82,9 +82,9 @@ ActiveRecord::Schema[7.0].define(version: 2022_03_28_222600) do
   end
 
   create_table "estudios", force: :cascade do |t|
-    t.string "nombre_estudio"
-    t.string "codigo"
-    t.boolean "estado"
+    t.string "name"
+    t.string "code"
+    t.boolean "active"
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
     t.integer "recinto_id"
@@ -124,7 +124,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_03_28_222600) do
   end
 
   create_table "recintos", force: :cascade do |t|
-    t.string "nombre_recinto"
+    t.string "name"
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
   end
@@ -152,7 +152,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_03_28_222600) do
     t.string "role", default: "Estudiante", null: false
     t.integer "superviser"
     t.string "phone"
-    t.boolean "activo"
+    t.boolean "active"
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"

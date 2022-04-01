@@ -55,7 +55,7 @@ class RecintosController < ApplicationController
   private
 
   def recinto_params
-    params.require(:recinto).permit(:nombre_recinto)
+    params.require(:recinto).permit(:name)
   end
   def require_activated
     if !current_user.active?

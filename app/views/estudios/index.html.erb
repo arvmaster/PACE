@@ -13,7 +13,7 @@
 
   <% @estudios.each do |f| %>
     <tr>
-      <td><%= f.nombre_estudio %></td>
+      <td><%= f.name %></td>
 
       <td><%= link_to 'Ver', estudio_path(f) %></td>
       <td><%= link_to 'Editar', edit_estudio_path(f) %></td>

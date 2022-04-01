@@ -13,7 +13,7 @@
 
   <% @recintos.each do |f| %>
     <tr>
-      <td><%= f.nombre_recinto %></td>
+      <td><%= f.name %></td>
       <td><%= link_to 'Ver', recinto_path(f) %></td>
       <td><%= link_to 'Editar', edit_recinto_path(f) %></td>
     </tr>

@@ -7,17 +7,17 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Recinto.create!(
   [
-    {nombre_recinto: "UTEM Campus Macul"},
-    {nombre_recinto: "UTEM Campus Casa Central"},
-    {nombre_recinto: "UTEM Campus Providencia"}
+    {name: "UTEM Campus Macul"},
+    {name: "UTEM Campus Casa Central"},
+    {name: "UTEM Campus Providencia"}
   ]
 )
 Estudio.create!(
   [
-    {nombre_estudio: "Ingeniería en Informática", codigo: "21030", recinto_id: 1},
-    {nombre_estudio: "Ingeniería Civil en Computación", codigo: "21040", recinto_id: 1},
-    {nombre_estudio: "Ingeniería en Geomensura", codigo: "21031", recinto_id: 1},
-    {nombre_estudio: "3°Medio", codigo: "3", recinto_id: nil }
+    {name: "Ingeniería en Informática", code: "21030", recinto_id: 1},
+    {name: "Ingeniería Civil en Computación", code: "21040", recinto_id: 1},
+    {name: "Ingeniería en Geomensura", code: "21031", recinto_id: 1},
+    {name: "3°Medio", code: "3", recinto_id: nil }
   ]
 )
 User.create!(

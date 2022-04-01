@@ -45,7 +45,7 @@ class EstudiosController < ApplicationController
   #def inactivo
   #estudio.destroy
 
-  #  @estudio.estado = false
+  #  @estudio.active = false
   #  @estudio.save
   #     redirect_to estudios_path, success: "Se ha desvinculado el usuario"
   # end
@@ -63,13 +63,12 @@ class EstudiosController < ApplicationController
   private
 
   def estudio_params
-    params.require(:estudio).permit(:nombre_estudio, :codigo, :estado, :recinto_id)
+    params.require(:estudio).permit(:name, :code, :active, :recinto_id)
   end
   def require_activated
-    if !current_user.active?
-      flash[:error]="Usuario no existe [401]"
+    unless current_user.active?
+      flash[:error] = "Usuario no existe [401]"
       redirect_to root_path
-
     end
   end
   def require_PACE
